@@ -1,4 +1,4 @@
-# GitHub 
+## GitHub 
 
 
 
@@ -16,7 +16,7 @@
 
 ### 在Repositories 打开新项目
 
-##### …or create a new repository on the command line
+…or create a new repository on the command line
 
 ```
 echo "# vue-rabbit" >> README.md
@@ -28,7 +28,7 @@ git remote add origin https://github.com/HooWC/vue-rabbit.git // 复制网址
 git push -u origin main
 ```
 
-##### …or push an existing repository from the command line
+…or push an existing repository from the command line
 
 ```
 git remote add origin https://github.com/HooWC/vue-rabbit.git
@@ -63,20 +63,20 @@ git push -u origin master
 ### 初始者需要在CMD输入这些信息，才能上传
 
 ```
-git config --global user.name "Hoo Weng Chin"
+git config --global user.name "xxxxx"
 
-git config --global user.email "wengchinHoo@gmail.com"
+git config --global user.email "xxxxxxx@gmail.com"
 ```
 
 
 
-# `[Branch]` vs code 上传
+## `[Branch]` vs code 上传
 
 ```
 在 Github 创建一个 Branche ， vs code切换分支，上传，最后合并
 ```
 
-```
+```git
 git init
 
 git remote add origin https://github.com/HooWC/Netlify-Demo.git   # 换你自己的URL

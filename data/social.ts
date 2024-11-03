@@ -5,7 +5,7 @@ export type Social = {
   //qq?: string
   wx?: string
   //cloudmusic?: string
-  zhihu?: string
+  //zhihu?: string
   email?: string
   discord?: string
 }
@@ -18,7 +18,7 @@ type SocialValue = {
 }
 
 const social: Social = {
-  github: 'https://github.com/kuizuo',
+  github: 'https://github.com/HooWC',
   x: 'https://twitter.com/kuizuo',
   //juejin: 'https://juejin.cn/user/1565318510545901',
   wx: 'https://img.kuizuo.cn/wechat.png',
@@ -54,12 +54,12 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
     icon: 'ri:wechat-2-line',
     color: '#07c160',
   },
-  zhihu: {
-    href: social.zhihu,
-    title: '知乎',
-    icon: 'ri:zhihu-line',
-    color: '#1772F6',
-  },
+  // zhihu: {
+  //   href: social.zhihu,
+  //   title: '知乎',
+  //   icon: 'ri:zhihu-line',
+  //   color: '#1772F6',
+  // },
   discord: {
     href: social.discord,
     title: 'Discord',
@@ -84,12 +84,12 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
   //   icon: 'ri:netease-cloud-music-line',
   //   color: '#C20C0C',
   // },
-  // rss: {
-  //   href: '/blog/rss.xml',
-  //   title: 'RSS',
-  //   icon: 'ri:rss-line',
-  //   color: '#FFA501',
-  // },
+  rss: {
+    href: '/blog/rss.xml',
+    title: 'RSS',
+    icon: 'ri:rss-line',
+    color: '#FFA501',
+  },
 }
 
 export default socialSet

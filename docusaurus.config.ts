@@ -55,11 +55,11 @@ const config: Config = {
       items: [
         { label: '博客', position: 'right', to: 'blog' },
         { type:'docSidebar',sidebarId: 'techSidebar',label: '笔记', position: 'right', to: 'docs/tech' },
-        { label: '项目', position: 'right', to: 'project' },
+         { label: '项目', position: 'right', to: 'project' },
         { type:'docSidebar',sidebarId: 'interviewSidebar', label: '面试', position: 'right', to: 'docs/interview' },
         { label: '关于', position: 'right', to: 'about' },
-        { label: '朋友！', position: 'right', to: 'friends' },
-        { label: '关于！', position: 'right', to: 'about' },
+        // { label: '朋友！', position: 'right', to: 'friends' },
+        // { label: '关于！', position: 'right', to: 'about' },
         {
           label: '更多',
           position: 'right',
@@ -74,7 +74,7 @@ const config: Config = {
           position: 'right',
         },
         {
-            href: 'https://github.com/HooWC/HDocs.git',
+            href: 'https://github.com/HooWC/TechDocs.git',
             position: "right",
             className: "header-github-link",
             "aria-label": "GitHub repository",
