@@ -36,7 +36,6 @@ function Name() {
         e.currentTarget.style.setProperty('--y', `${e.clientY}px`)
       }}
     >
-      {/* <Translate id="homepage.hero.greet">你好! 我是</Translate> */}
       <span
         className={styles.name}
         onMouseMove={e => {
@@ -79,10 +78,12 @@ export default function Hero() {
       </div>
       <motion.div className={styles.background}>
         <img
-      src="/img/backgroundpic.png" alt="Background"
-      style={{ width: '80%', height: 'auto' }}
-    />
+          src="/img/backgroundpic.png" alt="Background"
+          style={{ width: '80%', height: 'auto' }}
+        />
+
         {/* <HeroSvg /> */}
+        
         <Circle />
       </motion.div>
     </motion.div>
