@@ -1,6 +1,5 @@
 import Translate from '@docusaurus/Translate'
 import SocialLinks from '@site/src/components/SocialLinks'
-import backgroundPic from '@site/static/img/backgroundpic.png'
 import { motion } from 'framer-motion'
 import { MovingButton } from '../../magicui/moving-border'
 import styles from './styles.module.css'
@@ -80,7 +79,7 @@ export default function Hero() {
       </div>
       <motion.div className={styles.background}>
         <img
-      src={backgroundPic} alt="Background"
+      src="/img/backgroundpic.png" alt="Background"
       style={{ width: '80%', height: 'auto' }}
     />
         {/* <HeroSvg /> */}
