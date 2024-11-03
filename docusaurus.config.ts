@@ -206,6 +206,13 @@ const config: Config = {
     '@docusaurus/plugin-ideal-image',
     // ['docusaurus-plugin-baidu-tongji', { token: 'c9a3849aa75f9c4a4e65f846cd1a5155' }],
     [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+      }),
+    ],
+    [
       '@docusaurus/plugin-pwa',
       {
         debug: process.env.NODE_ENV === 'development',

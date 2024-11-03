@@ -3,7 +3,7 @@ export const projects: Project[] = [
     title: 'TechDocs',
     description: '基于 Docusaurus 静态网站生成器实现学习平台',
     preview: '/img/project/techdocs.png',
-    website: 'https://kuizuo.cn',
+    website: 'techdocs-drab.vercel.app',
     source: 'https://github.com/HooWC/TechDocs.git',
     tags: ['opensource', 'design', 'favorite','public'],
     type: 'web',
