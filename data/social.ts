@@ -4,6 +4,7 @@ export type Social = {
   //juejin?: string
   //qq?: string
   wx?: string
+  linkedin?: string
   //cloudmusic?: string
   //zhihu?: string
   email?: string
@@ -19,21 +20,37 @@ type SocialValue = {
 
 const social: Social = {
   github: 'https://github.com/HooWC',
-  x: 'https://twitter.com/kuizuo',
+  x: 'https://x.com/Hoo_Code',
   //juejin: 'https://juejin.cn/user/1565318510545901',
-  wx: 'https://img.kuizuo.cn/wechat.png',
+  wx: 'https://i.postimg.cc/Px0BbsYB/wx.jpg',
+  linkedin:'https://www.linkedin.com/in/hoo-weng-chin-120090201/',
   // qq: 'https://img.kuizuo.cn/qq.png',
   // zhihu: 'https://www.zhihu.com/people/kuizuo',
   // cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
-  email: 'mailto:hi@kuizuo.cn',
-  discord: 'https://discord.gg/M8cVcjDxkz',
+  email: 'mailto:wengchinbusiness@gmail.com',
+  discord: 'https://discordapp.com/users/Hoo#0234',
 }
 
-const socialSet: Record<keyof Social | 'rss', SocialValue> = {
+type SocialWithoutRSS = {
+  github: SocialValue;
+  linkedin: SocialValue;
+  x: SocialValue;
+  wx: SocialValue;
+  discord: SocialValue;
+  email: SocialValue;
+};
+
+const socialSet: SocialWithoutRSS = {
   github: {
     href: social.github,
     title: 'GitHub',
     icon: 'ri:github-line',
+    color: '#010409',
+  },
+  linkedin: {
+    href: social.linkedin,
+    title: 'LinkedIn',
+    icon: 'ri:linkedin-line',
     color: '#010409',
   },
   // juejin: {
@@ -84,12 +101,12 @@ const socialSet: Record<keyof Social | 'rss', SocialValue> = {
   //   icon: 'ri:netease-cloud-music-line',
   //   color: '#C20C0C',
   // },
-  rss: {
-    href: '/blog/rss.xml',
-    title: 'RSS',
-    icon: 'ri:rss-line',
-    color: '#FFA501',
-  },
+  // rss: {
+  //   href: '/blog/rss.xml',
+  //   title: 'RSS',
+  //   icon: 'ri:rss-line',
+  //   color: '#FFA501',
+  // },
 }
 
 export default socialSet

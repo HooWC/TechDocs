@@ -1,7 +1,7 @@
-import Link from '@docusaurus/Link'
-import Translate from '@docusaurus/Translate'
-import { Icon } from '@iconify/react'
-import type React from 'react'
+import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
+import { Icon } from '@iconify/react';
+import type React from 'react';
 
 interface SectionProps {
   title: string | JSX.Element

@@ -1,5 +1,5 @@
 {
-  "index_name": "kuizuo",
+  "index_name": "Hoo",
   "start_urls": ["https://kuizuo.cn/"],
   "sitemap_urls": ["https://kuizuo.cn/sitemap.xml"],
   "selectors": {

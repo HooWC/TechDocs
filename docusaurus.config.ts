@@ -5,14 +5,13 @@ import social from './data/social'
 import type { GiscusConfig } from './src/components/Comment'
 
 const beian = '闽ICP备2020017848号-2'
-const beian1 = '闽公网安备35021102000847号'
 
 const config: Config = {
   title: 'TechDocs',
   url: 'https://kuizuo.cn',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'kuizuo',
+  organizationName: 'Hoo',
   projectName: 'blog',
   customFields: {
     bio: '道阻且长，行则将至',
@@ -20,15 +19,11 @@ const config: Config = {
       '是一个由愧怍创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。',
   },
   themeConfig: {
-    // announcementBar: {
-    //   id: 'announcementBar-3',
-    //   content: ``,
-    // },
     image: 'img/og.png',
     metadata: [
       {
         name: 'author',
-        content: '愧怍',
+        content: 'Hoo',
       },
       {
         name: 'keywords',
@@ -58,8 +53,6 @@ const config: Config = {
          { label: '项目', position: 'right', to: 'project' },
         { type:'docSidebar',sidebarId: 'interviewSidebar', label: '面试', position: 'right', to: 'docs/interview' },
         { label: '关于', position: 'right', to: 'about' },
-        // { label: '朋友！', position: 'right', to: 'friends' },
-        // { label: '关于！', position: 'right', to: 'about' },
         {
           label: '更多',
           position: 'right',
@@ -74,7 +67,7 @@ const config: Config = {
           position: 'right',
         },
         {
-            href: 'https://github.com/HooWC/TechDocs.git',
+            href: 'https://github.com/HooWC',
             position: "right",
             className: "header-github-link",
             "aria-label": "GitHub repository",
@@ -89,9 +82,8 @@ const config: Config = {
           items: [
             { label: '博客', to: 'blog' },
             { label: '归档', to: 'blog/archive' },
-            { label: '技术笔记', to: 'docs/skill' },
-            { label: '实战项目', to: 'project' },
-            { label: '前端示例', to: 'https://example.kuizuo.cn' },
+            { label: '笔记', to: 'docs/skill' },
+            { label: '项目', to: 'project' },
           ],
         },
         {
@@ -99,46 +91,32 @@ const config: Config = {
           items: [
             { label: '关于我', to: '/about' },
             { label: 'GitHub', href: social.github.href },
-            { label: 'Twitter', href: social.x.href },
-            { label: 'Discord', href: social.discord.href },
+            { label: 'LinkedIn', href: social.discord.href },
+            { label: 'Youtube', href: social.x.href },    
           ],
         },
         {
           title: '网站',
           items: [
-            { label: 'js反混淆', to: 'https://js-deobfuscator.kuizuo.cn' },
-            { label: 'cyberChef', to: 'https://gchq.github.io/CyberChef' },
-            { label: 'api服务', to: 'https://api.kuizuo.cn' },
-            { label: '便民服务', to: 'https://service.kuizuo.cn' },
-            { label: '站点监控', to: 'https://uptime.kuizuo.cn' },
+            { label: 'Converter', to: 'https://js-deobfuscator.kuizuo.cn' },
+            { label: 'CV Web', to: 'https://gchq.github.io/CyberChef' }
           ],
         },
         {
           title: '更多',
           items: [
-            { label: '友链', position: 'right', to: 'friends' },
-            {
-              html: `
-                <a href="https://docusaurus.io" target="_blank" rel="noreferrer noopener">
-                  <img src="/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
-                </a>
-                `,
-            },
+            { label: '工具推荐', position: 'right', to: 'friends' },
           ],
         },
       ],
       copyright: `
-        <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${
-          beian1.match(/\d+/)?.[0]
-        }" >${beian1}</a></p>
-        <p>Copyright © 2020 - ${new Date().getFullYear()} kuizuo. | Built with Docusaurus.</p>
+        <p>Copyright © 2024 - ${new Date().getFullYear()} Hoo. | Built with Docusaurus.</p>
         `,
     },
     algolia: {
       appId: 'GV6YN1ODMO',
       apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
+      indexName: 'Hoo',
     },
     prism: {
       theme: themes.oneLight,
@@ -158,12 +136,12 @@ const config: Config = {
       ],
     },
     giscus: {
-      repo: 'kuizuo/blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
-      category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
-      theme: 'light',
-      darkTheme: 'dark_dimmed',
+       repo: 'HooWC/TechDocs',
+       repoId: 'R_kgDONJtHiA',
+       category: 'General',
+       categoryId: 'DIC_kwDONJtHiM4Cj9Bu',
+       theme: 'light',
+       darkTheme: 'dark_dimmed',
     } satisfies Partial<GiscusConfig>,
     tableOfContents: {
       minHeadingLevel: 2,
@@ -204,13 +182,11 @@ const config: Config = {
   plugins: [
     'docusaurus-plugin-image-zoom',
     '@docusaurus/plugin-ideal-image',
-    // ['docusaurus-plugin-baidu-tongji', { token: 'c9a3849aa75f9c4a4e65f846cd1a5155' }],
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
+      {
         hashed: true,
-      }),
+      },
     ],
     [
       '@docusaurus/plugin-pwa',
@@ -232,11 +208,11 @@ const config: Config = {
       },
     ],
     [
-      './src/plugin/plugin-content-blog', // 为了实现全局 blog 数据，必须改写 plugin-content-blog 插件
+      './src/plugin/plugin-content-blog',
       {
         path: 'blog',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+          `https://github.com/HooWC/TechDocs/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogDescription: '代码人生：编织技术与生活的博客之旅',
         blogSidebarCount: 10,
@@ -257,7 +233,6 @@ const config: Config = {
       return {
         name: 'docusaurus-tailwindcss',
         configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
           postcssOptions.plugins.push(require('tailwindcss'))
           postcssOptions.plugins.push(require('autoprefixer'))
           return postcssOptions
@@ -275,7 +250,7 @@ const config: Config = {
                 innerHTML: `
     (${function () {
       console.log(
-        `%c Kz Blog %c https://github.com/kuizuo/blog`,
+        `%c Kz Blog %c https://github.com/HooWC/TechDocs`,
         'color: #fff; margin: 1em 0; padding: 5px 0; background: #12affa;',
         'margin: 1em 0; padding: 5px 0; background: #efefef;',
       )

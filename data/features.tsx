@@ -1,5 +1,4 @@
 import Translate, { translate } from '@docusaurus/Translate'
-import { Icon } from '@iconify/react'
 import OpenSourceSvg from '@site/static/svg/undraw_open_source.svg'
 import SpiderSvg from '@site/static/svg/undraw_spider.svg'
 import WebDeveloperSvg from '@site/static/svg/undraw_web_developer.svg'
@@ -15,24 +14,24 @@ const FEATURES: FeatureItem[] = [
   {
     title: translate({
       id: 'homepage.feature.developer',
-      message: 'TypeScript 全栈工程师',
+      message: '全栈工程师',
     }),
     description: (
       <Translate>
-        作为一名 TypeScript 全栈工程师，秉着能用 TS 绝不用 JS 的原则，为项目提供类型安全的保障，提高代码质量和开发效率。
+        作为一名全栈工程师，全面掌握前端和后端开发技能是至关重要的，从而能够独立完成完整的项目开发和维护。
       </Translate>
     ),
     header: <WebDeveloperSvg className={'h-auto w-full'} height={150} role="img" />,
-    icon: <Icon icon="logos:typescript-icon" className="h-4 w-4 text-neutral-500" />,
+    // icon: <Icon icon="logos:typescript-icon" className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: translate({
       id: 'homepage.feature.spider',
-      message: '会点逆向 & 爬虫',
+      message: '编程热情与自律',
     }),
     description: (
       <Translate>
-        作为一名曾学习与实践逆向工程两年半的开发者，对于逆向工程有着浓厚的兴趣，同时造就了超凡的阅读代码能力。没有看不懂的代码，只有不想看的代码。
+        对编程的热爱让我具备了出色的代码阅读能力。没有难懂的代码，只有选择是否去深入理解的决定。通过自律与持续学习，我不断提升自己，面对各种代码挑战。
       </Translate>
     ),
     header: <SpiderSvg className={'h-auto w-full'} height={150} role="img" />,
@@ -40,11 +39,11 @@ const FEATURES: FeatureItem[] = [
   {
     title: translate({
       id: 'homepage.feature.enthusiast',
-      message: '开源爱好者',
+      message: '解决问题的能力',
     }),
     description: (
       <Translate>
-        作为一名开源爱好者，积极参与开源社区，为开源项目贡献代码，希望有生之年能够构建出一个知名的开源项目。
+        具备帮助他人解决编程问题的丰富经验，覆盖从前端到后端的多种技术领域。
       </Translate>
     ),
     header: <OpenSourceSvg className={'h-auto w-full'} height={150} role="img" />,

@@ -1,9 +1,17 @@
+# Hoo:
+#   name: Hoo
+#   title: 全栈工程师
+#   url: https://github.com/HooWC
+#   image_url: /img/logo.png
+#   email: wengchinbusiness@gmail.com
+#   socials:
+#     github: Hoowc
+
 kuizuo:
-  name: 愧怍
-  title: 全栈 typescripter / 刚毕业的学生
+  name: Kuizuo
+  title: 软件工程师
   url: https://github.com/kuizuo
-  image_url: https://kuizuo.cn/img/logo.png
-  email: hi@kuizuo.cn
+  image_url: /img/kuizuo.png
+  email: kuizuo@example.com
   socials:
-    x: kuizuo
     github: kuizuo
