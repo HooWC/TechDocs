@@ -1,3 +1,13 @@
+---
+id: laravel-queue
+slug: /laravel-queue
+title: Queue
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ## Laravel Queue
 
 *在 Laravel 中，Queue 是一种异步处理任务的机制。它允许你将任务推送到队列中，然后在后台异步地处理它们，而不会阻塞当前的请求处理流程。这对于需要处理耗时任务或者与外部服务进行通信的情况非常有用*

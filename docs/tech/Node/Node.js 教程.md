@@ -1,3 +1,13 @@
+---
+id: n-base
+slug: /n-base
+title: 基础学习
+date: 2024-11-04
+authors: Hoo
+tags: [node]
+keywords: [node]
+---
+
 ## Node.js 教程
 
 

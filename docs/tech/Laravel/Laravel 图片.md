@@ -1,3 +1,13 @@
+---
+id: laravel-pic
+slug: /laravel-pic
+title: 图片使用
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ## Laravel 图片
 
 ```

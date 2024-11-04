@@ -1,3 +1,13 @@
+---
+id: laravel-vue
+slug: /laravel-vue
+title: Laravel + Vue
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ### Laravel Vue
 
 ```

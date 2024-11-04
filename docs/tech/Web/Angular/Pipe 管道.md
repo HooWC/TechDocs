@@ -1,3 +1,13 @@
+---
+id: pipe
+slug: /pipe
+title: Angular Pipe
+date: 2024-11-04
+authors: Hoo
+tags: [angular]
+keywords: [angular]
+---
+
 # Angular Pipe 
 
 在 Angular 中，`Pipe` 是一种特殊的工具，可以对数据进行格式化或转换，通常用于模板中。Angular 提供了一些内置的管道（如 `date`、`uppercase`、`currency` 等），你还可以创建自定义的管道来实现特定的数据转换需求。

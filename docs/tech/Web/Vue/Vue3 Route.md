@@ -1,4 +1,14 @@
-# Vue3 Route 🌎
+---
+id: route-vue
+slug: /route-vue
+title: Vue Route
+date: 2024-11-04
+authors: Hoo
+tags: [vue]
+keywords: [vue]
+---
+
+# Vue3 Route
 
 ## 安装
 
@@ -27,7 +37,7 @@ app.mount('#app')
 
 
 
-### 🎁 Route 文件
+### Route 文件
 
 ```javascript
 import { createRouter, createWebHistory } from 'vue-router'
@@ -51,7 +61,7 @@ const router = createRouter({
 export default router
 ```
 
-### 🎁 Layout/index.vue
+### Layout/index.vue
 
 ```html
 <template>
@@ -63,9 +73,9 @@ export default router
 
 
 
-# ✌ 二级路由入口 `Children`
+# 二级路由入口 `Children`
 
-### 🎁 Route 文件
+### Route 文件
 
 ```javascript
 import { createRouter, createWebHistory } from 'vue-router'
@@ -101,7 +111,7 @@ const router = createRouter({
 export default router
 ```
 
-### 🎁 Layout/index.vue
+### Layout/index.vue
 
 ```html
 <template>
@@ -124,9 +134,9 @@ export default router
 </template>
 ```
 
-## 💫 404页面路由
+## 404页面路由
 
-```
+```js
 import NotFound from '@/views/NotFound/index.vue'
 
 {
@@ -138,9 +148,9 @@ import NotFound from '@/views/NotFound/index.vue'
 
 
 
-## 💫 传数据
+## 传数据
 
-```
+```js
 <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
       <img
         :src="meal.strMealThumb"
@@ -150,7 +160,7 @@ import NotFound from '@/views/NotFound/index.vue'
 </router-link>
 ```
 
-```
+```js
  {
    path: '/meal/:id',
    name: 'mealDetails',
@@ -158,7 +168,7 @@ import NotFound from '@/views/NotFound/index.vue'
  }
 ```
 
-```
+```js
 <script setup>
 import { useRoute } from 'vue-router';
 

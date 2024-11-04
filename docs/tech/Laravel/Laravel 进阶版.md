@@ -1,3 +1,13 @@
+---
+id: laravel-middle
+slug: /laravel-middle
+title: 进阶学习
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ## Laravel 进阶版
 
 #### Route

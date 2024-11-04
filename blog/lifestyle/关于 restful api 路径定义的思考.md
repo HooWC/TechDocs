@@ -2,18 +2,16 @@
 slug: restful-api-url-definition
 title: 关于 Restful Api 路径定义的思考
 date: 2024-10-24
-authors: kuizuo
+authors: Hoo
 tags: [闲聊, restful api]
 keywords: [闲聊, restful api]
 description: 这篇文章分享了作者使用Rest Api的心得和体会。
-image: https://i.postimg.cc/CLQ2TVzX/restful-api-blog.png
+image: https://github.com/HoowcBN/techdocs_pic/blob/main/restful-api-blog.jpg?raw=true
 ---
 
 你是否曾经在深夜与程序代码斗智斗勇，想知道怎样让你的应用程序顺利交流？那你可能需要认识一下 RESTful API！它就像网络世界里的一个友好翻译官，负责让各种程序能顺畅对话，而不用担心语言不通。
 
 <!-- truncate -->
-
-
 
 ## RESTful API 设计的思考与实践
 

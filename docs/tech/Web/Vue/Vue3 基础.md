@@ -1,6 +1,14 @@
-# Vue3 🦋
+---
+id: vue-base
+slug: /vue-base
+title: 基础学习
+date: 2024-11-04
+authors: Hoo
+tags: [vue]
+keywords: [vue]
+---
 
-[Vue 官网]: https://cn.vuejs.org/guide/quick-start.html
+# Vue3
 
 Vue.js 是一个流行的前端 JavaScript 框架，用于构建用户界面和单页面应用程序（SPA）。Vue 3 是 Vue.js 的最新版本
 
@@ -13,7 +21,7 @@ npm init vue@latest
 ```
 
 ```
-npm create vue@latest   //安装这个
+npm create vue@latest   //在其他后端里安装
 ```
 
 ### 安装 `NPM`
@@ -28,7 +36,7 @@ npm i
 npm i axios
 ```
 
-### 启动 🔫
+### 启动 
 
 ```
 npm run dev
@@ -36,11 +44,11 @@ npm run dev
 
 
 
-## ☝ Vue 基础
+## Vue 基础
 
-在`.eslintrc.cjs`文件里添加， 可随意命名文件名称 **（如有需要）**
+在`.eslintrc.cjs`文件里添加， 可随意命名文件名称 **（如有需要，可以忽略）**
 
-```vue
+```js
   rules: {
     'vue/multi-word-component-names': 0, // 不再强制邀请组件命名
   }
@@ -53,7 +61,7 @@ npm run dev
 
 ### Reactive 用法
 
-```vue
+```js
 import { reactive } from 'vue'
 
 const state = reactive({
@@ -71,7 +79,7 @@ console.log(state.count) // 输出: 1
 
 ### Ref 用法
 
-```vue
+```js
 import { ref } from 'vue'
 
 const count = ref(0)
@@ -87,9 +95,9 @@ console.log(count.value) // 输出: 1
 
 ### Computed 用法
 
-##### ⭐ 自动再次计算，然后输出
+#### 自动再次计算，然后输出
 
-```vue
+```js
 import { computed } from 'vue'
 
 const list = ref([1,2,3,4,5,6,7,8])
@@ -103,9 +111,9 @@ setTimeout(() => {
 })
 ```
 
-### ⭐ Watch 函数
+### Watch 函数
 
-```vue
+```js
 import { ref, watch } from 'vue'
 const count = ref(0)
 
@@ -114,9 +122,9 @@ watch(count, (newValue, oldValue) => {
 })
 ```
 
-### ✌ Watch 函数 多听变化
+### Watch 函数 多听变化
 
-```vue
+```js
 import { ref, watch } from 'vue'
 const count = ref(0)
 const name = ref('cp')
@@ -129,9 +137,9 @@ watch(
 )
 ```
 
-### 🤟 Watch 函数 Deep模式
+### Watch 函数 Deep模式
 
-```vue
+```js
 import { ref, watch } from 'vue'
 const state = ref({ count: 0})
 const changeStateByCount = () => {
@@ -145,9 +153,9 @@ watch(state, () => {
 })
 ```
 
-### 🤟 Watch 函数 Deep模式 （特定值变化时才启动 Watch）
+### Watch 函数 Deep模式 （特定值变化时才启动 Watch）
 
-```vue
+```js
 import { ref, watch } from 'vue'
 const state = ref({ 
 	name: 'Hoo',
@@ -166,7 +174,7 @@ watch(
 )
 ```
 
-### 🤟  v-for
+### v-for
 
 ```vue
 <ul>  
@@ -174,7 +182,7 @@ watch(
 </ul>
 ```
 
-### 🤟  v-if
+### v-if
 
 ```vue
 <div v-if="type === 'A'">
@@ -188,7 +196,7 @@ watch(
 </div>
 ```
 
-### 🤟  v-show
+### v-show
 
 ```vue
 <div v-show="isVisible">
@@ -196,13 +204,13 @@ watch(
 </div>
 ```
 
-### 🤟  @click
+### @click
 
 ```vue
 <button @click="handleClick">Click me</button>
 ```
 
-### 🤟   v-model
+### v-model
 
 ```vue
 <script setup>
@@ -220,261 +228,13 @@ watch(
 
 
 
-## 生命周期 🦀
-
-### onMounted
-
-```vue
-import { onMounted } from 'vue'
-
-onMounted(() => {
-	console.log('组件挂载完毕mounted执行了')
-})
-```
-
-### 其他 生命周期
-
-```vue
-onBeforeMount
-onMounted
-onBeforeUpdate
-onUpdated
-onBeforeUnmount
-onUnmounted
-```
-
-
-
-
-
-## 父传子 🐧
-
-##### 🔆 父组件
-
-```vue
-<script setup>
-	import Son from './son-com.vue'
-</script>
-
-<template>
-	<Son message="this is app message"/>
-</template>
-```
-
-##### 🔆 子组件
-
-```vue
-<script setup>
-	const props = defineProps({
-		message: String
-	})
-</script>
-
-<template>
-	{{ message }}
-</template>
-```
-
-```vue
-const props = defineProps({
-    id:{
-        type:String,
-        default:''
-    }
-})
-```
-
-
-
-## 子传父 Emit 🐧
-
-🔆 父组件
-
-```vue
-<script setup>
-	import Son from './son-com.vue'
-	const getMessage = (msg) => {
-		console.log(msg)
-	}
-</script>
-
-<template>
-	<Son @get-message="getMessage"/>
-</template>
-```
-
-🔆 子组件
-
-```vue
-<script setup>
-	const emit = defineEmits(['get-message'])
-	
-	const sendMsg = () => {
-		emit('get-message','this is son msg')
-	}
-</script>
-
-<template>
-	<button @clikc="sendMsg">sendMsg</button>
-</template>
-```
-
-
-
-## 🍎 Ref 模板引用 ⭐⭐⭐
-
-🔆 父组件
-
-```vue
-<script setup>
-	import { onMounted, ref } from 'vue'
-	import Son from './son-com.vue'
-	
-	const h1Ref = ref(null)
-	const comRef = ref(null)
-	
-	onMounted(() => {
-		console.log(h1Ref.value)
-		console.log(comRef.value)
-	})
-</script>
-
-<template>
-	<h1 ref="h1Ref">我是dom标签h1</h1>
-	<Son ref="comRef" />
-</template>
-```
-
-🔆 子组件
-
-```vue
-<script setup>
-	import { ref } from 'vue'
-	
-	const name = ref('Hoo')
-	
-	const setName = () => {
-		name.value = 'Hoo Weng Chin'
-	}
-	
-	defineExpose({
-		name,
-		setName
-	})
-	
-</script>
-
-<template>
-	<h1>我是son组件</h1>
-</template>
-```
-
-
-
-### Ref 模板引用 （传值）
-
-🔆 父组件
-
-```vue
-<script setup>
-	import { onMounted, ref } from 'vue'
-	import Son from './son-com.vue'
-	
-	const h1Ref = ref(null)
-	const comRef = ref(null)
-	
-	onMounted(() => {
-		console.log(h1Ref.value)
-		console.log(comRef.value)
-	})
-	
-	const onEdit = (newName) => {
-		comRef.value.EditName(newName)
-	}
-	
-</script>
-
-<template>
-	<h1 ref="h1Ref">我是dom标签h1</h1>
-	
-	<button @click="onEdit(newName)">修改名字</button>
-	
-	<Son ref="comRef" />
-</template>
-```
-
-🔆 子组件
-
-```vue
-<script setup>
-	import { ref } from 'vue'
-	
-	const name = ref('Hoo')
-	
-	const setName = () => {
-		name.value = 'Hoo Weng Chin'
-	}
-	
-	const EditName = (newName) => {
-		name.value = newName
-	}
-	
-	defineExpose({
-		name,
-		setName
-	})
-	
-</script>
-
-<template>
-	<h1>我是son组件</h1>
-</template>
-```
-
-### 🐱 Chilren (slot)
-
-```vue
-<template>
-  <div>
-    <Son>
-      <span>this is span</span>
-    </Son>
-  </div>
-</template>
-
-<script>
-import Son from './Son.vue';
-
-export default {
-  components: {
-    Son
-  }
-}
-</script>
-```
-
-```vue
-<template>
-  <div>
-    <div>
-      <div>this is son</div>
-      <slot></slot>
-    </div>
-  </div>
-</template>
-```
-
-
-
-
-
-## 🌂 Provide和Inject
-🔆 父组件
+## Provide和Inject
+父组件
 ```vue
 provide('data-key','this is room data')
 ```
 
-🔆 其他 子组件
+其他 子组件
 
 ```vue
 const roomData = inject('data-key')
@@ -482,13 +242,11 @@ const roomData = inject('data-key')
 
 
 
-
-
-## 🗺 Route
+## Route
 
 `Route` 文件
 
-```vue
+```js
 import {createRouter, createWebHistory} from "vue-router";
 import invoiceIndex from "../components/invoices/index.vue";
 import notFound from "../components/NotFound.vue";

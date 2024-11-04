@@ -1,3 +1,13 @@
+---
+id: laravel-event
+slug: /laravel-event
+title: Event & Listener
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ### Laravel Event 和 Listener
 
 ```

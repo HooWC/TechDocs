@@ -1,3 +1,13 @@
+---
+id: laravel-request
+slug: /laravel-request
+title: Request
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ## Request 写法
 
 #### 基本用法

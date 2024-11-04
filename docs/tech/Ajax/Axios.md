@@ -1,3 +1,13 @@
+---
+id: axios-base
+slug: /axios-base
+title: Axios
+date: 2024-11-04
+authors: Hoo
+tags: [ajax]
+keywords: [ajax]
+---
+
 ## Axios
 
 ### 1. 安装 Axios

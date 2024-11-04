@@ -1,3 +1,13 @@
+---
+id: jq-base
+slug: /jq-base
+title: JQuery Ajax
+date: 2024-11-04
+authors: Hoo
+tags: [ajax]
+keywords: [ajax]
+---
+
 ###  jQuery AJAX
 
 以下是使用 jQuery AJAX 进行基本 CRUD 操作的详细示例和步骤。假设我们将与 `https://jsonplaceholder.typicode.com/posts` 进行交互，这是一个模拟的 RESTful API。

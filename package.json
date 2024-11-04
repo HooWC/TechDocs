@@ -1,16 +1,16 @@
 {
-  "name": "blog",
+  "name": "TechDocs",
   "version": "3.0.0",
   "author": {
     "url": "https://github.com/HooWC",
-    "email": "hi@kuizuo.cn",
+    "email": "wengchinbusiness@gmail.com",
     "name": "Hoo"
   },
   "repository": {
     "url": "https://github.com/HooWC/TechDocs",
     "type": "git"
   },
-  "homepage": "https://kuizuo.cn",
+  "homepage": "https://techdocs-drab.vercel.app/",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",

@@ -1,3 +1,13 @@
+---
+id: laravel-base
+slug: /laravel-base
+title: 基础学习
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 # Laravel 基础 👻
 
 ### 🌂 初步使用Laravel，需安装以下

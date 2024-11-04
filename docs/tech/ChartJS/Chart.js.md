@@ -1,3 +1,13 @@
+---
+id: chartjs-base
+slug: /chartjs-base
+title: 基础学习
+date: 2024-11-04
+authors: Hoo
+tags: [chartjs]
+keywords: [chartjs]
+---
+
 ## Chart.js
 
 https://www.runoob.com/chartjs/chartjs-tutorial.html

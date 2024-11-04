@@ -1,3 +1,13 @@
+---
+id: laravel-template
+slug: /laravel-template
+title: Template Breeze
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 # 安裝 laravel/breeze
 
 ```

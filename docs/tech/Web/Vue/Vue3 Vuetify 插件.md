@@ -1,19 +1,27 @@
+---
+id: vuetify-vue
+slug: /vuetify-vue
+title: Vuetify
+date: 2024-11-04
+authors: Hoo
+tags: [vue]
+keywords: [vue]
+---
+
 # Vue3 Vuetify 插件
 
-[官网]: https://vuetifyjs.com/zh-Hans/components/all/#section-5bb956687ec44ef6-containment
-
-安装
+### 安装
 
 ```
-npm create vuetify@latest #没有项目，就安装这个
+npm create vuetify@latest #没有项目，就安装这个，同时安装了vue和vuetify
 ```
 
 ```
 npm install vuetify@next #如果已经有项目直接安装这个   自动安装vue3
-npm install @mdi/font
+npm install @mdi/font // 安装
 npm install @vitejs/plugin-vue --force --save-dev // ^5.1.4
 
-npm install vite@latest  // 升级 必须和@vitejs/plugin-vue 同一个版本  、 ^5.4.8
+npm install vite@latest  // 升级 @vitejs/plugin-vue 同一个版本   ^5.4.8
 npm install laravel-vite-plugin@latest // 升级 ^1.0.5
 
 npm install vue-router@next
@@ -21,15 +29,16 @@ npm install vue-loader@next vue-router@next --force
 
 npm install vite-plugin-pages --save-dev
 
-npm install @vueuse/core
-其他的在场按install就可以了
-```
-
-```
 // 自动扫描Pages文件的文件 用在router里 方便
 npm install vite-plugin-pages --save-dev
 
-在vite.config.js 配置
+npm install @vueuse/core
+```
+
+### 配置
+
+```js
+// 在vite.config.js 配置
 import Pages from 'vite-plugin-pages'
 
 plugins: [
@@ -39,10 +48,10 @@ plugins: [
       dirs: ['./src/js/pages'], // 你可以根据自己的项目结构修改路径
     }),
   ],
-  
-  
-  ===
-  
+```
+
+```js
+// 在vite.config.js 配置
 import vue from '@vitejs/plugin-vue'
 
 plugins:[
@@ -57,21 +66,15 @@ laravel({
         }),
 ```
 
-```
-Route::get('{any?}', function() {
-    return view('application');
-})->where('any', '.*');
-```
+### 最重要配置
 
-最重要配置
-
-```
+```js
 "type": "module",  // 在package.json 加上，才可以npm run dev
 ```
 
-配置
+main.js 配置
 
-```vue
+```js
 import './assets/main.css'
 
 import { createApp } from 'vue'
@@ -93,9 +96,9 @@ createApp(App).use(vuetify).mount('#app')
 
 
 
-使用 更多看官网
+### 使用 更多看官网
 
-```
+```js
 <v-btn fab>  #圆形
 <v-icon left small>
 <v-btn flat> #碰到才有背景颜色出现
@@ -111,7 +114,7 @@ font-weight-light
 
 自定义 plugins/vuetify.js
 
-```
+```js
 Vue.use(Vuetify, {
 	iconfont: 'md',
 	theme: {

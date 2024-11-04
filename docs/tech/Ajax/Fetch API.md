@@ -1,3 +1,13 @@
+---
+id: fetch-base
+slug: /fetch-base
+title: Fetch Api
+date: 2024-11-04
+authors: Hoo
+tags: [ajax]
+keywords: [ajax]
+---
+
 ## Fetch API
 
 以下是使用 Fetch API 进行基本 CRUD 操作和获取数据的详细示例和步骤。

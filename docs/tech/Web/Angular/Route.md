@@ -1,3 +1,13 @@
+---
+id: route-angular
+slug: /route-angular
+title: Angular Route
+date: 2024-11-04
+authors: Hoo
+tags: [angular]
+keywords: [angular]
+---
+
 ## Route
 
 在 Angular 中，`app-routing.module.ts` 是用来定义应用的路由配置文件。通过路由模块，你可以设置页面路径和对应的组件，以便实现页面导航。以下是创建和配置路由的步骤：

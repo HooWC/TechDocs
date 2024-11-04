@@ -1,3 +1,13 @@
+---
+id: laravel-policy
+slug: /laravel-policy
+title: Policy
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ### Laravel Policy 不需要安装
 
 *在 Laravel 中，Policy 是一种授权机制，用于定义模型的授权策略。它允许你在应用程序中定义谁可以执行模型的哪些操作。通常，Policy 用于将授权逻辑与控制器逻辑分离开来，以确保你的应用程序具有良好的安全性和可维护性。*

@@ -1,3 +1,13 @@
+---
+id: laravel-passport
+slug: /laravel-passport
+title: Passport
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ## Laravel Passport
 
 [Laravel 10 RESTful APIs with Passport Authentication 安装网站](https://onlinewebtutorblog.com/laravel-10-rest-apis-with-passport-authentication/)

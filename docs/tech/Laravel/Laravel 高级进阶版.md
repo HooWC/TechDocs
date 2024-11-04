@@ -1,3 +1,13 @@
+---
+id: laravel-hight
+slug: /laravel-hight
+title: 高级进阶学习
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ## Laravel 高级进阶版
 
 

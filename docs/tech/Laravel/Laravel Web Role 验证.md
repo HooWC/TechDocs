@@ -1,3 +1,13 @@
+---
+id: laravel-role
+slug: /laravel-role
+title: Role 验证
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ### Web Role 验证
 
 ```

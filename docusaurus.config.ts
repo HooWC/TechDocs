@@ -8,7 +8,7 @@ const beian = '闽ICP备2020017848号-2'
 
 const config: Config = {
   title: 'TechDocs',
-  url: 'https://kuizuo.cn',
+  url: 'https://techdocs-drab.vercel.app/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'Hoo',
@@ -16,7 +16,7 @@ const config: Config = {
   customFields: {
     bio: '道阻且长，行则将至',
     description:
-      '是一个由愧怍创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。',
+      '是一个由Hoo创建的学习平台，主要分享编程开发知识和项目，该网站基于 Docusaurus 构建。',
   },
   themeConfig: {
     image: 'img/og.png',
@@ -49,7 +49,7 @@ const config: Config = {
       hideOnScroll: true,
       items: [
         { label: '博客', position: 'right', to: 'blog' },
-        { type:'docSidebar',sidebarId: 'techSidebar',label: '笔记', position: 'right', to: 'docs/tech' },
+        { label: '笔记', position: 'right', to: 'docs/tech' },
          { label: '项目', position: 'right', to: 'project' },
         { type:'docSidebar',sidebarId: 'interviewSidebar', label: '面试', position: 'right', to: 'docs/interview' },
         { label: '关于', position: 'right', to: 'about' },
@@ -60,6 +60,7 @@ const config: Config = {
             { label: '归档', to: 'blog/archive' },
             { label: '笔记', to: 'docs/skill' },
             { label: '工具推荐', to: 'docs/tools' },
+            { label: '影视记录', to: 'movie' },
           ],
         },
         {

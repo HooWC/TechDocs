@@ -1,3 +1,13 @@
+---
+id: laravel-model
+slug: /laravel-model
+title: Model
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ### 主
 
 ```

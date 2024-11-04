@@ -1,8 +1,18 @@
+---
+id: api-vue
+slug: /api-vue
+title: API 请求
+date: 2024-11-04
+authors: Hoo
+tags: [vue]
+keywords: [vue]
+---
+
 # Vue3 API 发送请求
 
+使用 Axios 获取数据
 
-
-```
+```js
 onMounted(() => {
 	getList()
 })
@@ -13,18 +23,18 @@ const getList = async () => {
 }
 ```
 
+使用 Axios 删除数据
 
-
-```
+```js
 const onDelete = async (id) => {
 	await axios.delete('/del/${id}')
 	getList()
 }
 ```
 
+使用 Axios 获取数据和搜寻数据
 
-
-```
+```js
  onMounted(async() => {
         getInvoices()
     })

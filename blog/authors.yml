@@ -1,17 +1,8 @@
-# Hoo:
-#   name: Hoo
-#   title: 全栈工程师
-#   url: https://github.com/HooWC
-#   image_url: /img/logo.png
-#   email: wengchinbusiness@gmail.com
-#   socials:
-#     github: Hoowc
-
-kuizuo:
-  name: Kuizuo
-  title: 软件工程师
-  url: https://github.com/kuizuo
-  image_url: /img/kuizuo.png
-  email: kuizuo@example.com
+Hoo:
+  name: Hoo
+  title: 全栈工程师
+  url: https://github.com/HooWC
+  image_url: /img/logo.png
+  email: wengchinbusiness@gmail.com
   socials:
-    github: kuizuo
+    github: Hoowc

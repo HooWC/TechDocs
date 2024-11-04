@@ -1,3 +1,13 @@
+---
+id: httpclient-module
+slug: /httpclient-module
+title: Angular HttpClientModule
+date: 2024-11-04
+authors: Hoo
+tags: [angular]
+keywords: [angular]
+---
+
 ## HttpClientModule 
 
 `HttpClientModule` 是 Angular 框架中的一个模块，用于简化和增强与服务器进行 HTTP 通信的功能。它提供了一个可注入的 `HttpClient` 服务，允许开发者轻松发送 HTTP 请求并处理响应。以下是对 `HttpClientModule` 的详细解释：

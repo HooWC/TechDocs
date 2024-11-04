@@ -1,3 +1,13 @@
+---
+id: laravel-seeder
+slug: /laravel-seeder
+title: Seeder
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 # Laravel Seeder 
 
 *Laravel seeder 是创建虚拟用户数据中SQL,可以很好的帮助程序员测试项目*

@@ -1,3 +1,13 @@
+---
+id: laravel-migration
+slug: /laravel-migration
+title: Migration
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ### Migration 设定用法
 
 ```

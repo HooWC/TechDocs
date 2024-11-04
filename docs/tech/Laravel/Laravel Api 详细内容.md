@@ -1,3 +1,13 @@
+---
+id: laravel-api
+slug: /laravel-api
+title: API 学习
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
 ### Laravel Api 写法
 
 ```php

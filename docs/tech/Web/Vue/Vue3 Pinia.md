@@ -1,6 +1,25 @@
+---
+id: pinia-vue
+slug: /pinia-vue
+title: Pinia
+date: 2024-11-04
+authors: Hoo
+tags: [vue]
+keywords: [vue]
+---
+
 # Vue3 Pinia
 
-[Pinia 中文文档]: https://pinia.web3doc.top/introduction.html
+### Vue 3 Pinia 详解
+
+Pinia 是一个用于 Vue.js 应用的状态管理库，它是 Vuex 的替代品，并在 Vue 3 中得到了优化和改进。Pinia 的设计理念是简单、灵活且与 Vue 3 的组合式 API 完美兼容。它不仅提供了强大的状态管理功能，还简化了许多常见的使用场景，使开发者能够更加高效地管理应用状态。以下是对 Pinia 的详细介绍，包括其核心特性、使用方式及优点。
+
+### Pinia 的特点
+
+- **简洁易用**：Pinia 提供了简单易懂的 API，使得开发者可以快速上手并实现复杂的状态管理。
+- **类型支持**：Pinia 原生支持 TypeScript，提供更好的类型推断和开发体验。
+- **模块化**：Pinia 允许将状态拆分为多个 store，每个 store 都可以独立管理其状态和逻辑，易于组织和维护。
+- **与 Vue 3 组合式 API 的兼容性**：Pinia 与 Vue 3 的组合式 API 完美结合，能够与 Vue 的其他特性无缝配合。
 
 ### 安装 `Pinia`
 

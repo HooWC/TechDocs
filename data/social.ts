@@ -22,7 +22,7 @@ const social: Social = {
   github: 'https://github.com/HooWC',
   x: 'https://x.com/Hoo_Code',
   //juejin: 'https://juejin.cn/user/1565318510545901',
-  wx: 'https://i.postimg.cc/Px0BbsYB/wx.jpg',
+  wx: 'https://github.com/HoowcBN/techdocs_pic/blob/main/wx.jpg?raw=true',
   linkedin:'https://www.linkedin.com/in/hoo-weng-chin-120090201/',
   // qq: 'https://img.kuizuo.cn/qq.png',
   // zhihu: 'https://www.zhihu.com/people/kuizuo',

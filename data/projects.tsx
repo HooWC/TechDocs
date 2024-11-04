@@ -205,7 +205,7 @@ export type Tag = {
   color: string
 }
 
-export type TagType = 'favorite' | 'opensource' | 'product' | 'design' | 'large' | 'personal' | 'private' | 'public'
+export type TagType = 'favorite' | 'opensource' | 'product' | 'design' | 'large' | 'personal' | 'private' | 'public' |'horror' | 'funny' | 'bloody' | 'fighting'
 
 export type ProjectType = 'web' | 'app' | 'commerce' | 'personal' | 'toy' | 'other' | 'mobile'
 
@@ -270,6 +270,26 @@ export const Tags: Record<TagType, Tag> = {
     description: '面向公众的项目',
     color: '#33c7ff',
   },
+  horror: {
+    label: '恐怖',
+    description: '恐怖的电影!',
+    color: '#b01d00',
+  },
+  funny: {
+    label: '搞笑',
+    description: '搞笑的电影!',
+    color: '#dfd545',
+  },
+  bloody: {
+    label: '血腥',
+    description: '血腥的电影!',
+    color: '#a44fb7',
+  },
+  fighting: {
+    label: '战斗',
+    description: '热血的电影!',
+    color: '#8c2f00',
+  }
 }
 
 export const TagList = Object.keys(Tags) as TagType[]
