@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/tech/Node/Node简介.md
 ---
 id: n-intro
 slug: /n-intro
@@ -20,14 +19,3 @@ Node.js 的生态系统支持多种框架和库，如 Express.js、Koa.js 和 Ne
 由于 Node.js 使用 JavaScript 作为主要编程语言，前端开发者可以使用同一种语言进行全栈开发，这降低了技术栈的复杂性，促进了前后端的协作。
 
 总的来说，Node.js 是一个强大的服务器端 JavaScript 运行时环境，通过非阻塞式 I/O 模型和丰富的生态系统，极大地提升了开发者的生产力和应用程序的性能。随着互联网应用的日益复杂和实时性需求的增加，Node.js 正在成为现代网络开发的重要选择。
-=======
----
-id: n-intro
-slug: /n-intro
-title: Node 简介
-date: 2024-11-04
-authors: Hoo
-tags: [node]
-keywords: [node]
----
->>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8:docs/tech/node/Node简介.md

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 id: ts-intro
 slug: /ts-intro
@@ -20,14 +19,4 @@ TypeScript 的另一个重要特性是与现有的 JavaScript 代码兼容。开
 通过使用 TypeScript，开发者可以利用许多现代开发工具的支持，例如智能感知、自动补全和重构功能。这些工具能够提高开发效率，减少开发时间和成本。此外，TypeScript 的编译器能够生成干净且高效的 JavaScript 代码，确保在浏览器或 Node.js 环境中正常运行。
 
 总的来说，TypeScript 通过引入强类型系统和现代语言特性，改善了 JavaScript 的开发体验。它特别适合大型应用程序和团队协作，因其能够提高代码的可读性、可维护性和可扩展性。随着越来越多的项目采用 TypeScript，了解和掌握这门语言已成为现代前端开发的重要技能。
-=======
----
-id: ts-intro
-slug: /ts-intro
-title: TypeScript 简介
-date: 2024-11-04
-authors: Hoo
-tags: [typescript]
-keywords: [typescript]
----
->>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8
+

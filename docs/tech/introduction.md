@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 id: introduction
 slug: /tech
@@ -30,40 +29,4 @@ title: 笔记
 - HTTP (Restful API)
 - Git
 - Laravel
-=======
----
-id: introduction
-slug: /tech
-title: 技术笔记
-keywords:
-  - 前端
-  - 后端
-  - Vue
-  - React
-  - JavaScript
-  - Typescript
-  - 逆向
-  - HTTP
-  - 算法
----
 
-:::success 前文提醒
-
-
-
-::: 
-
-
-
-本页面为个人学习中所涉及相关技术栈的笔记汇总，包含但不限于
-
-- Web （前端 / 后端）
-- Vue
-- React
-- JavaScript & JQuery & TypeScript
-- ASP .NET MVC
-- Java Spring MVC
-- Node
-- 安卓
-- HTTP
->>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8

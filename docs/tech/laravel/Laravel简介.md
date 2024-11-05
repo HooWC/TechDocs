@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/tech/Laravel/Laravel简介.md
 ---
 id: laravel-intro
 slug: /laravel-intro
@@ -22,14 +21,4 @@ Laravel 提供了一系列强大的功能，包括但不限于：
 7. **丰富的生态系统**：Laravel 拥有丰富的生态系统，提供了许多工具和包，进一步增强了框架的功能。例如，Laravel Mix 提供了简单的资产编译工具，Laravel Cashier 处理订阅计费，Laravel Horizon 管理队列等。
 
 Laravel 的社区也非常活跃，开发者可以通过官方文档、论坛和社交媒体获得支持和分享经验。随着 Laravel 的发展，它已成为 PHP 开发领域中的一个重要选择，广泛应用于企业级应用和初创项目。
-=======
----
-id: laravel-intro
-slug: /laravel-intro
-title: Laravel 简介
-date: 2024-11-04
-authors: Hoo
-tags: [laravel]
-keywords: [laravel]
----
->>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8:docs/tech/laravel/Laravel简介.md
+

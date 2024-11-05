@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 id: spring-intro
 slug: /spring-intro
@@ -19,14 +18,4 @@ Spring MVC 的主要特点包括：
 4. **集成 RESTful API**：Spring MVC 也非常适合构建 RESTful API，支持 JSON 和 XML 格式的数据交换。通过使用 `@RestController` 注解，可以简化 RESTful 服务的创建。
 5. **数据绑定和验证**：Spring MVC 提供了强大的数据绑定和验证功能，开发者可以轻松地将请求参数绑定到 Java 对象，并进行验证和错误处理。
 6. **支持国际化和多语言**：Spring MVC 支持国际化功能，使得开发者可以轻松构建多语言应用程序。通过配置资源文件，可以根据用户的区域和语言提供不同的内容。
-=======
----
-id: spring-intro
-slug: /spring-intro
-title: Spring MVC 简介
-date: 2024-11-04
-authors: Hoo
-tags: [java]
-keywords: [java]
----
->>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8
+

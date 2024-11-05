@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/tech/Ajax/ajax简介.md
 ---
 id: ajax-intro
 slug: /ajax-intro
@@ -20,13 +19,3 @@ Ajax 的核心特点包括：
 5. **与 RESTful API 的集成**：Ajax 常用于与 RESTful API 进行交互，使得客户端可以轻松地从服务器请求和提交数据。通过使用 Ajax，开发者可以构建动态的单页应用（SPA）和移动应用。
 6. **提高应用性能**：通过仅请求和更新必要的数据，Ajax 可以显著提高 Web 应用的性能，减少服务器负载，并提供更快速的响应。
 =======
----
-id: ajax-intro
-slug: /ajax-intro
-title: Ajax 简介
-date: 2024-11-04
-authors: Hoo
-tags: [ajax]
-keywords: [ajax]
----
->>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8:docs/tech/ajax/ajax简介.md

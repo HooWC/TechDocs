@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/tech/Git/git简介.md
 ---
 id: git-intro
 slug: /git-intro
@@ -20,14 +19,3 @@ Git 的核心特点包括：
 5. **支持多种工作流**：Git 提供了灵活的工作流支持，开发者可以根据项目的需求选择不同的开发模式，如 Git Flow、GitHub Flow 等。这使得 Git 适用于各种规模的项目和团队。
 6. **与 GitHub 和 GitLab 的集成**：Git 与各种代码托管平台（如 GitHub、GitLab 和 Bitbucket）紧密集成，使得团队协作、代码审查和持续集成变得更加便利。
 7. **广泛的社区支持**：Git 拥有活跃的社区，开发者可以通过文档、教程和在线论坛获取支持，促进了其快速发展和普及。
-=======
----
-id: git-intro
-slug: /git-intro
-title: Git 简介
-date: 2024-11-04
-authors: Hoo
-tags: [git]
-keywords: [git]
----
->>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8:docs/tech/git/git简介.md
