@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 id: xamarin-intro
 slug: /xamarin-intro
@@ -17,3 +18,14 @@ Xamarin.Forms 是一种高级的 UI 框架，允许开发者使用 XAML（Extens
 Xamarin.Native 则允许开发者分别为 iOS 和 Android 平台编写原生 UI 代码，同时共享大部分业务逻辑代码。这种方式使得开发者可以利用每个平台的独特功能和优化，从而实现更好的性能和用户体验。
 
 Xamarin 与 Visual Studio 集成紧密，提供强大的开发工具和调试功能，使得开发过程更加顺畅。通过使用 Azure 和其他 Microsoft 服务，Xamarin 开发者还可以轻松实现云集成和后端服务。
+=======
+---
+id: xamarin-intro
+slug: /xamarin-intro
+title: Xamarin 简介
+date: 2024-11-04
+authors: Hoo
+tags: [xamarin]
+keywords: [xamarin]
+---
+>>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8

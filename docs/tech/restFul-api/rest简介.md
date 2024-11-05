@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 id: api-intro
 slug: /api-intro
@@ -22,3 +23,14 @@ RESTful API 的核心特点包括：
 4. **支持多种数据格式**：虽然 RESTful API 通常使用 JSON 格式进行数据交换，但它也支持 XML、HTML 和纯文本等多种格式。这使得不同平台和客户端能够方便地处理数据。
 5. **灵活性和可扩展性**：RESTful API 具有良好的扩展性，能够轻松支持多种客户端和设备。由于其无状态特性，可以根据需要横向扩展服务器，以处理更多的请求。
 6. **良好的性能**：由于 RESTful API 使用简单的 HTTP 协议，并且允许缓存响应数据，从而提高了应用的性能和响应速度。
+=======
+---
+id: api-intro
+slug: /api-intro
+title: RestFul API 简介
+date: 2024-11-04
+authors: Hoo
+tags: [rest-api]
+keywords: [rest-api]
+---
+>>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8

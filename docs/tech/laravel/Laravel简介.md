@@ -1,0 +1,35 @@
+<<<<<<< HEAD:docs/tech/Laravel/Laravel简介.md
+---
+id: laravel-intro
+slug: /laravel-intro
+title: Laravel 简介
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+
+Laravel 是一款开源的 PHP Web 应用框架，由 Taylor Otwell 于 2011 年推出。它以简洁的语法和强大的功能受到开发者的广泛欢迎。Laravel 旨在使 Web 应用程序的开发更加简单、高效，并提供优雅的开发体验。其设计理念强调开发者的效率和代码的可维护性。
+
+Laravel 提供了一系列强大的功能，包括但不限于：
+
+1. **优雅的路由**：Laravel 的路由系统非常灵活，允许开发者轻松定义应用程序的 URL 路由。通过简单的语法，开发者可以快速配置应用程序的路由，并支持 RESTful 风格的资源路由。
+2. **强大的 ORM（Eloquent）**：Laravel 的 Eloquent ORM 提供了直观的 ActiveRecord 实现，简化了与数据库的交互。开发者可以通过简单的模型类与数据库表进行交互，而无需编写复杂的 SQL 查询。
+3. **中间件**：Laravel 支持中间件，可以方便地处理 HTTP 请求的生命周期。通过中间件，开发者可以添加认证、日志记录、请求过滤等功能，增强应用的安全性和灵活性。
+4. **认证和授权**：Laravel 提供了内置的用户认证和授权机制，开发者可以轻松实现用户注册、登录、密码重置和角色管理等功能。
+5. **任务调度**：Laravel 的命令调度功能允许开发者轻松定义和调度任务。通过简单的表达式，开发者可以定期执行任务，无需依赖外部的 Cron 作业。
+6. **测试驱动开发**：Laravel 支持 PHPUnit 测试框架，使得编写单元测试和功能测试变得简单。开发者可以在开发过程中进行测试，确保代码的质量和稳定性。
+7. **丰富的生态系统**：Laravel 拥有丰富的生态系统，提供了许多工具和包，进一步增强了框架的功能。例如，Laravel Mix 提供了简单的资产编译工具，Laravel Cashier 处理订阅计费，Laravel Horizon 管理队列等。
+
+Laravel 的社区也非常活跃，开发者可以通过官方文档、论坛和社交媒体获得支持和分享经验。随着 Laravel 的发展，它已成为 PHP 开发领域中的一个重要选择，广泛应用于企业级应用和初创项目。
+=======
+---
+id: laravel-intro
+slug: /laravel-intro
+title: Laravel 简介
+date: 2024-11-04
+authors: Hoo
+tags: [laravel]
+keywords: [laravel]
+---
+>>>>>>> d75f00fc1ea1253c1f56f4615d7fcfbc00d453b8:docs/tech/laravel/Laravel简介.md
