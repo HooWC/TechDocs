@@ -1,5 +1,5 @@
 <h2 align="center">
-愧怍的个人博客
+Learning Platform
 </h2>
 <p align="center">
 <a href="https://vercel.com/new/clone?repository-url=https://github.com/HooWC/TechDocs/tree/main&project-name=blog&repo-name=blog" rel="nofollow"><img src="https://vercel.com/button"></a>
@@ -7,7 +7,7 @@
 <a href="https://stackblitz.com/github/HooWC/TechDocs" rel="nofollow"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"></a>
 </p>
 
-## 👋 介绍
+## 👋 Introduce
 
 在这里我会分享各类技术栈所遇到问题与解决方案，带你了解最新的技术栈以及实际开发中如何应用，并希望我的开发经历对你有所启发。
 
