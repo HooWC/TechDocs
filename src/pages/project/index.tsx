@@ -17,7 +17,7 @@ const TITLE = translate({
 })
 const DESCRIPTION = translate({
   id: 'theme.project.description',
-  message: '学而无用，不如学而用之。这里是我在技术领域中努力实践和应用的最佳证明。',
+  message: '学习的真正意义在于能够在实践中运用所学知识，而不是仅仅停留在理论之中。每一段学习旅程都是为应用打下坚实的基础，这里所展示的正是我在技术领域中不断努力实践的成果。我深信，唯有将知识转化为实际操作的能力，才能真正发挥出学习的价值。',
 })
 
 // const GITHUB_URL = 'https://github.com/kuizuo'

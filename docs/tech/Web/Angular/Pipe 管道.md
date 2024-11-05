@@ -10,9 +10,13 @@ keywords: [angular]
 
 # Angular Pipe 
 
+:::success 前文提醒
+
 在 Angular 中，`Pipe` 是一种特殊的工具，可以对数据进行格式化或转换，通常用于模板中。Angular 提供了一些内置的管道（如 `date`、`uppercase`、`currency` 等），你还可以创建自定义的管道来实现特定的数据转换需求。
 
 以下是如何使用 Angular 的内置管道，以及如何创建和使用自定义管道的步骤。
+
+::: 
 
 ------
 

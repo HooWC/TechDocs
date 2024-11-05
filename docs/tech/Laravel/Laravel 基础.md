@@ -12,13 +12,13 @@ keywords: [laravel]
 
 ### 🌂 初步使用Laravel，需安装以下
 
-[Node.js 安装]: https://nodejs.org/en/download/
-[PHPStorm 安装]: https://www.jetbrains.com/phpstorm/download/#section=windows
-[PHPStorm 免费激活码]: https://www.ajihuo.com/
-[Postman 安装]: https://www.postman.com/downloads/
-[xampp 安装]: https://www.apachefriends.org/download.html
-[Laragon 安装]: https://laragon.org/download/index.html
-[Laragon 安装步骤或者解决方法]: https://www.kreaweb.be/laragon-add-phpmyadmin/
+[**Node.js 安装**](https://nodejs.org/en/download/)
+[**PHPStorm 安装**](https://www.jetbrains.com/phpstorm/download/#section=windows)
+[**PHPStorm 免费激活码**](https://www.ajihuo.com/)
+[**Postman 安装**](https://www.postman.com/downloads/)
+[**xampp 安装**](https://www.apachefriends.org/download.html)
+[**Laragon 安装**](https://laragon.org/download/index.html)
+[**Laragon 安装步骤或者解决方法**](https://www.kreaweb.be/laragon-add-phpmyadmin/)
 
 ### Laravel 安装
 

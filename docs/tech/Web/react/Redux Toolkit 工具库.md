@@ -13,10 +13,9 @@ keywords: [react]
 类似Vue的Pinia
 
 [**Redux Toolkit**](https://redux-toolkit.js.org/) (也称为 **"RTK"** ) 是我们官方推荐的编写 Redux 逻辑的方法。
-
-[Redux Toolkit 中文官网]: https://cn.redux-toolkit.js.org/introduction/getting-started
-[视频教学 Redux Toolkit]: https://www.bilibili.com/video/BV1ZB4y1Z7o8?p=38&amp;vd_source=98bed7c6ffbd4c5daae519aceb54cc51
-[视频教学 美国]: https://www.bilibili.com/video/BV1qK411D7Lo/
+[**Redux Toolkit 中文官网**](https://cn.redux-toolkit.js.org/introduction/getting-started)
+[**视频教学 Redux Toolkit**](https://www.bilibili.com/video/BV1ZB4y1Z7o8?p=38&amp;vd_source=98bed7c6ffbd4c5daae519aceb54cc51)
+[**视频教学 美国**](https://www.bilibili.com/video/BV1qK411D7Lo/)
 
 
 

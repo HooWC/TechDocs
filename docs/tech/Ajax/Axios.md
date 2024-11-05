@@ -91,7 +91,7 @@ fetchDataWithHeaders();
 #### 4.1 创建（Create）
 
 ```js
-javascript复制代码import axios from 'axios';
+import axios from 'axios';
 
 const createPost = async () => {
     try {
@@ -112,7 +112,7 @@ createPost();
 #### 4.2 读取（Read）
 
 ```js
-javascript复制代码import axios from 'axios';
+import axios from 'axios';
 
 const fetchPosts = async () => {
     try {
@@ -129,7 +129,7 @@ fetchPosts();
 #### 4.3 更新（Update）
 
 ```js
-javascript复制代码import axios from 'axios';
+import axios from 'axios';
 
 const updatePost = async (postId) => {
     try {
@@ -151,7 +151,7 @@ updatePost(1);
 #### 4.4 删除（Delete）
 
 ```js
-javascript复制代码import axios from 'axios';
+import axios from 'axios';
 
 const deletePost = async (postId) => {
     try {

@@ -13,7 +13,7 @@
   },
   "link.item.label.博客": {
     "message": "Blogs",
-    "description": "The label of footer link with label=博客 linking to tags"
+    "description": "The label of footer link with label=博客 linking to blog"
   },
   "link.item.label.标签": {
     "message": "Tags",
@@ -21,7 +21,7 @@
   },
   "link.item.label.归档": {
     "message": "Archive",
-    "description": "The label of footer link with label=归档 linking to archive"
+    "description": "The label of footer link with label=归档 linking to blog/archive"
   },
   "link.item.label.技术笔记": {
     "message": "Notes",
@@ -41,7 +41,7 @@
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/kuizuo"
+    "description": "The label of footer link with label=GitHub linking to https://github.com/HooWC"
   },
   "link.item.label.掘金": {
     "message": "Juejin",
@@ -62,5 +62,49 @@
   "copyright": {
     "message": "<p><a href=\"http://beian.miit.gov.cn/\" >闽ICP备2020017848号-2</a></p><p>Copyright © 2020 – PRESENT kuizuo Built with Docusaurus.</p>",
     "description": "The footer copyright"
+  },
+  "link.title.网站": {
+    "message": "Website",
+    "description": "The title of the footer links column with title=网站 in the footer"
+  },
+  "link.item.label.笔记": {
+    "message": "Notes",
+    "description": "The label of footer link with label=笔记 linking to docs/tech"
+  },
+  "link.item.label.项目": {
+    "message": "Project",
+    "description": "The label of footer link with label=项目 linking to project"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://discordapp.com/users/Hoo#0234"
+  },
+  "link.item.label.Youtube": {
+    "message": "Youtube",
+    "description": "The label of footer link with label=Youtube linking to https://x.com/Hoo_Code"
+  },
+  "link.item.label.Converter": {
+    "message": "Converter",
+    "description": "The label of footer link with label=Converter linking to https://converter-alpha-orcin.vercel.app/"
+  },
+  "link.item.label.CV Web": {
+    "message": "CV Web",
+    "description": "The label of footer link with label=CV Web linking to https://hoo-cv-website.vercel.app/"
+  },
+  "link.item.label.设计文档": {
+    "message": "Design",
+    "description": "The label of footer link with label=设计文档 linking to docs/design"
+  },
+  "link.item.label.用户手册": {
+    "message": "User Manual",
+    "description": "The label of footer link with label=用户手册 linking to docs/tools"
+  },
+  "link.item.label.影视记录": {
+    "message": "Film Records",
+    "description": "The label of footer link with label=影视记录 linking to movie"
+  },
+  "link.item.label.版本发布说明": {
+    "message": "Imprint",
+    "description": "The label of footer link with label=版本发布说明 linking to docs/version"
   }
 }

@@ -1,16 +1,18 @@
+import { translate } from '@docusaurus/Translate'
+
 export const projects: Project[] = [
   {
     title: 'TechDocs',
-    description: '基于 Docusaurus 静态网站生成器实现学习平台',
+    description: translate({ id: 'projects.work.techdocs', message: '基于 Docusaurus 静态网站生成器实现学习平台' }),
     preview: '/img/project/techdocs.png',
-    website: 'techdocs-drab.vercel.app',
+    website: 'https://techdocs-hazel.vercel.app/',
     source: 'https://github.com/HooWC/TechDocs.git',
     tags: ['opensource', 'design', 'favorite','public'],
     type: 'web',
   },
   {
     title: 'CV Web',
-    description: '基于 HTML/CSS/JavaScript 开发的个人简历网站',
+    description: translate({ id: 'projects.work.cv', message: '基于 HTML/CSS/JavaScript 开发的个人简历网站' }),
     preview: '/img/project/cv.png',
     website: 'https://hoo-cv-website.vercel.app/',
     source: 'https://github.com/HooWC/CV_Web.git',
@@ -19,7 +21,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Webp To Png Conterver',
-    description: '能够将 WEBP 格式转换 PNG 图片的网站',
+    description: translate({ id: 'projects.work.conterver', message: '能够将 WEBP 格式转换 PNG 图片的网站' }),
     preview: '/img/project/Converter.png',
     website: 'https://converter-alpha-orcin.vercel.app/',
     source: 'https://github.com/HooWC/Webp_to_Png.git',
@@ -29,7 +31,7 @@ export const projects: Project[] = [
   // personal
   {
     title: 'Muyi Music',
-    description: '自己开发和设计的个人音乐在线网站',
+    description: translate({ id: 'projects.work.muyimusic', message: '自己开发和设计的个人音乐在线网站' }),
     preview: '/img/project/Muyi Music.png',
     website: 'https://muyi-music.vercel.app/',
     source: 'https://github.com/HooWC/Muyi_Music.git',
@@ -38,7 +40,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Muyi Lyrics',
-    description: '保存自己写的歌词网站',
+    description: translate({ id: 'projects.work.muyilyrics', message: '保存自己写的歌词网站' }),
     preview: '/img/project/Lyrics.png',
     website: 'https://lyrics-web-alpha.vercel.app/',
     source: 'https://github.com/HooWC/Lyrics_Web.git',
@@ -48,7 +50,7 @@ export const projects: Project[] = [
   // mobile
   {
     title: 'Motian Novel',
-    description: 'Xamarin + Rest API 开发的小说 APP',
+    description: translate({ id: 'projects.work.motian', message: 'Xamarin + Rest API 开发的小说 APP' }),
     preview: '/img/project/novels.png',
     website: 'https://github.com/HooWC/Motian_Novel.git',
     source: 'https://github.com/HooWC/Motian_Novel.git',
@@ -57,7 +59,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Sakura Cinama',
-    description: 'Xamarin + Rest API 开发的在线购买电影票APP，也是在学校最后的作品',
+    description: translate({ id: 'projects.work.sakura', message: 'Xamarin + Rest API 开发的在线购买电影票APP，也是在学校最后的作品' }),
     preview: '/img/project/Sakura.png',
     website: 'https://github.com/HooWC/Sakura_Cinema.git',
     source: 'https://github.com/HooWC/Sakura_Cinema.git',
@@ -66,7 +68,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Hoo-Youtube Music',
-    description: 'Xamarin + Firebase 模拟开发的 Youtube Music APP',
+    description: translate({ id: 'projects.work.youtube', message: 'Xamarin + Firebase 模拟开发的 Youtube Music APP' }),
     preview: '/img/project/YTMusic.png',
     website: '#',
     tags: ['opensource','large','design','private'],
@@ -75,7 +77,7 @@ export const projects: Project[] = [
   // other
   {
     title: 'TOTP',
-    description: 'Laravel 开发的两步验证功能',
+    description: translate({ id: 'projects.work.totp', message: 'Laravel 开发的两步验证功能' }),
     preview: '/img/project/totp.png',
     website: 'https://github.com/HooWC/TOTP.git',
     source: 'https://github.com/HooWC/TOTP.git',
@@ -84,7 +86,7 @@ export const projects: Project[] = [
   },
   {
     title: 'SAML IDP',
-    description: 'Laravel + SAML 实现 IDP 用户数据存储功能和提供 Metadata 给 SP 项目',
+    description: translate({ id: 'projects.work.samlidp', message: 'Laravel + SAML 实现 IDP 用户数据存储功能和提供 Metadata 给 SP 项目' }),
     preview: '/img/project/samlidp.png',
     website: 'https://github.com/HooWC/SAML_IDP.git',
     source: 'https://github.com/HooWC/SAML_IDP.git',
@@ -93,7 +95,7 @@ export const projects: Project[] = [
   },
   {
     title: 'SAML SP',
-    description: 'Laravel + SAML 实现 SSO 安全登入和多个 SP 项目自动登入和登出功能',
+    description: translate({ id: 'projects.work.samlsp', message: 'Laravel + SAML 实现 SSO 安全登入和多个 SP 项目自动登入和登出功能' }),
     preview: '/img/project/samlsp.png',
     website: 'https://github.com/HooWC/SAML_SP.git',
     source: 'https://github.com/HooWC/SAML_SP.git',
@@ -102,7 +104,7 @@ export const projects: Project[] = [
   },
   {
     title: 'IT Assets Management',
-    description: 'ASP .NET MVC + Rest API 开发员工在线租借公司产品，以及 Admin 实现 ERP 界面功能',
+    description: translate({ id: 'projects.work.it', message: 'ASP .NET MVC + Rest API 开发员工在线租借公司产品，以及 Admin 实现 ERP 界面功能' }),
     preview: '/img/project/ITAsset.png',
     website: 'https://github.com/HooWC/IT_Assets.git',
     source: 'https://github.com/HooWC/IT_Assets.git',
@@ -111,7 +113,7 @@ export const projects: Project[] = [
   },
   {
     title: 'CharNest',
-    description: '使用 Node + MongoDB Atlas 开发的在线聊天功能',
+    description: translate({ id: 'projects.work.chart', message: '使用 Node + MongoDB Atlas 开发的在线聊天功能' }),
     preview: '/img/project/chat.png',
     website: 'https://github.com/HooWC/ChatNest.git',
     source: 'https://github.com/HooWC/ChatNest.git',
@@ -120,7 +122,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Meybank Online Banking',
-    description: 'Java Dynamic Web + Rest API 模拟 Public Bank 开发的银行网站',
+    description: translate({ id: 'projects.work.meybank', message: 'Java Dynamic Web + Rest API 模拟 Public Bank 开发的银行网站' }),
     preview: '/img/project/Meybank.png',
     website: 'https://github.com/HooWC/MeyBank.git',
     source: 'https://github.com/HooWC/MeyBank.git',
@@ -129,7 +131,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Hoo-Malaysia Netflix',
-    description: 'ASP .NET MVC + Rest API 开发在线购买电影的网站',
+    description: translate({ id: 'projects.work.netflix', message: 'ASP .NET MVC + Rest API 开发在线购买电影的网站' }),
     preview: '/img/project/Netflix.png',
     website: 'https://github.com/HooWC/Netflix_Student.git',
     source: 'https://github.com/HooWC/Netflix_Student.git',
@@ -138,7 +140,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Alice Music',
-    description: 'ASP .NET MVC + Rest API 开发在线观看的音乐网站',
+    description: translate({ id: 'projects.work.alice', message: 'ASP .NET MVC + Rest API 开发在线观看的音乐网站' }),
     preview: '/img/project/Alice.png',
     website: 'https://github.com/HooWC/Alice_Music.git',
     source: 'https://github.com/HooWC/Alice_Music.git',
@@ -147,7 +149,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Nana Shopee',
-    description: 'ASP .NET MVC + MSSQL 开发在线网购的网站，也是自己在学校第一个网站',
+    description: translate({ id: 'projects.work.nana', message: 'ASP .NET MVC + MSSQL 开发在线网购的网站，也是自己在学校第一个网站' }),
     preview: '/img/project/Nana.png',
     website: 'https://github.com/HooWC/Nana_Shopee.git',
     source: 'https://github.com/HooWC/Nana_Shopee.git',
@@ -156,7 +158,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Ganfang Food',
-    description: 'ASP .NET MVC + MSSQL 开发在线订购食物的网站',
+    description: translate({ id: 'projects.work.ganfang', message: 'ASP .NET MVC + MSSQL 开发在线订购食物的网站' }),
     preview: '/img/project/Ganfang.png',
     website: 'https://github.com/HooWC/Ganfang_Food.git',
     source: 'https://github.com/HooWC/Ganfang_Food.git',
@@ -165,7 +167,7 @@ export const projects: Project[] = [
   },  
   {
     title: 'Memory Forum',
-    description: 'ASP .NET MVC + Rest API 开发大型论坛网站，里面包含88个以上话题，学校论文的作品',
+    description: translate({ id: 'projects.work.memory', message: 'ASP .NET MVC + Rest API 开发大型论坛网站，里面包含88个以上话题，学校论文的作品' }),
     preview: '/img/project/Forum.png',
     website: 'https://github.com/HooWC/Memory_Forum.git',
     source: 'https://github.com/HooWC/Memory_Forum.git',
@@ -174,7 +176,7 @@ export const projects: Project[] = [
   },  
   {
     title: 'Beer Quest',
-    description: 'React Native 为啤酒APP设计的首页',
+    description: translate({ id: 'projects.work.beer', message: 'React Native 为啤酒APP设计的首页' }),
     preview: '/img/project/BQ.png',
     website: 'https://github.com/HooWC/Bear.git',
     source: 'https://github.com/HooWC/Bear.git',
@@ -183,15 +185,15 @@ export const projects: Project[] = [
   },  
    {
     title: 'Picture Shadows',
-    description: '使用 CSS 将图片模糊漆黑效果的小项目',
+    description: translate({ id: 'projects.work.pictureshadows', message: '使用 CSS 将图片模糊漆黑效果的小项目' }),
     website: 'https://github.com/HooWC/Picture_Shadows.git',
     source: 'https://github.com/HooWC/Picture_Shadows.git',
     tags: ['opensource','design','private'],
     type: 'other',
   },  
   {
-    title: 'ATM System （终端）',
-    description: 'Java 开发模拟 ATM 功能',
+    title: 'ATM System',
+    description: translate({ id: 'projects.work.atmsystem', message: 'Java 开发模拟 ATM 功能' }),
     website: 'https://github.com/HooWC/ATM_System.git',
     source: 'https://github.com/HooWC/ATM_System.git',
     tags: ['opensource', 'private'],
@@ -205,9 +207,9 @@ export type Tag = {
   color: string
 }
 
-export type TagType = 'favorite' | 'opensource' | 'product' | 'design' | 'large' | 'personal' | 'private' | 'public' |'horror' | 'funny' | 'bloody' | 'fighting'
+export type TagType = 'favorite' | 'opensource' | 'product' | 'design' | 'large' | 'personal' | 'private' | 'public' |'horror' | 'funny' | 'bloody' | 'fighting' | 'boring' | 'thriller'
 
-export type ProjectType = 'web' | 'app' | 'commerce' | 'personal' | 'toy' | 'other' | 'mobile'
+export type ProjectType = 'web' | 'app' | 'commerce' | 'personal' | 'toy' | 'other' | 'mobile' | 'movie' | 'anime' | 'tv'
 
 export const projectTypeMap = {
   web: '🖥️ 网站',
@@ -217,6 +219,9 @@ export const projectTypeMap = {
   toy: '🔫 玩具',
   mobile: '📱 安卓',
   other: '🗃️ 其他',
+  movie: '🖥️ 电影',
+  anime: '🖥️ 动漫',
+  tv: '🖥️ 电视剧',
 }
 
 export type Project = {
@@ -231,62 +236,72 @@ export type Project = {
 
 export const Tags: Record<TagType, Tag> = {
   favorite: {
-    label: '喜爱',
+    label: translate({id: 'projects.tags.favorite', message:'喜爱'}),
     description: '我最喜欢的网站，一定要去看看!',
     color: '#e9669e',
   },
   opensource: {
-    label: '开源',
+    label: translate({id: 'projects.tags.opensource', message:'开源'}),
     description: '开源项目可以提供灵感!',
     color: '#39ca30',
   },
   product: {
-    label: '产品',
+    label: translate({id: 'projects.tags.product', message:'产品'}),
     description: '与产品相关的项目!',
     color: '#dfd545',
   },
   design: {
-    label: '设计',
+    label: translate({id: 'projects.tags.design', message:'设计'}),
     description: '设计漂亮的网站!',
     color: '#a44fb7',
   },
   large: {
-    label: '大型',
+    label: translate({id: 'projects.tags.large', message:'大型'}),
     description: '大型项目，原多于平均数的页面',
     color: '#8c2f00',
   },
   personal: {
-    label: '个人',
+    label: translate({id: 'projects.tags.personal', message:'个人'}),
     description: '个人项目',
     color: '#12affa',
   },
   private: {
-    label: '非公共',
+    label: translate({id: 'projects.tags.private', message:'非公共'}),
     description: '仅限内部访问的项目',
     color: '#ff5733',
   },
   public: {
-    label: '公共',
+    label: translate({id: 'projects.tags.public', message:'公共'}),
     description: '面向公众的项目',
     color: '#33c7ff',
   },
   horror: {
-    label: '恐怖',
+    label: translate({id: 'projects.tags.horror', message:'恐怖'}),
     description: '恐怖的电影!',
     color: '#b01d00',
   },
   funny: {
-    label: '搞笑',
+    label: translate({id: 'projects.tags.funny', message:'搞笑'}),
     description: '搞笑的电影!',
     color: '#dfd545',
   },
   bloody: {
-    label: '血腥',
+    label: translate({id: 'projects.tags.bloody', message:'血腥'}),
     description: '血腥的电影!',
     color: '#a44fb7',
   },
   fighting: {
-    label: '战斗',
+    label: translate({id: 'projects.tags.fighting', message:'热血'}),
+    description: '热血的电影!',
+    color: '#8c2f00',
+  },
+  boring: {
+    label: translate({id: 'projects.tags.boring', message:'无聊'}),
+    description: '血腥的电影!',
+    color: '#a44fb7',
+  },
+  thriller: {
+    label: translate({id: 'projects.tags.thriller', message:'惊悚'}),
     description: '热血的电影!',
     color: '#8c2f00',
   }

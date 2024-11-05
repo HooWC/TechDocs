@@ -8,6 +8,8 @@ tags: [laravel]
 keywords: [laravel]
 ---
 
+
+
 ## Laravel 高级进阶版
 
 
@@ -1834,8 +1836,8 @@ class AppServiceProvider extends ServiceProvider
 
 你可以通过创建或删除用户来测试观察者。打开 Laravel Tinker 或在控制器中执行以下代码来观察效果：
 
-```
-php复制代码// 创建用户
+```js
+// 创建用户
 $user = \App\Models\User::create([
     'name' => 'John Doe',
     'email' => 'johndoe@example.com',
@@ -1854,8 +1856,8 @@ $user->delete();
 
 除了创建和删除，观察者还可以监听其他事件，比如 `updated`、`saving`、`restoring` 等。你可以根据需要在 `UserObserver` 中定义相应方法：
 
-```
-php复制代码public function updated(User $user)
+```js
+public function updated(User $user)
 {
     echo "User updated with ID: " . $user->id;
 }
@@ -2388,7 +2390,7 @@ class AuthController extends Controller
 在路由文件中使用 `middleware('auth:sanctum')` 保护需要身份验证的路由。例如，保护一个获取用户信息的路由：
 
 ```php
-php复制代码use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
@@ -2433,6 +2435,835 @@ $token->delete();
 
 
 
+### ☕   定义模型关系
+
+在 Laravel 中，如果你想要在一个模型中定义与另一个模型的关系，并通过 `user_id` 字段连接这两个模型，通常会使用 `belongsTo` 关系。以下是详细的代码和步骤，假设我们有 `User` 模型和 `Post` 模型，`Post` 模型中的 `user_id` 字段指向 `User` 模型。
+
+### 步骤 1: 定义模型关系
+
+#### 1.1. User 模型
+
+在 `User` 模型中定义与 `Post` 的关系：
+
+```php
+// app/Models/User.php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    use HasFactory;
+
+    // 定义与 Post 模型的关系
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+}
+```
+
+#### 1.2. Post 模型
+
+在 `Post` 模型中定义与 `User` 的关系：
+
+```php
+// app/Models/Post.php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory;
+
+    // 定义与 User 模型的关系
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+```
+
+### 步骤 2: 创建数据库迁移
+
+如果你还没有创建 `posts` 表，你可以通过迁移来创建它。运行以下命令生成迁移文件：
+
+```
+php artisan make:migration create_posts_table
+```
+
+然后在生成的迁移文件中，定义 `posts` 表的结构：
+
+```php
+// database/migrations/xxxx_xx_xx_xxxxxx_create_posts_table.php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreatePostsTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // 添加 user_id 字段
+            $table->string('title');
+            $table->text('content');
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('posts');
+    }
+}
+```
+
+### 步骤 3: 运行迁移
+
+运行迁移以创建 `posts` 表：
+
+```
+php artisan migrate
+```
+
+### 步骤 4: 使用关系
+
+现在你可以使用定义的关系来获取用户的帖子或获取帖子的用户。
+
+#### 4.1. 获取用户的所有帖子
+
+```php
+use App\Models\User;
+
+$user = User::find(1); // 获取 ID 为 1 的用户
+$posts = $user->posts; // 获取该用户的所有帖子
+
+foreach ($posts as $post) {
+    echo $post->title; // 输出每个帖子的标题
+}
+```
+
+#### 4.2. 获取帖子的用户
+
+```php
+use App\Models\Post;
+
+$post = Post::find(1); // 获取 ID 为 1 的帖子
+$user = $post->user; // 获取该帖子的用户
+
+echo $user->name; // 输出帖子的用户名称
+```
+
+### 总结
+
+通过以上步骤，你可以在 Laravel 中定义 `User` 和 `Post` 之间的关系，利用 `belongsTo` 和 `hasMany` 方法轻松地进行数据库操作。这使得在模型之间导航变得简单和直观。
+
+
+
+
+
+### ☕   Request
+
+在 Laravel 中，`Request` 是处理 HTTP 请求的核心组件。使用 `Request` 类可以轻松获取请求的数据、验证输入、管理文件上传等。以下是详细的代码和步骤，介绍如何使用 `Request` 类。
+
+### 1. 引入 `Request` 类
+
+在你的控制器中，可以通过依赖注入或者直接引入来使用 `Request` 类。
+
+#### 依赖注入
+
+```php
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function store(Request $request)
+    {
+        // 处理请求
+    }
+}
+```
+
+#### 直接使用 `Request` Facade
+
+```php
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\Request;
+
+class UserController extends Controller
+{
+    public function store()
+    {
+        $data = Request::all(); // 获取所有请求数据
+    }
+}
+```
+
+### 2. 获取请求数据
+
+你可以通过 `Request` 实例获取请求中的各种数据。
+
+```php
+public function store(Request $request)
+{
+    $name = $request->input('name'); // 获取单个输入
+    $email = $request->get('email'); // 使用 get 方法获取输入
+    $allData = $request->all(); // 获取所有输入
+}
+```
+
+### 3. 验证请求数据
+
+使用 Laravel 的验证功能来验证请求数据。你可以在控制器中使用 `validate` 方法。
+
+```php
+public function store(Request $request)
+{
+    $validatedData = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
+
+    // 验证通过后，可以使用 $validatedData
+    $user = User::create($validatedData);
+}
+```
+
+### 4. 处理文件上传
+
+使用 `Request` 来处理文件上传非常简单。你可以使用 `file` 方法获取上传的文件，并使用 `store` 方法保存文件。
+
+```php
+public function store(Request $request)
+{
+    $request->validate([
+        'avatar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+
+    if ($request->hasFile('avatar')) {
+        $path = $request->file('avatar')->store('avatars', 'public'); // 保存到 storage/app/public/avatars 目录
+
+        // 你可以保存 $path 到数据库
+        $user->avatar = $path;
+        $user->save();
+    }
+}
+```
+
+### 5. 访问请求的其他信息
+
+你可以获取请求的其他信息，如 URL、请求方法、IP 地址等。
+
+```php
+public function index(Request $request)
+{
+    $url = $request->url(); // 获取请求 URL
+    $method = $request->method(); // 获取请求方法（GET, POST等）
+    $ip = $request->ip(); // 获取客户端 IP 地址
+}
+```
+
+### 6. 使用中间件处理请求
+
+你可以在中间件中处理请求，如认证、记录日志等。创建一个中间件并注册：
+
+```php
+// 创建中间件
+php artisan make:middleware CheckUserIsAdmin
+
+// 在中间件中处理请求
+public function handle(Request $request, Closure $next)
+{
+    if (!$request->user() || !$request->user()->is_admin) {
+        return redirect('/'); // 如果用户不是管理员，重定向
+    }
+
+    return $next($request); // 继续请求处理
+}
+```
+
+### 7. 定义路由
+
+在 `routes/web.php` 或 `routes/api.php` 中定义路由并使用控制器方法：
+
+```php
+use App\Http\Controllers\UserController;
+
+Route::post('/users', [UserController::class, 'store']);
+```
+
+### 总结
+
+以上是 Laravel 中使用 `Request` 类的详细代码和步骤。`Request` 类提供了强大的功能来处理 HTTP 请求，使得获取和验证请求数据变得简单直观。结合中间件和控制器，你可以构建出强大的 Web 应用程序。
+
+
+
+
+
+### ☕   多对多关系（Many-to-Many）
+
+下面是使用 Laravel 实现多对多关系的详细代码和步骤，包括如何使用 `with` 方法预加载角色。
+
+### 1. 创建模型和迁移文件
+
+假设我们要实现用户（`User`）和角色（`Role`）之间的多对多关系。
+
+#### 创建用户模型和迁移文件
+
+首先创建用户模型及其迁移文件：
+
+```
+php artisan make:model User -m
+```
+
+在生成的迁移文件中，定义 `users` 表：
+
+```php
+// database/migrations/xxxx_xx_xx_create_users_table.php
+public function up()
+{
+    Schema::create('users', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->string('email')->unique();
+        $table->timestamps();
+    });
+}
+```
+
+#### 创建角色模型和迁移文件
+
+接着创建角色模型及其迁移文件：
+
+```
+php artisan make:model Role -m
+```
+
+在生成的迁移文件中，定义 `roles` 表：
+
+```php
+// database/migrations/xxxx_xx_xx_create_roles_table.php
+public function up()
+{
+    Schema::create('roles', function (Blueprint $table) {
+        $table->id();
+        $table->string('name')->unique();
+        $table->timestamps();
+    });
+}
+```
+
+### 2. 创建连接表
+
+然后，你需要创建一个连接表 `role_user` 来存储用户和角色之间的关系。使用下面的命令创建迁移文件：
+
+```
+php artisan make:migration create_role_user_table --create=role_user
+```
+
+在迁移文件中定义连接表：
+
+```php
+// database/migrations/xxxx_xx_xx_create_role_user_table.php
+public function up()
+{
+    Schema::create('role_user', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        $table->foreignId('role_id')->constrained()->onDelete('cascade');
+        $table->timestamps();
+    });
+}
+```
+
+### 3. 运行迁移
+
+运行迁移以创建表：
+
+```
+php artisan migrate
+```
+
+### 4. 定义模型关系
+
+在 `User` 模型和 `Role` 模型中定义多对多关系。
+
+#### User 模型
+
+```php
+// app/Models/User.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    use HasFactory;
+
+    // 定义多对多关系
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_user', 'user_id', 'role_id');
+    }
+}
+```
+
+#### Role 模型
+
+```php
+// app/Models/Role.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Role extends Model
+{
+    use HasFactory;
+
+    // 定义多对多关系
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'role_user', 'role_id', 'user_id');
+    }
+}
+```
+
+### 5. 使用多对多关系
+
+接下来，使用 Eloquent 模型的多对多关系。
+
+#### 预加载角色
+
+以下是获取所有用户及其角色的示例：
+
+```php
+$users = User::with('roles')->get();
+
+foreach ($users as $user) {
+    echo $user->name . " has roles: ";
+    foreach ($user->roles as $role) {
+        echo $role->name . " ";
+    }
+}
+```
+
+### 6. 添加和删除角色
+
+#### 添加角色给用户
+
+```php
+$user = User::find(1); // 找到用户 ID 为 1 的用户
+$roleId = 2; // 假设要添加的角色 ID
+
+// 将角色附加到用户
+$user->roles()->attach($roleId);
+```
+
+#### 从用户中删除角色
+
+```php
+$user->roles()->detach($roleId); // 从用户中删除指定角色
+```
+
+### 7. 示例控制器
+
+下面是一个简单的控制器示例，展示如何在控制器中使用这些功能：
+
+```php
+// app/Http/Controllers/UserController.php
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use App\Models\Role;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        // 获取所有用户及其角色
+        $users = User::with('roles')->get();
+        
+        return response()->json($users);
+    }
+
+    public function attachRole(Request $request, $userId)
+    {
+        $user = User::findOrFail($userId);
+        $roleId = $request->input('role_id');
+        
+        $user->roles()->attach($roleId);
+
+        return response()->json(['message' => 'Role attached successfully.']);
+    }
+
+    public function detachRole(Request $request, $userId)
+    {
+        $user = User::findOrFail($userId);
+        $roleId = $request->input('role_id');
+
+        $user->roles()->detach($roleId);
+
+        return response()->json(['message' => 'Role detached successfully.']);
+    }
+}
+```
+
+### 8. 路由
+
+在 `routes/web.php` 中定义路由：
+
+```php
+use App\Http\Controllers\UserController;
+
+Route::get('/users', [UserController::class, 'index']);
+Route::post('/users/{user}/attach-role', [UserController::class, 'attachRole']);
+Route::post('/users/{user}/detach-role', [UserController::class, 'detachRole']);
+```
+
+### 总结
+
+以上是如何在 Laravel 中设置和使用多对多关系的详细步骤和代码，包括预加载的示例。通过定义模型关系和连接表，你可以轻松管理和操作多对多关系数据。
+
+
+
+
+
+### ☕   一对一（One-to-One）关系
+
+在 Laravel 中实现一对一（One-to-One）关系非常简单。以下是详细的步骤和代码示例，假设我们要实现用户（`User`）和用户个人资料（`Profile`）之间的一对一关系。
+
+### 1. 创建模型和迁移文件
+
+#### 创建用户模型和迁移文件
+
+首先创建用户模型及其迁移文件：
+
+```
+php artisan make:model User -m
+```
+
+在生成的迁移文件中，定义 `users` 表：
+
+```php
+php复制代码// database/migrations/xxxx_xx_xx_create_users_table.php
+public function up()
+{
+    Schema::create('users', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->string('email')->unique();
+        $table->timestamps();
+    });
+}
+```
+
+#### 创建个人资料模型和迁移文件
+
+接着创建个人资料模型及其迁移文件：
+
+```
+php artisan make:model Profile -m
+```
+
+在生成的迁移文件中，定义 `profiles` 表：
+
+```php
+// database/migrations/xxxx_xx_xx_create_profiles_table.php
+public function up()
+{
+    Schema::create('profiles', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        $table->string('bio')->nullable();
+        $table->string('avatar')->nullable();
+        $table->timestamps();
+    });
+}
+```
+
+### 2. 运行迁移
+
+运行迁移以创建表：
+
+```
+php artisan migrate
+```
+
+### 3. 定义模型关系
+
+在 `User` 模型和 `Profile` 模型中定义一对一关系。
+
+#### User 模型
+
+```php
+// app/Models/User.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    use HasFactory;
+
+    // 定义一对一关系
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+}
+```
+
+#### Profile 模型
+
+```php
+// app/Models/Profile.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Profile extends Model
+{
+    use HasFactory;
+
+    // 定义反向一对一关系
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+```
+
+### 4. 使用一对一关系
+
+以下是如何使用 Eloquent 模型的一对一关系的示例。
+
+#### 创建用户及其个人资料
+
+```php
+// 创建用户
+$user = User::create([
+    'name' => 'John Doe',
+    'email' => 'john@example.com',
+]);
+
+// 创建用户个人资料
+$user->profile()->create([
+    'bio' => 'Software Developer',
+    'avatar' => 'path/to/avatar.jpg',
+]);
+```
+
+#### 获取用户及其个人资料
+
+```php
+$user = User::with('profile')->find(1); // 假设用户 ID 为 1
+echo $user->name . " has bio: " . $user->profile->bio;
+```
+
+#### 更新用户个人资料
+
+```php
+$user = User::find(1);
+$user->profile()->update([
+    'bio' => 'Senior Software Developer',
+    'avatar' => 'path/to/new_avatar.jpg',
+]);
+```
+
+#### 删除用户个人资料
+
+```php
+$user = User::find(1);
+$user->profile()->delete();
+```
+
+### 5. 示例控制器
+
+下面是一个简单的控制器示例，展示如何在控制器中使用这些功能：
+
+```php
+// app/Http/Controllers/UserController.php
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        // 获取所有用户及其个人资料
+        $users = User::with('profile')->get();
+        
+        return response()->json($users);
+    }
+
+    public function store(Request $request)
+    {
+        // 创建用户及其个人资料
+        $user = User::create($request->only('name', 'email'));
+        $user->profile()->create($request->only('bio', 'avatar'));
+
+        return response()->json($user->load('profile'), 201);
+    }
+
+    public function updateProfile(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        $user->profile()->update($request->only('bio', 'avatar'));
+
+        return response()->json(['message' => 'Profile updated successfully.']);
+    }
+
+    public function deleteProfile($id)
+    {
+        $user = User::findOrFail($id);
+        $user->profile()->delete();
+
+        return response()->json(['message' => 'Profile deleted successfully.']);
+    }
+}
+```
+
+### 6. 路由
+
+在 `routes/web.php` 中定义路由：
+
+```php
+use App\Http\Controllers\UserController;
+
+Route::get('/users', [UserController::class, 'index']);
+Route::post('/users', [UserController::class, 'store']);
+Route::put('/users/{id}/profile', [UserController::class, 'updateProfile']);
+Route::delete('/users/{id}/profile', [UserController::class, 'deleteProfile']);
+```
+
+### 总结
+
+以上是如何在 Laravel 中设置和使用一对一关系的详细步骤和代码，包括创建、读取、更新和删除个人资料的示例。通过定义模型关系，你可以轻松管理和操作一对一关系的数据。
+
+
+
+### ☕  通过关联获取数据（Eager Loading）
+
+在 Laravel 中，使用 Eager Loading 可以高效地加载与模型关联的数据，减少数据库查询次数，提高应用性能。以下是使用 Eager Loading 的详细步骤和代码示例。
+
+### 1. 先决条件
+
+假设我们已经有用户（`User`）和个人资料（`Profile`）模型，并且这些模型之间已建立了一对一关系。请参考之前提供的一对一关系的代码和步骤。
+
+### 2. 使用 Eager Loading
+
+#### 2.1 定义 Eager Loading
+
+你可以使用 `with` 方法在查询中指定要加载的关联。例如，要获取所有用户及其个人资料，可以使用如下代码：
+
+```php
+$users = User::with('profile')->get();
+```
+
+这将加载所有用户及其相关的个人资料，减少数据库查询次数。
+
+#### 2.2 示例代码
+
+以下是一个示例控制器，展示如何使用 Eager Loading 来获取用户和个人资料：
+
+```php
+// app/Http/Controllers/UserController.php
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        // 使用 Eager Loading 获取所有用户及其个人资料
+        $users = User::with('profile')->get();
+        
+        return response()->json($users);
+    }
+
+    public function show($id)
+    {
+        // 使用 Eager Loading 获取指定用户及其个人资料
+        $user = User::with('profile')->findOrFail($id);
+        
+        return response()->json($user);
+    }
+}
+```
+
+### 3. 路由
+
+在 `routes/web.php` 中定义路由：
+
+```php
+use App\Http\Controllers\UserController;
+
+Route::get('/users', [UserController::class, 'index']);
+Route::get('/users/{id}', [UserController::class, 'show']);
+```
+
+### 4. 访问 Eager Loaded 数据
+
+当你从数据库中获取用户及其个人资料时，你可以直接访问关联数据，例如：
+
+```php
+$users = User::with('profile')->get();
+
+foreach ($users as $user) {
+    echo $user->name . ' - ' . $user->profile->bio . '<br>';
+}
+```
+
+### 5. 处理 Eager Loading 的 N+1 问题
+
+使用 Eager Loading 可以显著减少 N+1 查询问题。以下是一个简单的比较：
+
+#### 5.1 没有 Eager Loading
+
+```php
+$users = User::all();
+foreach ($users as $user) {
+    echo $user->name . ' - ' . $user->profile->bio . '<br>'; // 每个用户都会单独查询 profile
+}
+```
+
+在这个例子中，对于每个用户，都会执行一个额外的查询来获取其个人资料，导致 N+1 查询问题。
+
+#### 5.2 使用 Eager Loading
+
+```php
+$users = User::with('profile')->get();
+foreach ($users as $user) {
+    echo $user->name . ' - ' . $user->profile->bio . '<br>'; // 只执行两个查询
+}
+```
+
+使用 Eager Loading 之后，只会执行两个查询：一个查询所有用户，一个查询所有个人资料。
+
+### 6. 总结
+
+Eager Loading 是一个强大的特性，可以帮助你优化数据库查询，减少不必要的查询次数，提高应用的性能。使用 `with` 方法加载关联数据，使你的代码更加简洁和高效。
 
 
 
@@ -2440,10 +3271,293 @@ $token->delete();
 
 
 
+### ☕  附加条件的关系（Conditional Relationships）
+
+附加条件的关系（Conditional Relationships）在 Laravel 中允许我们根据特定条件过滤关联数据，以便只加载满足条件的关联记录。这对于需要部分数据的情况非常有用，例如只获取发布的文章或特定状态的订单等。
+
+### 1. 示例场景
+
+假设我们有两个模型：`User` 和 `Post`，用户（`User`）可以有多篇文章（`Post`），但我们只想加载已发布的文章。
+
+### 2. 准备模型和迁移
+
+#### User 模型
+
+```php
+// app/Models/User.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    use HasFactory;
+
+    // 定义与 Post 的一对多关系
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    // 仅获取已发布的文章
+    public function publishedPosts()
+    {
+        return $this->hasMany(Post::class)->where('is_published', true);
+    }
+}
+```
+
+#### Post 模型
+
+```php
+// app/Models/Post.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['title', 'content', 'is_published', 'user_id'];
+}
+```
+
+#### 迁移
+
+确保 `posts` 表中有 `is_published` 字段来标识文章是否已发布。
+
+```php
+// database/migrations/xxxx_xx_xx_create_posts_table.php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreatePostsTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->string('title');
+            $table->text('content');
+            $table->boolean('is_published')->default(false);
+            $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('posts');
+    }
+}
+```
+
+### 3. 使用条件关联
+
+在控制器或其他地方使用条件关联方法 `publishedPosts()` 获取已发布的文章：
+
+```php
+// app/Http/Controllers/UserController.php
+namespace App\Http\Controllers;
+
+use App\Models\User;
+
+class UserController extends Controller
+{
+    public function showPublishedPosts($id)
+    {
+        // 使用条件关联 publishedPosts 仅获取已发布的文章
+        $user = User::with('publishedPosts')->findOrFail($id);
+
+        return response()->json($user->publishedPosts);
+    }
+}
+```
+
+### 4. 路由
+
+在 `routes/web.php` 中定义一个路由，使用 `showPublishedPosts` 方法。
+
+```php
+use App\Http\Controllers\UserController;
+
+Route::get('/users/{id}/published-posts', [UserController::class, 'showPublishedPosts']);
+```
+
+### 5. 使用动态条件
+
+你也可以使用 `when` 方法在条件满足时动态添加条件。例如：
+
+```php
+// 获取某用户的文章，并在条件满足时过滤已发布的文章
+$user = User::with(['posts' => function ($query) {
+    $query->when(request('published_only'), function ($query) {
+        $query->where('is_published', true);
+    });
+}])->findOrFail($id);
+```
+
+### 6. 测试结果
+
+访问 `/users/{id}/published-posts` 可以看到指定用户的已发布文章
 
 
 
 
+
+### ☕  聚合函数（Aggregate Functions）
+
+在 Laravel 中，聚合函数（Aggregate Functions）如 `count`、`sum`、`avg`、`max` 和 `min` 可以用来计算数据库中的数据统计信息。这些方法可以直接在查询构建器中调用，用于获取特定的聚合结果。
+
+### 1. 示例场景
+
+假设我们有一个 `Order` 模型，用来表示订单，每个订单包含订单金额 (`amount`) 和订单状态 (`status`) 等字段。我们将使用聚合函数来获取一些统计信息，例如订单总数、总金额、平均金额等。
+
+### 2. 准备模型和迁移
+
+#### Order 模型
+
+```php
+// app/Models/Order.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Order extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['amount', 'status'];
+}
+```
+
+#### 迁移
+
+确保 `orders` 表有一个 `amount` 字段来存储订单金额和 `status` 字段来存储订单状态。
+
+```php
+// database/migrations/xxxx_xx_xx_create_orders_table.php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateOrdersTable extends Migration
+{
+    public function up()
+    {
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id();
+            $table->decimal('amount', 10, 2); // 订单金额
+            $table->string('status'); // 订单状态
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('orders');
+    }
+}
+```
+
+### 3. 使用聚合函数
+
+#### 3.1 获取订单总数
+
+```php
+use App\Models\Order;
+
+$totalOrders = Order::count();
+```
+
+#### 3.2 获取订单金额总和
+
+```php
+$totalAmount = Order::sum('amount');
+```
+
+#### 3.3 获取订单平均金额
+
+```php
+$averageAmount = Order::avg('amount');
+```
+
+#### 3.4 获取订单最高金额
+
+```php
+$maxAmount = Order::max('amount');
+```
+
+#### 3.5 获取订单最低金额
+
+```php
+$minAmount = Order::min('amount');
+```
+
+### 4. 示例控制器
+
+创建一个控制器来展示如何使用这些聚合函数。
+
+```php
+// app/Http/Controllers/OrderController.php
+namespace App\Http\Controllers;
+
+use App\Models\Order;
+use Illuminate\Http\Request;
+
+class OrderController extends Controller
+{
+    public function stats()
+    {
+        $totalOrders = Order::count();
+        $totalAmount = Order::sum('amount');
+        $averageAmount = Order::avg('amount');
+        $maxAmount = Order::max('amount');
+        $minAmount = Order::min('amount');
+
+        return response()->json([
+            'total_orders' => $totalOrders,
+            'total_amount' => $totalAmount,
+            'average_amount' => $averageAmount,
+            'max_amount' => $maxAmount,
+            'min_amount' => $minAmount,
+        ]);
+    }
+}
+```
+
+### 5. 路由
+
+在 `routes/web.php` 中定义一个路由，使用 `stats` 方法。
+
+```php
+use App\Http\Controllers\OrderController;
+
+Route::get('/orders/stats', [OrderController::class, 'stats']);
+```
+
+### 6. 测试结果
+
+访问 `/orders/stats` 可以看到订单的统计信息，包括总数、总金额、平均金额、最高金额和最低金额等。
+
+### 7. 结合条件使用聚合函数
+
+如果只需要统计特定条件下的订单信息，例如仅获取 `status` 为 `completed` 的订单，可以使用 `where` 结合聚合函数：
+
+```php
+$completedOrderCount = Order::where('status', 'completed')->count();
+$completedOrderTotalAmount = Order::where('status', 'completed')->sum('amount');
+```
+
+这些聚合函数在结合条件查询时可以更精确地获取满足条件的数据统计。
 
 
 

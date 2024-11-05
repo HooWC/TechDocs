@@ -12,11 +12,11 @@ import { upperFirst } from '@site/src/utils/jsUtils'
 import styles from './styles.module.css'
 
 const TITLE = translate({
-  id: 'theme.project.title',
+  id: 'theme.movie.title',
   message: '影视',
 })
 const DESCRIPTION = translate({
-  id: 'theme.project.description',
+  id: 'theme.movie.description',
   message: '记录作者观看的影视',
 })
 

@@ -10,8 +10,6 @@ keywords: [java]
 
 ## MyBatis 基础
 
-新关卡！新篇章！ 番外篇！**黑暗神鸟篇章！**
-
 
 
 主流的 **ORM 框架**，之前叫 **iBatis**, 后来改名 **MyBatis**

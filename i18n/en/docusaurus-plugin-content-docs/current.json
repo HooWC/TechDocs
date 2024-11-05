@@ -8,7 +8,7 @@
     "description": "The label for category Docusaurus2 主题魔改 in sidebar skill"
   },
   "sidebar.skill.category.代码规范": {
-    "message": "代码规范",
+    "message": "Code Specifications",
     "description": "The label for category 代码规范 in sidebar skill"
   },
   "sidebar.skill.category.Vue": {
@@ -44,23 +44,23 @@
     "description": "The label for category Git in sidebar skill"
   },
   "sidebar.skill.category.算法": {
-    "message": "算法",
+    "message": "Algorithm",
     "description": "The label for category 算法 in sidebar skill"
   },
   "sidebar.skill.category.逆向": {
-    "message": "逆向",
+    "message": "Reverse",
     "description": "The label for category 逆向 in sidebar skill"
   },
   "sidebar.skill.category.逆向.link.generated-index.title": {
-    "message": "逆向笔记",
+    "message": "Reverse Notes",
     "description": "The generated-index page title for category 逆向 in sidebar skill"
   },
   "sidebar.skill.category.逆向.link.generated-index.description": {
-    "message": "Web逆向与安卓逆向笔记",
+    "message": "Web Reverse Notes",
     "description": "The generated-index page description for category 逆向 in sidebar skill"
   },
   "sidebar.skill.category.安卓": {
-    "message": "安卓",
+    "message": "Android",
     "description": "The label for category 安卓 in sidebar skill"
   },
   "sidebar.skill.category.frida": {
@@ -68,11 +68,11 @@
     "description": "The label for category frida in sidebar skill"
   },
   "sidebar.skill.category.刷机": {
-    "message": "刷机",
+    "message": "Flash the machine",
     "description": "The label for category 刷机 in sidebar skill"
   },
   "sidebar.skill.category.密码学": {
-    "message": "密码学",
+    "message": "Cryptography",
     "description": "The label for category 密码学 in sidebar skill"
   },
   "sidebar.skill.category.Docker": {
@@ -80,7 +80,7 @@
     "description": "The label for category Docker in sidebar skill"
   },
   "sidebar.skill.category.数据库": {
-    "message": "数据库",
+    "message": "Database",
     "description": "The label for category 数据库 in sidebar skill"
   },
   "sidebar.skill.category.Mysql": {
@@ -100,7 +100,259 @@
     "description": "The label for category Elasticsearch in sidebar skill"
   },
   "sidebar.skill.category.杂项": {
-    "message": "杂项",
+    "message": "Miscellaneous",
     "description": "The label for category 杂项 in sidebar skill"
+  },
+  "sidebar.interviewSidebar.category.面试准备": {
+    "message": "Interview Preparation",
+    "description": "The label for category 面试准备 in sidebar interviewSidebar"
+  },
+  "sidebar.techSidebar.category.ajax": {
+    "message": "ajax",
+    "description": "The label for category ajax in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.app": {
+    "message": "app",
+    "description": "The label for category app in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.react-native": {
+    "message": "react-native",
+    "description": "The label for category react-native in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.xamarin": {
+    "message": "xamarin",
+    "description": "The label for category xamarin in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.backend": {
+    "message": "backend",
+    "description": "The label for category backend in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.csharp": {
+    "message": "csharp",
+    "description": "The label for category csharp in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.python": {
+    "message": "python",
+    "description": "The label for category python in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.chartjs": {
+    "message": "chartjs",
+    "description": "The label for category chartjs in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.css": {
+    "message": "css",
+    "description": "The label for category css in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.scss": {
+    "message": "scss",
+    "description": "The label for category scss in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.tailwing-css": {
+    "message": "tailwing-css",
+    "description": "The label for category tailwing-css in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.git": {
+    "message": "git",
+    "description": "The label for category git in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.java": {
+    "message": "java",
+    "description": "The label for category java in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.dynamic-web": {
+    "message": "dynamic-web",
+    "description": "The label for category dynamic-web in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.spring": {
+    "message": "spring",
+    "description": "The label for category spring in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.javascript": {
+    "message": "javascript",
+    "description": "The label for category javascript in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.jquery": {
+    "message": "jquery",
+    "description": "The label for category jquery in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.laravel": {
+    "message": "laravel",
+    "description": "The label for category laravel in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.node": {
+    "message": "node",
+    "description": "The label for category node in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.restFul-api": {
+    "message": "restFul-api",
+    "description": "The label for category restFul-api in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.typescript": {
+    "message": "typescript",
+    "description": "The label for category typescript in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.web": {
+    "message": "web",
+    "description": "The label for category web in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.angular": {
+    "message": "angular",
+    "description": "The label for category angular in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.react": {
+    "message": "react",
+    "description": "The label for category react in sidebar techSidebar"
+  },
+  "sidebar.techSidebar.category.vue": {
+    "message": "vue",
+    "description": "The label for category vue in sidebar techSidebar"
+  },
+  "sidebar.tech.category.前端开发": {
+    "message": "Front-end",
+    "description": "The label for category 前端开发 in sidebar tech"
+  },
+  "sidebar.tech.category.前端开发.link.generated-index.title": {
+    "message": "Web Front-end",
+    "description": "The generated-index page title for category 前端开发 in sidebar tech"
+  },
+  "sidebar.tech.category.前端开发.link.generated-index.description": {
+    "message": "Architecture",
+    "description": "The generated-index page description for category 前端开发 in sidebar tech"
+  },
+  "sidebar.tech.category.Angular": {
+    "message": "Angular",
+    "description": "The label for category Angular in sidebar tech"
+  },
+  "sidebar.tech.category.React": {
+    "message": "React",
+    "description": "The label for category React in sidebar tech"
+  },
+  "sidebar.tech.category.Vue": {
+    "message": "Vue",
+    "description": "The label for category Vue in sidebar tech"
+  },
+  "sidebar.tech.category.JavaScript": {
+    "message": "JavaScript",
+    "description": "The label for category JavaScript in sidebar tech"
+  },
+  "sidebar.tech.category.JQuery": {
+    "message": "JQuery",
+    "description": "The label for category JQuery in sidebar tech"
+  },
+  "sidebar.tech.category.TypeScript": {
+    "message": "TypeScript",
+    "description": "The label for category TypeScript in sidebar tech"
+  },
+  "sidebar.tech.category.Node": {
+    "message": "Node",
+    "description": "The label for category Node in sidebar tech"
+  },
+  "sidebar.tech.category.CSS": {
+    "message": "CSS",
+    "description": "The label for category CSS in sidebar tech"
+  },
+  "sidebar.tech.category.CSS.link.generated-index.title": {
+    "message": "CSS Design",
+    "description": "The generated-index page title for category CSS in sidebar tech"
+  },
+  "sidebar.tech.category.CSS.link.generated-index.description": {
+    "message": "Architecture",
+    "description": "The generated-index page description for category CSS in sidebar tech"
+  },
+  "sidebar.tech.category.SCSS": {
+    "message": "SCSS",
+    "description": "The label for category SCSS in sidebar tech"
+  },
+  "sidebar.tech.category.Tailwind CSS": {
+    "message": "Tailwind CSS",
+    "description": "The label for category Tailwind CSS in sidebar tech"
+  },
+  "sidebar.tech.category.ChartJS": {
+    "message": "ChartJS",
+    "description": "The label for category ChartJS in sidebar tech"
+  },
+  "sidebar.tech.category.后端": {
+    "message": "Back-end",
+    "description": "The label for category 后端 in sidebar tech"
+  },
+  "sidebar.tech.category.后端.link.generated-index.title": {
+    "message": "C# / Python",
+    "description": "The generated-index page title for category 后端 in sidebar tech"
+  },
+  "sidebar.tech.category.后端.link.generated-index.description": {
+    "message": "Architecture",
+    "description": "The generated-index page description for category 后端 in sidebar tech"
+  },
+  "sidebar.tech.category.C#": {
+    "message": "C#",
+    "description": "The label for category C# in sidebar tech"
+  },
+  "sidebar.tech.category.Python": {
+    "message": "Python",
+    "description": "The label for category Python in sidebar tech"
+  },
+  "sidebar.tech.category.安卓": {
+    "message": "Android",
+    "description": "The label for category 安卓 in sidebar tech"
+  },
+  "sidebar.tech.category.安卓.link.generated-index.title": {
+    "message": "Android development",
+    "description": "The generated-index page title for category 安卓 in sidebar tech"
+  },
+  "sidebar.tech.category.安卓.link.generated-index.description": {
+    "message": "Architecture",
+    "description": "The generated-index page description for category 安卓 in sidebar tech"
+  },
+  "sidebar.tech.category.React Native": {
+    "message": "React Native",
+    "description": "The label for category React Native in sidebar tech"
+  },
+  "sidebar.tech.category.Xamarin": {
+    "message": "Xamarin",
+    "description": "The label for category Xamarin in sidebar tech"
+  },
+  "sidebar.tech.category.Laravel 构架": {
+    "message": "Laravel 构架",
+    "description": "The label for category Laravel 构架 in sidebar tech"
+  },
+  "sidebar.tech.category.AJAX": {
+    "message": "AJAX",
+    "description": "The label for category AJAX in sidebar tech"
+  },
+  "sidebar.tech.category.Git": {
+    "message": "Git",
+    "description": "The label for category Git in sidebar tech"
+  },
+  "sidebar.tech.category.Java": {
+    "message": "Java",
+    "description": "The label for category Java in sidebar tech"
+  },
+  "sidebar.tech.category.Java.link.generated-index.title": {
+    "message": "Java MVC Develop",
+    "description": "The generated-index page title for category Java in sidebar tech"
+  },
+  "sidebar.tech.category.Java.link.generated-index.description": {
+    "message": "Architecture",
+    "description": "The generated-index page description for category Java in sidebar tech"
+  },
+  "sidebar.tech.category.Dynamic Web Project": {
+    "message": "Dynamic Web Project",
+    "description": "The label for category Dynamic Web Project in sidebar tech"
+  },
+  "sidebar.tech.category.Spring MVC": {
+    "message": "Spring MVC",
+    "description": "The label for category Spring MVC in sidebar tech"
+  },
+  "sidebar.tech.category.RestFul API": {
+    "message": "RestFul API",
+    "description": "The label for category RestFul API in sidebar tech"
+  },
+  "sidebar.design.category.美观设计": {
+    "message": "Beautiful Design",
+    "description": "The label for category 美观设计 in sidebar design"
+  },
+  "sidebar.version.category.TechDocs 版本": {
+    "message": "TechDocs Version",
+    "description": "The label for category TechDocs 版本 in sidebar version"
   }
 }

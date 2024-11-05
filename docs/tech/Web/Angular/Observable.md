@@ -9,7 +9,12 @@ keywords: [angular]
 ---
 
 
+
+:::success 前文提醒
+
 `Observable` 是 RxJS 库中的一个重要概念，常用于处理异步数据流。在 Angular 中，`Observable` 常与 `HttpClient` 一起使用，以便在处理 HTTP 请求时能够优雅地管理异步数据。
+
+::: 
 
 ## 什么是 Observable？
 

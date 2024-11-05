@@ -10,7 +10,13 @@ keywords: [angular]
 
 ## Axios 
 
+
+
+:::success 前文提醒
+
 在 Angular 中，你可以使用 `Axios` 进行 HTTP 请求。虽然 Angular 内置了 `HttpClient` 模块，但如果你熟悉 `Axios` 或有特定需求，也可以使用它。以下是安装和配置 `Axios` 以及在 Angular 中使用它的详细步骤。
+
+::: 
 
 ------
 

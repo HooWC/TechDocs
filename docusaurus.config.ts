@@ -58,9 +58,10 @@ const config: Config = {
           position: 'right',
           items: [
             { label: '归档', to: 'blog/archive' },
-            { label: '笔记', to: 'docs/skill' },
-            { label: '工具推荐', to: 'docs/tools' },
+            { label: '设计文档', to: 'docs/design' },
+            { label: '用户手册', to: 'docs/tools' },
             { label: '影视记录', to: 'movie' },
+            { label: '版本发布说明', to: 'docs/version' },
           ],
         },
         {
@@ -83,7 +84,7 @@ const config: Config = {
           items: [
             { label: '博客', to: 'blog' },
             { label: '归档', to: 'blog/archive' },
-            { label: '笔记', to: 'docs/skill' },
+            { label: '笔记', to: 'docs/tech' },
             { label: '项目', to: 'project' },
           ],
         },
@@ -99,14 +100,17 @@ const config: Config = {
         {
           title: '网站',
           items: [
-            { label: 'Converter', to: 'https://js-deobfuscator.kuizuo.cn' },
-            { label: 'CV Web', to: 'https://gchq.github.io/CyberChef' }
+            { label: 'Converter', to: 'https://converter-alpha-orcin.vercel.app/' },
+            { label: 'CV Web', to: 'https://hoo-cv-website.vercel.app/' }
           ],
         },
         {
           title: '更多',
           items: [
-            { label: '工具推荐', position: 'right', to: 'friends' },
+            { label: '设计文档', position: 'right', to: 'docs/design' },
+            { label: '用户手册', position: 'right', to: 'docs/tools' },
+            { label: '影视记录', position: 'right', to: 'movie' },
+            { label: '版本发布说明', position: 'right', to: 'docs/version' },
           ],
         },
       ],
@@ -215,7 +219,7 @@ const config: Config = {
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
           `https://github.com/HooWC/TechDocs/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogDescription: '代码人生：编织技术与生活的博客之旅',
+        blogDescription: '我选择了程序员这条路，注定要与编程为伴',
         blogSidebarCount: 10,
         blogSidebarTitle: '博文',
         postsPerPage: 12,
@@ -224,9 +228,9 @@ const config: Config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: '愧怍',
+          title: 'Hoo',
           description: 'feedId:41215011978385457+userId:41840354283324416',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          copyright: `Copyright © ${new Date().getFullYear()} Hoo Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
         },
       },
     ],

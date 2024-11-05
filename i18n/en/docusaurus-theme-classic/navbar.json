@@ -1,6 +1,6 @@
 {
   "title": {
-    "message": "kuizuo",
+    "message": "TechDocs",
     "description": "The title in the navbar"
   },
   "item.label.博客": {
@@ -70,5 +70,29 @@
   "item.label.网盘": {
     "message": "Cloudreve",
     "description": "Navbar item with label 网盘"
+  },
+  "logo.alt": {
+    "message": "Hoo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.面试": {
+    "message": "Interview",
+    "description": "Navbar item with label 面试"
+  },
+  "item.label.设计文档": {
+    "message": "Design",
+    "description": "Navbar item with label 设计文档"
+  },
+  "item.label.用户手册": {
+    "message": "User Manual",
+    "description": "Navbar item with label 用户手册"
+  },
+  "item.label.影视记录": {
+    "message": "Film Records",
+    "description": "Navbar item with label 影视记录"
+  },
+  "item.label.版本发布说明": {
+    "message": "Imprint",
+    "description": "Navbar item with label 版本发布说明"
   }
 }

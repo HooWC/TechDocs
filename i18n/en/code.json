@@ -4,15 +4,13 @@
     "description": "hero greet"
   },
   "homepage.hero.name": {
-    "message": "Hoo",
-    "description": "hero name"
+    "message": "TechDocs"
   },
   "homepage.hero.text": {
-    "message": "Here I will share the problems and solutions encountered by various technology stacks, take you to understand the latest technology stacks and how to apply them in actual development, and hope that my development experience will inspire you",
-    "description": "hero text"
+    "message": "Here, I will share the problems and solutions in various technology stacks, take you to a deeper understanding of the latest technology trends, and show their application in actual development. I hope my development experience can provide you with inspiration and help you solve the challenges in your project more efficiently."
   },
   "hompage.hero.introduce": {
-    "message": "Introduce"
+    "message": "Start Learning"
   },
   "homepage.blog.title": {
     "message": "Recent Blogs"
@@ -27,13 +25,13 @@
     "message": "Feature"
   },
   "homepage.feature.developer": {
-    "message": "Typescript Developer"
+    "message": "Full-Stack Developer"
   },
   "homepage.feature.spider": {
-    "message": "Know a little Reverse"
+    "message": "Passion self-discipline for programming"
   },
   "homepage.feature.enthusiast": {
-    "message": "Open source enthusiast"
+    "message": "Problem solving skills"
   },
   "theme.blog.archive.posts.total": {
     "message": "Total {total} posts"
@@ -44,7 +42,13 @@
   "theme.project.title": {
     "message": "Project Showcase"
   },
+  "theme.movie.title": {
+    "message": "Film And Television"
+  },
   "theme.project.description": {
+    "message": "The true meaning of learning lies in being able to apply what you have learned in practice, rather than just staying in theory. Every learning journey lays a solid foundation for application. What is shown here is the result of my continuous efforts in the technical field. I firmly believe that only the ability to transform knowledge into practical operations can truly bring out the value of learning."
+  },
+  "theme.movie.description": {
     "message": "Here is the best proof of my hard practice and application in the field of technology."
   },
   "showcase.header.button": {
@@ -86,7 +90,7 @@
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Try again",
-    "description": "The label of the button to try again when the page crashed"
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.NotFound.title": {
     "message": "Page Not Found",
@@ -471,7 +475,370 @@
     "description": "The ARIA label for close button of PWA reload popup"
   },
   "showcase.card.sourceLink": {
-    "message": "source",
-    "description": "The label for the source link of a showcase card"
+    "message": "source"
+  },
+  "homepage.feature.github.title": {
+    "message": "Github"
+  },
+  "homepage.feature.skill.title": {
+    "message": "技术栈"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Close navigation bar",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Toggle navigation bar",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 item|{count} items",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.admonition.caution": {
+    "message": "caution",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Expand sidebar category '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Collapse sidebar category '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "Everywhere"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "No results"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "See all results outside \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "See all results within \"{context}\""
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Authors",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "View all authors",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "This author has not written any posts yet.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Unlisted page",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Draft page",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "description": "The draft content banner message"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "The title of the tag list page"
+  },
+  "projects.work.techdocs": {
+    "message": "Learning platform implementation using Docusaurus static site generator",
+    "description": "project"
+  },
+  "projects.work.cv": {
+    "message": "Personal resume website developed based on HTML/CSS/JavaScript",
+    "description": "project"
+  },
+  "projects.work.conterver": {
+    "message": "A website that can convert WEBP format to PNG images",
+    "description": "project"
+  },
+  "projects.work.muyimusic": {
+    "message": "Personal music online website developed and designed by myself",
+    "description": "project"
+  },
+  "projects.work.muyilyrics": {
+    "message": "Save own lyrics website",
+    "description": "project"
+  },
+  "projects.work.motian": {
+    "message": "Novel APP developed by Xamarin + Rest API",
+    "description": "project"
+  },
+  "projects.work.sakura": {
+    "message": "An online movie ticket purchase APP developed with Xamarin + Rest API, which was also the last work in school.",
+    "description": "project"
+  },
+  "projects.work.youtube": {
+    "message": "Youtube Music APP developed by Xamarin + Firebase simulation",
+    "description": "project"
+  },
+  "projects.work.totp": {
+    "message": "Two-step verification feature developed by Laravel",
+    "description": "project"
+  },
+  "projects.work.samlidp": {
+    "message": "Laravel + SAML implements IDP user data storage function and provides Metadata to SP project",
+    "description": "project"
+  },
+  "projects.work.samlsp": {
+    "message": "Laravel + SAML implements SSO secure login and automatic login and logout functions for multiple SP projects",
+    "description": "project"
+  },
+  "projects.work.it": {
+    "message": "ASP.NET MVC + Rest API develops employees to rent company products online, and Admin implements ERP interface functions",
+    "description": "project"
+  },
+  "projects.work.chart": {
+    "message": "Online chat function developed using Node + MongoDB Atlas",
+    "description": "project"
+  },
+  "projects.work.meybank": {
+    "message": "Java Dynamic Web + Rest API simulates the bank website developed by Public Bank",
+    "description": "project"
+  },
+  "projects.work.netflix": {
+    "message": "ASP .NET MVC + Rest API to develop a website for purchasing movies online",
+    "description": "project"
+  },
+  "projects.work.alice": {
+    "message": "ASP.NET MVC + Rest API to develop online music website",
+    "description": "project"
+  },
+  "projects.work.nana": {
+    "message": "ASP.NET MVC + MSSQL developed an online shopping website, which was also my first website in school.",
+    "description": "project"
+  },
+  "projects.work.ganfang": {
+    "message": "ASP .NET MVC + MSSQL to develop a website for online food ordering",
+    "description": "project"
+  },
+  "projects.work.memory": {
+    "message": "ASP .NET MVC + Rest API to develop a large forum website, which contains more than 88 topics and school paper works",
+    "description": "project"
+  },
+  "projects.work.beer": {
+    "message": "Home page designed with React Native for beer APP",
+    "description": "project"
+  },
+  "projects.work.pictureshadows": {
+    "message": "A small project that uses CSS to blur and darken images",
+    "description": "project"
+  },
+  "projects.work.atmsystem": {
+    "message": "Java development to simulate ATM functions",
+    "description": "project"
+  },
+  "movie.title.movie1": {
+    "message": "Who is that child?",
+    "description": "movie"
+  },
+  "movie.desc.movie1": {
+    "message": "The ending of the 2024 horror movie directed by Takashi Shimizu is too sudden.",
+    "description": "movie"
+  },
+  "movie.title.movie2": {
+    "message": "Apocalypse Z: The Beginning of the End",
+    "description": "movie"
+  },
+  "movie.desc.movie2": {
+    "message": "A zombie movie is probably more about human nature, with very little zombie content.",
+    "description": "movie"
+  },
+  "movie.title.movie3": {
+    "message": "Don't Move",
+    "description": "movie"
+  },
+  "movie.desc.movie3": {
+    "message": "The theme of the new thriller movie is quite good.",
+    "description": "movie"
+  },
+  "movie.title.movie4": {
+    "message": "Mads",
+    "description": "movie"
+  },
+  "movie.desc.movie4": {
+    "message": "This movie is shot in one shot, and the content is probably about not taking drugs.",
+    "description": "movie"
+  },
+  "movie.title.movie5": {
+    "message": "Terrifier 3",
+    "description": "movie"
+  },
+  "movie.desc.movie5": {
+    "message": "The bloodiest movie I watched in 2024...",
+    "description": "movie"
+  },
+  "movie.title.movie6": {
+    "message": "House of Spoils",
+    "description": "movie"
+  },
+  "movie.desc.movie6": {
+    "message": "No horror...",
+    "description": "movie"
+  },
+  "movie.title.movie7": {
+    "message": "All My Friends Are Dead",
+    "description": "movie"
+  },
+  "movie.desc.movie7": {
+    "message": "A pretty good thriller movie, a revenge story.",
+    "description": "movie"
+  },
+  "movie.title.movie8": {
+    "message": "El hoyo 2",
+    "description": "movie"
+  },
+  "movie.desc.movie8": {
+    "message": "A movie about human nature, much more thrilling than the first one, and it also involves a broken hand.",
+    "description": "movie"
+  },
+  "movie.title.movie9": {
+    "message": "Deadpool & Wolverine",
+    "description": "movie"
+  },
+  "movie.desc.movie9": {
+    "message": "Fortunately, not as funny as the first one",
+    "description": "movie"
+  },
+  "movie.title.movie10": {
+    "message": "Escape",
+    "description": "movie"
+  },
+  "movie.desc.movie10": {
+    "message": "A very good Korean movie about deserters",
+    "description": "movie"
+  },
+  "movie.title.movie11": {
+    "message": "Dominique: Rise of the Phoenix",
+    "description": "movie"
+  },
+  "movie.desc.movie11": {
+    "message": "It's a bit bloody, and the ending is something I never expected.",
+    "description": "movie"
+  },
+  "movie.title.movie12": {
+    "message": "Aftermath",
+    "description": "movie"
+  },
+  "movie.desc.movie12": {
+    "message": "A very good and passionate film, but the protagonist is a bit too crazy",
+    "description": "movie"
+  },
+  "movie.title.movie13": {
+    "message": "Mystery Writers",
+    "description": "movie"
+  },
+  "movie.desc.movie13": {
+    "message": "Falling down the building is scary at first, but not so scary later on.",
+    "description": "movie"
+  },
+  "movie.title.movie14": {
+    "message": "KKN di Desa Penari",
+    "description": "movie"
+  },
+  "movie.desc.movie14": {
+    "message": "Okay, not very scary.",
+    "description": "movie"
+  },
+  "movie.title.movie15": {
+    "message": "Die Alone",
+    "description": "movie"
+  },
+  "movie.desc.movie15": {
+    "message": "A zombie movie that is not scary, but beyond love.",
+    "description": "movie"
+  },
+  "features-1": {
+    "message": "As a full-stack engineer, mastering both front-end and back-end skills is essential for independently handling project development and maintenance.",
+    "description": "features"
+  },
+  "features-2": {
+    "message": "My passion for programming has sharpened my code reading skills. No code is too difficult—only a choice to understand it. Through self-discipline and continuous learning, I keep improving and tackling challenges.",
+    "description": "features"
+  },
+  "features-3": {
+    "message": "Have extensive experience in helping others solve programming problems, covering a variety of technical fields from front-end to back-end.",
+    "description": "features"
+  },
+  "projects.tags.favorite": {
+    "message": "Favorite",
+    "description": "features"
+  },
+  "projects.tags.opensource": {
+    "message": "Opensource",
+    "description": "features"
+  },
+  "projects.tags.product": {
+    "message": "Product",
+    "description": "features"
+  },
+  "projects.tags.design": {
+    "message": "Design",
+    "description": "features"
+  },
+  "projects.tags.large": {
+    "message": "Large",
+    "description": "features"
+  },
+  "projects.tags.personal": {
+    "message": "Personal",
+    "description": "features"
+  },
+  "projects.tags.private": {
+    "message": "Private",
+    "description": "features"
+  },
+  "projects.tags.public": {
+    "message": "Public",
+    "description": "features"
+  },
+  "projects.tags.horror": {
+    "message": "Horror",
+    "description": "features"
+  },
+  "projects.tags.funny": {
+    "message": "Funny",
+    "description": "features"
+  },
+  "projects.tags.bloody": {
+    "message": "Bloody",
+    "description": "features"
+  },
+  "projects.tags.fighting": {
+    "message": "Passionate",
+    "description": "features"
+  },
+  "projects.tags.boring": {
+    "message": "Boring",
+    "description": "features"
+  },
+  "projects.tags.thriller": {
+    "message": "Thriller",
+    "description": "features"
   }
+
+
 }

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Blog",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Code Life: A Blog Journey Weaving Technology and Life",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Blog",
+    "description": "The label for the left sidebar"
+  }
+}

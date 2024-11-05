@@ -227,7 +227,7 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
-      label: 'Laravel 构架',
+      label: 'Laravel',
       type: 'category',
       link: {
         type: 'generated-index'
@@ -323,17 +323,16 @@ const sidebars: SidebarsConfig = {
 
 
   // 问题笔记
-  skill: [
-    'skill/introduction',
+  design: [
+    'design/introduction',
     {
-      label: 'Docusaurus 主题魔改',
+      label: '美观设计',
       type: 'category',
       link: {
-        type: 'doc',
-        id: 'skill/test/testing',
+        type: 'generated-index',
       },
       items: [
-        'skill/test/testing2',
+        'design/beau-design/song-name-display',
       ],
     },
   ],
@@ -344,6 +343,23 @@ const sidebars: SidebarsConfig = {
   tools: [
     'tools/introduction',
     'tools/discord-get-user-id',
+  ],
+
+
+  // 版本
+  version: [
+    'version/introduction',
+    {
+      label: 'TechDocs 版本',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'version/version/version-1-1',
+        'version/version/version-1-0',
+      ],
+    },
   ],
 }
 

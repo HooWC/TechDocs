@@ -8,7 +8,13 @@ tags: [angular]
 keywords: [angular]
 ---
 
+
+
+:::success 前文提醒
+
 `@Injectable` 是 Angular 中的一个装饰器，用于定义一个可注入的服务。它告诉 Angular 该类可以被注入到其他类中，例如组件、其他服务或指令等。下面是对 `@Injectable` 的详细解释。
+
+::: 
 
 ### 定义
 

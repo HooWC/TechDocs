@@ -1,14 +1,18 @@
 ---
-id: js-intro
-slug: /js-intro
-title: JavaScript 简介
+id: js-base
+slug: /js-base
+title: 基础学习
 date: 2024-11-04
 authors: Hoo
 tags: [javascript]
 keywords: [javascript]
 ---
 
+:::success 前文提醒
+
 JavaScript 是一种广泛使用的编程语言，特别适用于 Web 开发。它是前端开发的核心技术之一，与 HTML 和 CSS 一起构成了现代网页的基础。以下是一些 JavaScript 的基础知识，包括语言特性、语法以及常见用法。
+
+::: 
 
 ------
 
