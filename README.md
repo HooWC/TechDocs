@@ -10,7 +10,9 @@ Learning Platform
 ## 👋 Introduce
 
 Here, I will share with you the various problems I encountered during the technical development process and my experience and solutions on how to solve them. From front-end development to back-end debugging, from database optimization to exception handling of API requests, I will discuss common technical problems and solutions with you in an easy-to-understand way. I hope that these sharings can not only help you avoid common pitfalls, but also provide some practical guidance for your technical growth.
+ 
 ---------------------------
+
 在这里，我将与大家分享我在技术开发过程中遇到的各种问题以及我如何解决它们的经验和方案。从前端开发到后端调试，从数据库优化到API请求的异常处理，我会用轻松易懂的方式和大家一起探讨常见的技术难题和解决方法。希望这些分享不仅能帮助你避免常见的坑，还能为你的技术成长提供一些实用的指导。
 
 ## ✨ Characteristic
