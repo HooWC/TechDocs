@@ -8,6 +8,8 @@ tags: [mvc]
 keywords: [mvc]
 ---
 
+
+
 Java Dynamic Web Project 是一种基于 Java EE（Java Platform, Enterprise Edition）的 Web 应用程序开发模型。它允许开发者构建动态生成内容的 Web 应用程序，通常通过与服务器端技术（如 Java Servlets 和 JSP）结合使用。这种项目结构通常用于创建能够响应用户请求并动态显示内容的网站。
 
 Java Dynamic Web Project 的主要特点包括：

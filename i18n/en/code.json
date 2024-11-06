@@ -771,6 +771,30 @@
     "message": "A zombie movie that is not scary, but beyond love.",
     "description": "movie"
   },
+  "movie.title.anime1": {
+    "message": "Bleach",
+    "description": "anime"
+  },
+  "movie.desc.anime1": {
+    "message": "When I was a kid, I spent my own money to buy a lot of Bleach CDs, they were my favorite!",
+    "description": "anime"
+  },
+  "movie.title.anime2": {
+    "message": "Tokyo Ghoul",
+    "description": "anime"
+  },
+  "movie.desc.anime2": {
+    "message": "I was once shocked by the theme song and then fell in love with the anime.",
+    "description": "anime"
+  },
+  "movie.title.anime3": {
+    "message": "Demon Slayer",
+    "description": "anime"
+  },
+  "movie.desc.anime3": {
+    "message": "Anime that is inexplicably attracted by the plot.",
+    "description": "anime"
+  },
   "features-1": {
     "message": "As a full-stack engineer, mastering both front-end and back-end skills is essential for independently handling project development and maintenance.",
     "description": "features"

@@ -10,52 +10,88 @@ keywords: [react-native]
 
 # React Native Expo Navigation
 
-[官网]: https://docs.expo.dev/router/installation/
+[**DOCS Official Website**](https://docs.expo.dev/router/installation/)
 
+`npx create-expo-app --template` is a command for quickly creating an Expo application. It helps you create a new project and select a template to initialize the project. This command has pre-installed some common dependencies and configurations, so you don't need to manually run `npx expo install` to install additional packages.
 
+### Detailed steps and explanations
 
-## 快速构建 `Navigation` 项目
+1. **Install Node.js and npm** First, you need to make sure you have installed [Node.js](https://nodejs.org/) and npm (Node.js package manager). You can check if it is installed with the following command:
 
-```
-npx create-expo-app --template
+   ```
+   node -v
+   npm -v
+   ```
 
-选择 Navigation (TypeScript)
+  If not installed, visit the Node.js official website to install it.
 
-// 无需再安装以下
-```
-
-
-
-## 安装
-
-```
-npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
-```
-
-`package.json`
-
+2. **Install Expo CLI (if not installed)** Expo CLI is a tool for creating and managing Expo applications. If you don't have Expo CLI installed yet, you can install it through npm using the following command:
 
 ```
-{
-  "main": "expo-router/entry"
-}
+npm install -g expo-cli
 ```
 
-`app.json`
+This will install Expo CLI globally, allowing you to run Expo commands in the command line.
+
+3. **Create a new Expo application** Use the `npx create-expo-app` command to create a new Expo application. You can choose a template to initialize the project. If you don't specify a template, a basic Expo application will be created by default.
+
+Run the following command:
+
+   ```
+   npx create-expo-app MyNewApp --template
+   ```
+
+   Here, `MyNewApp` is the name of your new app. You can change it to whatever you like.
+
+4. **Choose a template** When you execute `npx create-expo-app MyNewApp --template`, the command will create a new folder `MyNewApp` and initialize an Expo project. Expo provides several templates that you can choose from:
+
+- **`blank`**: A blank template suitable for building an app from scratch.
+
+- **`tabs`**: A template with tab navigation, suitable for multi-page apps.
+
+- **`stack`**: A template with stack navigation, suitable for apps with a navigation stack.
+
+If you want to choose a specific template, such as a template with tab navigation, you can run the following command:
+
+   ```
+   npx create-expo-app MyNewApp --template tabs
+   ```
+
+  This will create an app template with tabbed navigation.
+
+5. **Enter the project directory** After creating the app, enter your project directory:
 
 ```
-{
-  "scheme": "your-app-scheme"
-}
+cd MyNewApp
 ```
 
+6. **Start the Expo development server** In the project directory, you can start the Expo development server with the following command:
 
+   ```
+   npm start
+   ```
 
+   或者：
 
+   ```
+   expo start
+   ```
 
-## 主 Layout
+  This will start the Expo development server and open a browser window showing your app. You can use the Expo Go app to scan the QR code on your phone to preview the app, or view it in the browser.
 
-在 React Native 中，"Stack" 通常指的是堆栈导航（Stack Navigation），它是一种导航模式，允许用户在不同的屏幕之间进行堆叠式的导航。
+### Summary
+
+- **`npx create-expo-app --template`** is used to create a new Expo app and select a template. The template has pre-configured some common dependencies to help you quickly start app development.
+- You don't need to install additional dependencies because the template has automatically prepared the required basic configuration for you.
+- Just run the command and select the template, Expo will help you initialize a new project, allowing you to focus on development without worrying about environment configuration and dependency installation.
+
+With these steps, you can easily create and start a new Expo app and start building your mobile app project.
+
+## Project Example:
+
+### Main Layout
+
+In React Native, "Stack" usually refers to Stack Navigation, which is a navigation mode that allows users to navigate between different screens in a stacked manner.
 
 `app/_layout.jsx`
 
@@ -83,7 +119,7 @@ const RootLayout = () => (
 export default RootLayout;
 ```
 
-有 `Tabs` 的
+With `Tabs`
 
 ```react
 import { Stack } from "expo-router";
@@ -109,7 +145,7 @@ import { Redirect } from 'expo-router'
 
 
 
-`两种方式`
+`Two ways`
 
 ```react
 import { Link } from "expo-router";
@@ -128,7 +164,7 @@ import { Pressable } from "react-native";
 
 
 
-`传`
+`Transfer data`
 
 ```react
 import { router } from "expo-router";
@@ -142,7 +178,7 @@ import { Pressable } from "react-native";
 </Pressable>
 ```
 
-`用`
+`Use data`
 
 ```react
 import { useLocalSearchParams } from "expo-router";
@@ -160,11 +196,11 @@ const { id } = useLocalSearchParams<{
 
 
 
-## Tabs (副 Layout)
+### Tabs (Sub-Layout)
 
-在 React Native 中，"Tabs" 通常指的是选项卡导航（Tab Navigation），它是一种常见的用户界面设计模式，用于在应用程序中切换不同的视图或功能。
+In React Native, "Tabs" usually refers to Tab Navigation, which is a common user interface design pattern used to switch between different views or functions in an application.
 
-**选项卡通常位于屏幕底部**
+**Tabs are usually located at the bottom of the screen**
 
 ```react
 import { Tabs } from "expo-router";
@@ -191,7 +227,7 @@ export default TabsLayout;
 
 
 
-## 项目例子 （登入）
+## Project Example (Login)
 
 `app/(app)`
 
@@ -275,10 +311,10 @@ export function AuthProvider({ children }:React.PropsWithChildren) {
         if(user === undefined) return;
 
         if(!user && rootSegment !== "(auth)") {
-            // 如果用户不存在 ， 界面却来到 auth ， 就返回登入界面
+            // If the user does not exist, but the interface comes to auth, it returns to the login interface
             router.replace("/(auth)/login");
         }else if(user && rootSegment !== "(app)"){
-            // 如果用户存在
+            // If the user exists
             router.replace("/");
         }
     }, [user, rootSegment]);
@@ -298,32 +334,3 @@ export function AuthProvider({ children }:React.PropsWithChildren) {
     );
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

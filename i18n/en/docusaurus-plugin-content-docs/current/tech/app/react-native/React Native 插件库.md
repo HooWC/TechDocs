@@ -1,23 +1,36 @@
 ---
 id: rn-install
 slug: /rn-install
-title: 插件库
+title: Plugin Library
 date: 2024-11-04
 authors: Hoo
 tags: [react-native]
 keywords: [react-native]
 ---
 
-# React Native 插件库
+# React Native Plugin Library
 
+:::info
 
+React Native plugin libraries are a collection of additional features, components, or tools designed to extend and enhance the capabilities of React Native applications. These plugin libraries are developed by the community or official teams and address common development needs such as image processing, UI components, device function access, network requests, storage management, etc.
 
-## ⚡ WebView
+React Native itself provides some core components and APIs, but for more complex or specific features, developers often need to rely on third-party plugins. Plugin libraries provide an ecosystem for React Native where developers can quickly integrate existing solutions without having to develop all features from scratch.
 
-- **功能**: WebView 是一个嵌入式浏览器组件，允许你在应用程序中显示 web 内容，例如网页或 HTML 内容。
-- **用途**: 可以用来加载和显示网页内容、渲染 HTML 内容、与 web 页面进行交互等。
+:::
 
-安装
+### The role of plugin libraries:
+
+1. **Simplify the development process**: By integrating existing plugins, developers can save a lot of development time and effort. Many common features, such as data storage, push notifications, map components, etc., already have mature solutions.
+2. **Improve application functionality**: Some features may not be provided in the core library of React Native. Third-party plugins enable developers to easily implement these features in their applications by providing additional features.
+3. **Enhanced cross-platform capabilities**: React Native plugin libraries are usually cross-platform, which means they can support both Android and iOS, avoiding developers from writing duplicate code for each platform.
+4. **Community support and open source**: Most React Native plugins are open source, which means developers can modify and customize them according to their needs, and even contribute their own code. The active community also means that the plugin library is constantly updated and improved to keep up with the development of React Native.
+
+## WebView
+
+- **Function**: WebView is an embedded browser component that allows you to display web content, such as web pages or HTML content, in your application.
+- **Purpose**: It can be used to load and display web content, render HTML content, interact with web pages, etc.
+
+Installation
 
 ```
 npm install react-native-webview
@@ -46,15 +59,15 @@ export default App;
 
 
 
-## ⚡ Picker
+## Picker
 
-- **功能**: Picker 是一个下拉选择器组件，允许用户从预定义的选项列表中选择一个值。
-- **用途**: 通常用于实现用户界面中的下拉菜单、日期选择器、时间选择器等。
+- **Function**: Picker is a drop-down selector component that allows users to select a value from a predefined list of options.
+- **Purpose**: Usually used to implement drop-down menus, date pickers, time pickers, etc. in user interfaces.
 
-[官网]: https://github.com/react-native-picker/picker
-[官网]: https://www.npmjs.com/package/react-native-picker-select
+[**Git official website**](https://github.com/react-native-picker/picker)<br/>
+[**NPM official website**](https://www.npmjs.com/package/react-native-picker-select)
 
-安装
+Installation
 
 ```
 npm install @react-native-picker/picker --save
@@ -107,15 +120,14 @@ export default App;
 
 
 
-## ⚡ Swiper
+## Swiper
 
-- **功能**: Swiper 是一个轮播组件，允许你在应用程序中创建轮播图或图片滑动效果。
-- **用途**: 用于创建漂亮的图片轮播效果，通常用于应用程序中的广告轮播、产品展示等。
+- **Function**: Swiper is a carousel component that allows you to create carousels or image sliding effects in your application.
+- **Purpose**: Used to create beautiful image carousel effects, usually used for advertising carousels, product displays, etc. in applications.
 
-[官网]: https://github.com/leecade/react-native-swiper
+[**Git official website**](https://github.com/leecade/react-native-swiper)
 
-安装
-
+Installation
 ```
 npm i react-native-swiper --save
 
@@ -181,7 +193,7 @@ import Swiper from 'react-native-swiper';
 const { height } = Dimensions.get('window');
 
 const SwiperExample = () => {
-  const swiperHeight = height * 0.25; // 计算 Swiper 的高度为屏幕高度的25%
+  const swiperHeight = height * 0.25; // Calculate the height of Swiper to be 25% of the screen height
 
   return (
     <View style={styles.container}>
@@ -212,7 +224,7 @@ const SwiperExample = () => {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // 适配 Android 状态栏
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // Adapt to Android status bar
     top: 0,
     left: 0,
     right: 0,
@@ -236,16 +248,16 @@ export default SwiperExample;
 
 
 
-## ⚡ AsyncStorage
+## AsyncStorage
 
-- **功能**: AsyncStorage 是 React Native 中用于本地持久化存储数据的 API，类似于 Web 开发中的 localStorage。
-- **用途**: 用于存储应用程序的持久化数据，如用户配置、应用程序状态、用户登录信息等。
+- **Function**: AsyncStorage is an API for local persistent storage data in React Native, similar to localStorage in Web development.
+- **Purpose**: Used to store persistent data of applications, such as user configuration, application status, user login information, etc.
 
-[官网]: https://reactnative.dev/docs/asyncstorage
-[官网]: https://npmjs.com/package/@react-native-async-storage/async-storage
-[官网]: https://react-native-async-storage.github.io/async-storage/docs/usage
+[**DOCS official website**](https://reactnative.dev/docs/asyncstorage)<br/>
+[**NPM official website**](https://npmjs.com/package/@react-native-async-storage/async-storage)<br/>
+[**GIT official website**](https://react-native-async-storage.github.io/async-storage/docs/usage)
 
-安装
+Installation
 
 ```
 npm i @react-native-async-storage/async-storage
@@ -259,7 +271,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const App = () => {
   const [count, setCount] = useState(0);
 
-  // 从 AsyncStorage 中加载初始值
+  // 从 AsyncStorage Loading initial values
   useEffect(() => {
     const loadData = async () => {
       try {
@@ -274,7 +286,7 @@ const App = () => {
     loadData();
   }, []);
 
-  // 将 count 值保存到 AsyncStorage 中
+  // Save the count value to AsyncStorage 中
   const saveData = async () => {
     try {
       await AsyncStorage.setItem('count', count.toString());
@@ -287,8 +299,8 @@ const App = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Count: {count}</Text>
-      <Button title="增量" onPress={() => setCount(prevCount => prevCount + 1)} />
-      <Button title="递减" onPress={() => setCount(prevCount => prevCount - 1)} />
+      <Button title="Increment" onPress={() => setCount(prevCount => prevCount + 1)} />
+      <Button title="Decreasing" onPress={() => setCount(prevCount => prevCount - 1)} />
       <Button title="Save Data" onPress={saveData} />
     </View>
   );
@@ -299,14 +311,13 @@ export default App;
 
 
 
-## ⚡ Expo Location
+## Expo Location
 
-- 通过 Expo Location，开发者可以轻松地在 Expo 应用程序中获取和利用用户的位置信息，以实现位置相关的功能和服务，例如地图应用、定位服务、位置提醒等。
+- Through Expo Location, developers can easily obtain and utilize user location information in Expo applications to implement location-related functions and services, such as map applications, location services, location reminders, etc.
 
-[官网]: https://docs.expo.dev/versions/latest/sdk/location/
+[** DOCS official website**](https://docs.expo.dev/versions/latest/sdk/location/)
 
-安装
-
+Installation
 ```
 npx expo install expo-location
 ```
@@ -321,7 +332,7 @@ const App = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // 请求前台位置权限
+    // Request foreground location permission
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
@@ -329,7 +340,7 @@ const App = () => {
         return;
       }
 
-      // 获取当前位置信息
+      // Get current location information
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
     })();
@@ -355,24 +366,30 @@ export default App;
 
 
 
-## ⚡ Expo Camera
+## Expo Camera
 
-- Expo Camera 是 Expo SDK 中的一个模块，它使得在 Expo 应用中集成相机功能变得非常简单。Expo Camera 提供了一系列易于使用的组件和 API，让开发者能够轻松地在应用中实现拍照、录像等功能。
+- Expo Camera is a module in Expo SDK that makes it very simple to integrate camera functions in Expo applications. Expo Camera provides a series of easy-to-use components and APIs, allowing developers to easily implement functions such as taking photos and recording videos in applications.
 
-  主要功能和特点包括：
+Main functions and features include:
 
-  1. **相机预览：** 可以在应用中显示实时的相机预览，用户可以通过界面进行拍照和录像操作。
-  2. **拍照功能：** 支持在应用中拍摄照片，可以设置照片质量、格式等参数。
-  3. **录像功能：** 支持在应用中录制视频，可以设置视频质量、分辨率等参数。
-  4. **权限管理：** Expo Camera 自动处理权限请求和系统相机访问的问题，开发者无需担心权限问题。
-  5. **闪光灯控制：** 可以控制设备的闪光灯功能，用于拍摄照片和录制视频时的光线辅助。
-  6. **前后摄像头切换：** 支持前后摄像头的切换，用户可以选择使用哪个摄像头进行拍摄。
-  7. **自定义界面：** 可以通过自定义样式和布局来定制相机界面，以适应应用的设计风格。
+1. **Camera preview:** You can display a real-time camera preview in the application, and users can take photos and record videos through the interface.
 
-[官网]: https://docs.expo.dev/versions/latest/sdk/camera/
-[素材]: https://codewithbeto.dev/projects/camera-expo
+2. **Photo function:** Support taking photos in the application, and you can set parameters such as photo quality and format.
 
-安装
+3. **Video function:** Support recording videos in the application, and you can set parameters such as video quality and resolution.
+
+4. **Permission management:** Expo Camera automatically handles permission requests and system camera access issues, so developers don’t need to worry about permission issues.
+
+5. **Flash control:** You can control the device’s flash function for light assistance when taking photos and recording videos.
+
+6. **Front and rear camera switching:** Support switching between front and rear cameras, and users can choose which camera to use for shooting.
+
+7. **Custom interface:** The camera interface can be customized through custom styles and layouts to suit the design style of the application.
+
+[**DOCS official website**](https://docs.expo.dev/versions/latest/sdk/camera/)<br/>
+[**Material**](https://codewithbeto.dev/projects/camera-expo)
+
+Installation
 
 ```
 npx expo install expo-camera
@@ -397,8 +414,8 @@ const CameraExample = () => {
   const takePicture = async () => {
     if (cameraRef) {
       const photo = await cameraRef.takePictureAsync({
-        quality: 1, // 设置照片质量为原始质量的一半
-        pictureSize: '140x480', // 设置照片分辨率为640x480
+        quality: 1, // Set photo quality to half of original quality
+        pictureSize: '140x480', // Set the photo resolution to 640x480
       });
       console.log(photo);
     }
@@ -459,22 +476,24 @@ export default CameraExample;
 
 
 
-## ⚡ Expo MediaLibrary
+## Expo MediaLibrary
 
-Expo MediaLibrary 是 Expo 提供的一个库，用于在 Expo 应用程序中管理设备上的照片和视频。它提供了一组方法，让你可以从设备的相册中获取媒体文件、保存新的照片和视频，以及删除媒体文件等操作。
+Expo MediaLibrary is a library provided by Expo for managing photos and videos on the device in the Expo application. It provides a set of methods that allow you to get media files from the device's album, save new photos and videos, and delete media files.
 
-**主要的功能包括：**
+**Main functions include:**
 
-1. 获取设备上的照片和视频文件。
-2. 保存新的照片和视频到设备。
-3. 删除设备上的照片和视频文件。
-4. 获取照片和视频的详细信息，如尺寸、类型等。
+1. Get photo and video files on the device.
 
-[官网]: https://docs.expo.dev/versions/latest/sdk/media-library/
-[素材]: https://codewithbeto.dev/projects/camera-expo
+2. Save new photos and videos to the device.
 
-安装
+3. Delete photo and video files on the device.
 
+4. Get detailed information about photos and videos, such as size, type, etc.
+
+[**DOCS official website**](https://docs.expo.dev/versions/latest/sdk/media-library/)<br/>
+[**Material**](https://codewithbeto.dev/projects/camera-expo)
+
+Installation
 ```
 npx expo install expo-media-library
 ```
@@ -671,20 +690,21 @@ const styles = StyleSheet.create({
 
 
 
-## ⚡ Expo ImagePicker
+## Expo ImagePicker
 
-React Native Image Picker 是一个用于从相册或相机中选择图片的库。它允许你的应用程序与用户的设备相册和相机进行交互，并获取所选图片的信息。
+React Native Image Picker is a library for selecting images from the photo album or camera. It allows your application to interact with the user's device photo album and camera and get information about the selected image.
 
-**主要特性包括：**
+**Main features include:**
 
-1. 从相册中选择图片：用户可以从设备的相册中选择图片。
-2. 使用相机拍摄图片：用户可以使用设备的相机拍摄新的图片。
-3. 自定义选项：可以配置图片选择器的行为和外观，例如设置图片质量、允许裁剪、选择多个图片等。
+1. Select images from the photo album: Users can select images from the device's photo album.
 
-[官网]: https://docs.expo.dev/versions/latest/sdk/imagepicker/
+2. Take pictures with the camera: Users can take new pictures with the device's camera.
 
-安装
+3. Custom options: You can configure the behavior and appearance of the image picker, such as setting image quality, allowing cropping, selecting multiple images, etc.
 
+[**DOCS Official Website**](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
+
+Installation
 ```
 npx expo install expo-image-picker
 ```
@@ -698,7 +718,7 @@ export default function ImagePickerExample() {
   const [image, setImage] = useState(null);
 
   const pickImage = async () => {
-    // 启动图像库无需请求权限
+    // No permission is required to launch the image gallery
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -735,18 +755,6 @@ const styles = StyleSheet.create({
 ```
 
 
+## Other Expo third-party plug-ins
 
-## 其他 Expo 第三方插件
-
-[官网]: https://docs.expo.dev/versions/latest/sdk/accelerometer/
-
-
-
-
-
-
-
-
-
-
-
+[**DOCS official website**](https://docs.expo.dev/versions/latest/sdk/accelerometer/)

@@ -34,7 +34,7 @@ export default function BlogPostGridItems({ items }: BlogPostItemsProps): JSX.El
       {data.map((item, idx) => (
         <div
           key={item.link}
-          className="group relative block h-full w-full p-2"
+          className="group relative relative_box block h-full w-full p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -57,7 +57,7 @@ export default function BlogPostGridItems({ items }: BlogPostItemsProps): JSX.El
               )}
             </AnimatePresence>
 
-            <Card className={cn('relative bg-blog', item.sticky && styles.blogSticky)}>
+            <Card className={cn('relative_box bg-blog', item.sticky && styles.blogSticky)}>
               <CardTitle className="transition duration-300 hover:text-primary">{item.title}</CardTitle>
               <CardFooter className="flex justify-between pt-4">
                 <div
@@ -111,7 +111,7 @@ export const Card = ({
         className,
       )}
     >
-      <div className="relative z-50">
+      <div className="relative_box z-50">
         <div className="p-2">{children}</div>
       </div>
     </div>

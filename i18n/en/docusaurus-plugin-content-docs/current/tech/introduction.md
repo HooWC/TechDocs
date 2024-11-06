@@ -4,8 +4,13 @@ slug: /tech
 title: Notes
 ---
 
- 
-:::success Reminder
+:::info Previous
+
+My notes are still being updated and improved. My goal is to make them more concise and intuitive, so that learners can understand them at a glance and feel "Oh, that's it!"
+
+::: 
+
+:::success Previous
 
 The purpose of the notes documentation is to provide developers with detailed code demonstrations and plugin usage instructions to help users better understand and apply related technologies. The documentation covers everything from basic operations to advanced features, with a wealth of examples and steps so that users can get started quickly. As the project progresses and new requirements are added, the documentation will be continuously updated to ensure that the content is always up-to-date and relevant to the actual application scenarios.
 
@@ -28,5 +33,4 @@ This page is a summary of notes on relevant technology stacks involved in person
 - HTTP (Restful API)
 - Git
 - Laravel
-
 

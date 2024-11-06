@@ -10,8 +10,6 @@ keywords: [java]
 
 ## MyBatis 基础
 
-
-
 主流的 **ORM 框架**，之前叫 **iBatis**, 后来改名 **MyBatis**
 
 如果你使用的是 **Spring MyBatis** 而不是 **Spring Boot**，并希望自动将实体类生成数据库表（类似于 JPA 的自动表生成），**MyBatis** 本身并不支持这种功能。**MyBatis** 是一个 **ORM 框架**，用于映射 SQL 语句和 Java 对象，但它不会像 JPA 那样自动创建数据库表。

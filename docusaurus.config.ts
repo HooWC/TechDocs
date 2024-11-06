@@ -4,7 +4,7 @@ import { themes } from 'prism-react-renderer'
 import social from './data/social'
 import type { GiscusConfig } from './src/components/Comment'
 
-const beian = '闽ICP备2020017848号-2'
+//const beian = '闽ICP备2020017848号-2'
 
 const config: Config = {
   title: 'TechDocs',
@@ -230,7 +230,7 @@ const config: Config = {
           type: 'all',
           title: 'Hoo',
           description: 'feedId:41215011978385457+userId:41840354283324416',
-          copyright: `Copyright © ${new Date().getFullYear()} Hoo Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          copyright: `Copyright © ${new Date().getFullYear()} Hoo Built with Docusaurus.`,
         },
       },
     ],

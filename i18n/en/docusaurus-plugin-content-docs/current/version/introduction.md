@@ -10,6 +10,8 @@ title: Version
 
 IN Progress
 
+Current version 1.1
+
 :::
 
 In the software development process, version updates and issue fixes are key aspects of ensuring software quality, improving user experience, and maintaining competitiveness. With the continuous development of technology and changes in user needs, regular updates and issue resolutions have become an indispensable part of the software lifecycle. This article will delve into the significance of version updates, common types of updates, the process of issue fixing, and how to effectively manage these processes.

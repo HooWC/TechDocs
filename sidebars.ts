@@ -222,6 +222,8 @@ const sidebars: SidebarsConfig = {
           items: [
             'tech/app/xamarin/xamarin-intro',
             'tech/app/xamarin/xamarin-base',
+            'tech/app/xamarin/xamarin-understand',
+            'tech/app/xamarin/xamarin-mvvm',
           ],
         },
       ],
@@ -301,6 +303,7 @@ const sidebars: SidebarsConfig = {
           link: { type: 'generated-index' },
           items: [
             'tech/java/spring/spring-intro',
+            'tech/java/spring/java-spring-maven',
             'tech/java/spring/mybatis-java',
             'tech/java/spring/ssm',
           ],
@@ -343,6 +346,14 @@ const sidebars: SidebarsConfig = {
   tools: [
     'tools/introduction',
     'tools/discord-get-user-id',
+    'tools/xampp-php-version-update',
+    'tools/what-is-laragon',
+    'tools/git-merge-conflicts',
+    'tools/auto-save-code',
+    'tools/loading-web-slow-problem',
+    'tools/api-return-404-error',
+    'tools/http-request-fail',
+    'tools/markdown-word',
   ],
 
 

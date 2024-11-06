@@ -5,7 +5,7 @@ date: 2024-10-24
 authors: Hoo
 tags: [闲聊, restful api]
 keywords: [闲聊, restful api]
-description: 这篇文章分享了作者使用Rest Api的心得和体会。
+description: 这篇文章分享了作者使用REST API的心得和体会，涵盖了常见的CRUD操作（创建、读取、更新、删除）。通过实践和优化，帮助读者更好地理解RESTful架构并高效地与后端进行数据交互。
 image: https://github.com/HoowcBN/techdocs_pic/blob/main/restful-api-blog.jpg?raw=true
 ---
 

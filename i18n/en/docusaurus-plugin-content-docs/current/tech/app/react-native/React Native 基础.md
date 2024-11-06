@@ -1,65 +1,59 @@
 ---
 id: rn-base
 slug: /rn-base
-title: 基础学习
+title: Basic Learning
 date: 2024-11-04
 authors: Hoo
 tags: [react-native]
 keywords: [react-native]
 ---
 
-# React Native Expo 基础
+# React Native Expo Base
 
-[官网]: https://expo.nodejs.cn/get-started/create-a-project/
+[**Official Website**](https://expo.nodejs.cn/get-started/create-a-project/)
 
-React Native是一个用于构建跨平台移动应用的开源框架。它由Facebook开发并维护，允许开发人员使用JavaScript和React构建原生移动应用。与传统的移动开发方式相比，React Native具有许多优势，其中最主要的是可以同时在iOS和Android平台上进行开发，减少了开发人员需要编写的代码量，并且提供了更快的开发周期。React Native通过将JavaScript代码解释为原生组件，使得应用的性能接近于原生应用，同时还能够利用React的强大的组件化和声明式UI的特性。
+React Native is an open source framework for building cross-platform mobile applications. Developed and maintained by Facebook, it allows developers to build native mobile applications using JavaScript and React. Compared with traditional mobile development methods, React Native has many advantages, the most important of which is that it can be developed on both iOS and Android platforms, reducing the amount of code developers need to write and providing a faster development cycle. React Native interprets JavaScript code as native components, making the performance of the application close to that of native applications, while also being able to take advantage of React's powerful componentization and declarative UI features.
 
+## Android Studio Installation (if necessary) (——Basically no installation required——)
 
-
-## Android Studio 安装 （如有需要）（——基本不需要安装——）
-
-[塔建安卓环境 软件安装视频教程]: https://www.bilibili.com/video/BV1Pt4y1n7bD?p=3
+[**Tower build Android environment software installation video tutorial**](https://www.bilibili.com/video/BV1Pt4y1n7bD?p=3)
 
 
-
-## Expo Go 安装  📱
+## Expo Go installation 📱
 
 ```
-手机安装 `Expo Go` 软件
+Install `Expo Go` software on your phone
 ```
 
-
-
-## 🔔 安装
-
+## 🔔 Installation
 ```
 npx create-expo-app <project-name>
 ```
 
-## 🔔 快速构建 `Navigation` 项目
+## 🔔 Quickly build the `Navigation` project
 
 ```
 npx create-expo-app --template
 
-选择 Navigation (TypeScript)
+Select Navigation (TypeScript)
 ```
 
 
 
 
 
-## 🔔 启动 expo-cli
+## 🔔 Start expo-cli
 
-`expo-cli` 无需通过 USB 连接。这是 Expo 提供的一种方便快捷的开发方式，适用于跨平台移动应用程序的开发和测试。
+`expo-cli` does not require a USB connection. This is a convenient and fast development method provided by Expo, suitable for the development and testing of cross-platform mobile applications.
 
-[问题 Git 讨论]: https://github.com/expo/expo/issues/22747
+[**Issue Git Discussion**](https://github.com/expo/expo/issues/22747)
 
-#### 第一次启动项目，请输入以下
+#### To start the project for the first time, please enter the following
 
 ```
 npx expo-cli upgrade
 ```
-#### 启动
+#### Start
 
 ```
 npx expo start
@@ -69,11 +63,11 @@ npx expo start
 
 
 
-# 基础使用 🎥
+# Basic usage
 
-组件文件 `Welcome.jsx` 和 `welcome.style.js`
+Component files `Welcome.jsx` and `welcome.style.js`
 
-`style` 文件
+`style` file
 
 ```react
 import { StyleSheet } from "react-native";
@@ -109,7 +103,7 @@ const styles = StyleSheet.create({
 export default styles;
 ```
 
-`html` 文件
+`html` File
 
 ```html
 style={styles.container}
@@ -119,7 +113,7 @@ style={[styles.container]}
 
 
 
-### 🎐 函数使用
+### 🎐Function usage
 
 ```react
 import React from 'react';
@@ -142,7 +136,7 @@ export default MyButton;
 
 
 
-### 🎐 React Native 标签
+### 🎐 React Native Tag
 
 #### 🌍 View
 
@@ -178,7 +172,7 @@ export default function App() {
 
 #### 🌍 SafeAreaView
 
-`SafeAreaView` 会根据设备的屏幕边缘自动调整子组件的布局，以确保内容不会被遮挡或延伸到屏幕的安全区域外。在 iPhone X 及以上设备上，`SafeAreaView` 会自动考虑到刘海区域、底部安全区域以及可能的 Home Indicator 区域，从而使内容在显示时不会受到这些区域的干扰。
+`SafeAreaView` automatically adjusts the layout of child components based on the device's screen edges to ensure that content is not obscured or extends outside the safe area of ​​the screen. On iPhone X and above, `SafeAreaView` automatically takes into account the fringe area, the bottom safe area, and possible Home Indicator areas so that content is not disturbed by these areas when displayed.
 
 ```react
 import { SafeAreaView, ScrollView, StyleSheet, Text, View, Platform, StatusBar } from 'react-native';
@@ -198,14 +192,14 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // 适配 Android 状态栏
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // Adapt to Android status bar
   },
 });
 
 export default Home;
 ```
 
-Android可以使用 `getStatusBarHeight` 库
+Android can use the `getStatusBarHeight` library
 
 
 
@@ -241,17 +235,15 @@ const Home = () => {
 export default Home;
 ```
 
-`showsVerticalScrollIndicator={false}` 是 ScrollView 组件的一个属性，用于控制是否显示垂直滚动条。
+`showsVerticalScrollIndicator={false}` is a property of the ScrollView component that controls whether the vertical scroll bar is displayed.
 
-`contentContainerStyle={{padding:30}}` 是 ScrollView 和 FlatList 等滚动组件的一个属性，用于定义滚动内容的容器样式。这个样式会被应用到包含滚动内容的容器上，而不是滚动条本身。
+`contentContainerStyle={{padding:30}}` is a property of scroll components such as ScrollView and FlatList that defines the container style of the scrolling content. This style will be applied to the container containing the scrolling content, not the scroll bar itself.
 
-`horizontal={true}` // 设置为水平滚动
-
-
+`horizontal={true}` // Set to horizontal scrolling
 
 #### 🌍 Dismensions
 
-`Dimensions` 是 React Native 中的一个 API，用于获取设备的尺寸信息。它提供了一种简单的方法来获取设备的宽度和高度，以及其他相关的尺寸信息。
+`Dimensions` is an API in React Native for getting device size information. It provides a simple way to get the width and height of the device, as well as other related size information.
 
 ```react
 import { Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native'
@@ -298,16 +290,16 @@ export default Home;
 
 #### 🌍 StatusBar
 
-`StatusBar` 是 React Native 中用于控制设备状态栏的组件。它允许你控制状态栏的颜色、样式、是否显示等。你可以使用 `StatusBar` 来设置状态栏的背景色、文字颜色、是否隐藏状态栏等。
+`StatusBar` is a component in React Native that controls the device status bar. It allows you to control the color, style, display, etc. of the status bar. You can use `StatusBar` to set the background color, text color, whether to hide the status bar, etc. of the status bar.
 
 ```react
 <StatusBar hidden={true} backgroundColor="red" barStyle={"dark-content"} />
 ```
 
-`StatusBar` 组件的 `barStyle` 属性用于指定状态栏的文字颜色主题，有两个可选值：
+The `barStyle` attribute of the `StatusBar` component is used to specify the text color theme of the status bar. There are two optional values:
 
-1. `"dark-content"`：将状态栏文字颜色设置为深色（通常为黑色），适用于浅色背景。
-2. `"light-content"`：将状态栏文字颜色设置为浅色（通常为白色），适用于深色背景
+1. `"dark-content"`: Set the status bar text color to a dark color (usually black), suitable for light backgrounds.
+2. `"light-content"`: Set the status bar text color to a light color (usually white), suitable for dark backgrounds
 
 ```react
 barStyle={"dark-content"}
@@ -321,7 +313,7 @@ barStyle={"light-content"}
 
 #### 🌍 Switch
 
-`Switch` 是一个用于切换开关状态的组件。它提供了一个可视化的开关按钮，用户可以通过点击来切换开关的状态。你可以通过设置 `value` 属性来控制开关的状态，通过监听 `onValueChange` 事件来处理开关状态的改变。
+`Switch` is a component used to switch the state of a switch. It provides a visual switch button that users can click to switch the state of the switch. You can control the state of the switch by setting the `value` property and handle the change of the switch state by listening to the `onValueChange` event.
 
 ```react
 import React, { useState } from 'react';
@@ -369,21 +361,18 @@ export default App;
 ```
 
 1. **trackColor**:
-   - `trackColor` 属性用于设置开关轨道（track）的颜色，即开关的背景色。
-   - 这个属性接受一个对象作为值，对象有两个键值对：`false` 和 `true`，分别表示开关关闭和开关打开时的颜色。
-   - 例如，`trackColor={{ false: "#767577", true: "#81b0ff" }}` 表示当开关关闭时，轨道的颜色为 `#767577`，当开关打开时，轨道的颜色为 `#81b0ff`。
+- The `trackColor` property is used to set the color of the switch track, that is, the background color of the switch.
+- This property accepts an object as a value, which has two key-value pairs: `false` and `true`, which represent the colors when the switch is closed and opened respectively.
+- For example, `trackColor={{ false: "#767577", true: "#81b0ff" }}` means that when the switch is closed, the color of the track is `#767577`, and when the switch is opened, the color of the track is `#81b0ff`.
 2. **thumbColor**:
-   - `thumbColor` 属性用于设置开关的 thumb（指示开关状态的小圆形按钮）的颜色。
-   - 这个属性接受一个颜色字符串作为值，用于指定 thumb 的颜色。
-   - 通常，根据开关的状态不同，thumb 的颜色也会不同。您可以根据需要使用条件表达式来设置不同状态下的颜色。
-   - 例如，`thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}` 表示如果开关处于打开状态，则 thumb 的颜色为 `#f5dd4b`，否则为 `#f4f3f4`。
+- The `thumbColor` property is used to set the color of the switch thumb (the small round button indicating the switch state).
+- This property accepts a color string as a value, which is used to specify the color of the thumb.
+- Usually, the color of the thumb will be different depending on the state of the switch. You can use conditional expressions to set the color in different states as needed.
+- For example, `thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}` means that if the switch is on, the color of the thumb is `#f5dd4b`, otherwise it is `#f4f3f4`.
 
+#### 🌍 ActivityIndicator (loding)
 
-
-#### 🌍 ActivityIndicator  (loding)
-
-`ActivityIndicator` 是一个用于显示加载指示器的组件，通常用于在数据加载或处理过程中显示一个加载动画。它提供了不同的样式和颜色选项，可以根据需要进行定制。当应用程序在后台进行网络请求或其他耗时操作时，你可以使用 `ActivityIndicator` 来告诉用户正在进行加载操作。
-
+`ActivityIndicator` is a component used to display a loading indicator, usually used to display a loading animation when data is loading or processing. It provides different style and color options and can be customized as needed. When the application is performing network requests or other time-consuming operations in the background, you can use `ActivityIndicator` to tell the user that a loading operation is in progress.
 ```react
 import React, { useState, useEffect } from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
@@ -391,10 +380,10 @@ import { View, ActivityIndicator, StyleSheet } from 'react-native';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  // 模拟加载数据或执行长时间任务
+  // Simulate loading data or executing long tasks
   useEffect(() => {
     const fetchData = async () => {
-      // 模拟加载数据或执行长时间任务
+      // Simulate loading data or executing long tasks
       await new Promise(resolve => setTimeout(resolve, 3000));
       setIsLoading(false);
     };
@@ -407,7 +396,7 @@ const App = () => {
         <ActivityIndicator size="large" color="#0000ff" />
       ) : (
         <View>
-          {/* 显示加载完成后的内容 */}
+          {/* Display the content after loading */}
           <Text>Data loaded successfully!</Text>
         </View>
       )}
@@ -426,11 +415,11 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-1. **small**：指示器的尺寸为小号。
-2. **large**：指示器的尺寸为大号。
+1. **small**: The indicator size is small.
+2. **large**: The indicator size is large.
 
 ```
-size={50} // 数字
+size={50} // number
 ```
 
 
@@ -438,10 +427,9 @@ size={50} // 数字
 
 
 #### 🌍 Animated
+`Animated` is an API for creating animation effects in React Native. It provides a set of methods that can be used to create, combine, and time animations, including translation, rotation, scaling, transparency, and more. With `Animated`, you can easily add various animation effects to your application and enhance the user experience.
 
-`Animated` 是 React Native 中用于创建动画效果的 API。它提供了一组可以用来创建、组合和定时动画的方法，包括平移、旋转、缩放、透明度等。使用 `Animated`，你可以轻松地为你的应用程序添加各种动画效果，提升用户体验。
-
-[官网]: https://reactnative.cn/docs/animated
+[**Official Website**](https://reactnative.cn/docs/animated)
 
 ```react
 import React, {useRef} from 'react';
@@ -455,11 +443,11 @@ import {
 } from 'react-native';
 
 const App = () => {
-  // fadeAnim 将用作不透明度的值。初始值：0
+  // fadeAnim The value that will be used as opacity. Initial value: 0
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   const fadeIn = () => {
-    // 将在 5 秒内将 fadeAnim 值更改为 1
+    // will change the fadeAnim value to 1 in 5 seconds
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 5000,
@@ -468,7 +456,7 @@ const App = () => {
   };
 
   const fadeOut = () => {
-    // 将在 3 秒内将 fadeAnim 值更改为 0
+    // will change the fadeAnim value to 0 in 3 seconds
     Animated.timing(fadeAnim, {
       toValue: 0,
       duration: 3000,
@@ -482,7 +470,7 @@ const App = () => {
         style={[
           styles.fadingContainer,
           {
-            // 将不透明度绑定到动画值
+            // Bind opacity to an animated value
             opacity: fadeAnim,
           },
         ]}>
@@ -525,7 +513,7 @@ Animated.timing(fadeAnim, {
       duration: 5000,
       useNativeDriver: true,
     }).start(() => {
-    	alert("我出来了")
+    	alert("I'm out")
 	});
 ```
 
@@ -535,9 +523,9 @@ Animated.timing(fadeAnim, {
 
 #### 🌍 TextInput
 
-`TextInput` 是一个用于接受用户输入的文本输入框组件。它允许用户输入文本、数字、密码等，并提供了一些属性和事件用于控制输入内容的样式、行为和处理。
+`TextInput` is a text input box component used to accept user input. It allows users to enter text, numbers, passwords, etc., and provides some properties and events to control the style, behavior, and processing of input content.
 
-[官网]: https://reactnative.cn/docs/textinput
+[**Official Website**](https://reactnative.cn/docs/textinput)
 
 ```react
 import React, { useState } from 'react';
@@ -557,12 +545,12 @@ const App = () => {
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
-        secureTextEntry={true} // 设置为密码输入框
-        keyboardType="email-address" // 设置键盘类型为 email-address
+        secureTextEntry={true} // Set as password input box
+        keyboardType="email-address" // Set the keyboard type to email-address
         placeholder="Type here..."
-        multiline={true} // 支持多行输入
-        numberOfLines={4} // 初始行数为 4 行
-        textAlignVertical="top" // 设置文本从顶部开始对齐
+        multiline={true} // Support multi-line input
+        numberOfLines={4} // The initial number of rows is 4
+        textAlignVertical="top" // Set the text to start from the top
       />
       <Text>Your name is: {text}</Text>
     </View>
@@ -589,30 +577,33 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-`keyboardType` 是 TextInput 组件的一个属性，用于指定在用户输入文本时要显示的键盘类型。
+`keyboardType` is a property of the TextInput component that specifies the type of keyboard to display when the user enters text.
 
-以下是一些常用的 `keyboardType` 值：
+Here are some commonly used `keyboardType` values:
 
-- `default`：默认的键盘类型，适用于通用文本输入。
-- `numeric`：显示数字键盘，允许输入数字。
-- `email-address`：显示带有 `@` 符号的键盘，适用于输入电子邮件地址。
-- `phone-pad`：显示电话号码键盘，适用于输入电话号码。
-- `number-pad`：显示数字键盘，允许输入数字，不显示小数点。
-- `decimal-pad`：显示数字键盘，允许输入数字和小数点。
+- `default`: The default keyboard type, suitable for general text input.
+
+- `numeric`: Displays a numeric keyboard, allowing the entry of numbers.
+
+- `email-address`: Displays a keyboard with an `@` symbol, suitable for entering email addresses.
+
+- `phone-pad`: Displays a phone number keyboard, suitable for entering phone numbers.
+
+- `number-pad`: Displays a numeric keyboard, allowing the entry of numbers without a decimal point.
+
+- `decimal-pad`: Displays a numeric keyboard, allowing the entry of numbers and a decimal point.
 
 ```
-multiline 和 numberOfLines 和 textAlignVertical 一起使用
+multiline and numberOfLines used with textAlignVertical
 ```
+`textAlignVertical` is a property of the TextInput component that specifies the vertical alignment of text.
 
-`textAlignVertical` 是 TextInput 组件的一个属性，用于指定垂直方向上文本的对齐方式。
+In React Native, the `textAlignVertical` property is only available on Android and controls the vertical alignment of text. It can accept several predefined values:
 
-在 React Native 中，`textAlignVertical` 属性仅适用于 Android 平台，用于控制文本在垂直方向上的对齐方式。它可以接受以下几个预定义的值：
-
-- `auto`：默认值。根据文本内容自动调整垂直对齐方式。
-- `top`：文本从顶部开始对齐。
-- `bottom`：文本从底部开始对齐。
-- `center`：文本在垂直方向上居中对齐。
-
+- `auto`: Default value. Automatically adjust vertical alignment based on text content.
+- `top`: Text is aligned from the top.
+- `bottom`: Text is aligned from the bottom.
+- `center`: Text is vertically centered.
 
 
 
@@ -621,30 +612,30 @@ multiline 和 numberOfLines 和 textAlignVertical 一起使用
 
 #### 🌍 KeyboardAvoidingView
 
-`KeyboardAvoidingView` 是一个用于在键盘弹出时自动调整界面布局的组件。它可以确保输入框不被键盘遮挡，从而提高用户体验。通常与 `TextInput` 一起使用，以确保输入框在键盘弹出时能够自动调整位置。
+`KeyboardAvoidingView` is a component used to automatically adjust the interface layout when the keyboard pops up. It can ensure that the input box is not blocked by the keyboard, thereby improving the user experience. It is usually used with `TextInput` to ensure that the input box can automatically adjust its position when the keyboard pops up.
 
-#### 
+####
 
 #### 🌍 Image
 
-`Image` 是一个用于显示图片的组件。它可以显示本地图片、远程图片、网络图片等，并提供了一些属性和事件用于控制图片的加载、缩放、裁剪等。
+`Image` is a component used to display images. It can display local images, remote images, network images, etc., and provides some properties and events for controlling image loading, scaling, cropping, etc.
 
 ```react
 import React from 'react';
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 
-const { width } = Dimensions.get('window'); // 获取屏幕宽度
+const { width } = Dimensions.get('window'); // Get the screen width
 
 const App = () => {
   return (
     <View style={styles.container}>
-      {/* 显示本地图片 */}
+      {/* Display local pictures */}
       <Image
         source={require('./path/to/local/image.png')}
         style={styles.image}
       />
 
-      {/* 显示网络图片 */}
+      {/* Display network pictures */}
       <Image
         source={{ uri: 'https://example.com/path/to/image.jpg' }}
         style={styles.image}
@@ -660,9 +651,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: width, // 设置图片宽度为屏幕宽度
-    height: 200, // 固定高度
-    resizeMode: 'cover', // 控制图片的缩放方式
+    width: width, // Set the image width to the screen width
+    height: 200, // Fixed Height
+    resizeMode: 'cover', // Control how images are scaled
     marginBottom: 20,
   },
 });
@@ -676,21 +667,17 @@ export default App;
 
 #### 🌍 ImageBackground
 
-`ImageBackground` 是一个用于显示带有背景图片的组件。它允许你在背景上叠加其他组件，从而实现复杂的布局和样式。
-
-
-
-
+`ImageBackground` is a component for displaying images with backgrounds. It allows you to overlay other components on the background to achieve complex layouts and styles.
 
 #### 🌍 TouchableNativeFeedback
 
-`TouchableNativeFeedback` 是一个用于实现原生触摸反馈效果的组件。它提供了一种类似于 Android 原生按钮点击效果的触摸反馈，可以使用户感觉到按钮被点击的反馈效果。
+`TouchableNativeFeedback` is a component for implementing native touch feedback effects. It provides a touch feedback similar to the Android native button click effect, which allows users to feel the feedback effect of the button being clicked.
 
 #### 🌍 TouchableOpacity
 
-`TouchableOpacity` 是一个用于实现按钮点击效果的组件。它提供了一种在用户点击时降低按钮的不透明度的效果，从而使用户感觉到按钮被点击的反馈效果。
+`TouchableOpacity` is a component for implementing button click effects. It provides an effect of reducing the opacity of the button when the user clicks it, so that the user can feel the feedback effect of the button being clicked.
 
-`触摸时透明度变化`
+`Transparency changes when touching`
 
 ```react
 import React from 'react';
@@ -738,11 +725,11 @@ export default App;
 
 #### 🌍 TouchableHighlight
 
-`TouchableHighlight` 是一个用于实现触摸高亮效果的组件。它会在用户触摸时高亮显示，提供了一种类似于点击按钮的反馈效果。通常用于实现按钮或其他可点击元素。
+`TouchableHighlight` is a component used to implement touch highlighting effects. It highlights when the user touches it, providing a feedback effect similar to clicking a button. It is usually used to implement buttons or other clickable elements.
 
-[官网]: https://reactnative.cn/docs/touchablehighlight
+[**Official Website**](https://reactnative.cn/docs/touchablehighlight)
 
-`触摸时高亮显示`
+`Highlight on touch`
 
 ```react
 import React from 'react';
@@ -758,7 +745,7 @@ const App = () => {
       <TouchableHighlight
         style={styles.button}
         onPress={onPressButton}
-        underlayColor="lightblue" // 触摸时显示的颜色
+        underlayColor="lightblue" // Color displayed when touched
       >
         <Text style={styles.text}>Press Me</Text>
       </TouchableHighlight>
@@ -793,9 +780,9 @@ export default App;
 
 #### 🌍 TouchableWithoutFeedback
 
-`TouchableWithoutFeedback` 是一个用于实现无反馈触摸效果的组件。它不会提供任何反馈效果，仅仅是在用户触摸时触发相应的事件。通常用于实现自定义的交互效果。
+`TouchableWithoutFeedback` is a component for implementing non-feedback touch effects. It does not provide any feedback effects, but only triggers corresponding events when the user touches. It is usually used to implement custom interactive effects.
 
-`TouchableWithoutFeedback` 不会提供任何点击反馈
+`TouchableWithoutFeedback` does not provide any click feedback
 
 ```react
 import React from 'react';
@@ -843,10 +830,9 @@ export default App;
 
 
 #### 🌍 Button
+`Button` is a component used to create native buttons. It provides a simple button interface for triggering corresponding actions or events. `Button` components are usually cross-platform and have similar appearance and behavior on different platforms.
 
-`Button` 是一个用于创建原生按钮的组件。它提供了一个简单的按钮界面，用于触发相应的操作或事件。`Button` 组件通常是跨平台的，在不同的平台上都有相似的外观和行为。
-
-[官网]: https://reactnative.cn/docs/button
+[**Official Website**](https://reactnative.cn/docs/button)
 
 `onPress`
 
@@ -858,8 +844,7 @@ export default App;
 
 #### 🌍 Alert
 
-`Alert` 是 React Native 中用于显示警告框的 API。它可以用来在应用程序中显示警告、确认或提示信息，通常用于提示用户某些重要的信息或操作。
-
+`Alert` is an API for displaying alert boxes in React Native. It can be used to display warnings, confirmations, or prompts in applications, usually to prompt users with some important information or operations.
 ```react
 import { View, Button, Alert } from 'react-native';
 
@@ -873,17 +858,17 @@ import { View, Button, Alert } from 'react-native';
 const MyAlert = () => {
   const showAlert = () => {
     Alert.alert(
-      '标题',
-      '确定要执行这个操作吗？',
+      'Title',
+      'Are you sure you want to perform this operation?',
       [
         {
-          text: '取消',
-          onPress: () => console.log('取消按钮被点击'),
+          text: 'Cancel',
+          onPress: () => console.log('Cancel button is clicked'),
           style: 'cancel',
         },
         {
-          text: '确定',
-          onPress: () => console.log('确定按钮被点击'),
+          text: 'Sure',
+          onPress: () => console.log('The Sure button is clicked'),
         },
       ],
       { cancelable: false }
@@ -892,7 +877,7 @@ const MyAlert = () => {
 
   return (
     <View>
-      <Button title="显示提示框" onPress={showAlert} />
+      <Button title="Show tooltip" onPress={showAlert} />
     </View>
   );
 };
@@ -900,11 +885,11 @@ const MyAlert = () => {
 export default MyAlert;
 ```
 
-`cancelable: false` 是一个配置选项，用于设置 Alert 组件是否允许通过点击屏幕空白区域或返回键来关闭提示框。
+`cancelable: false` is a configuration option that sets whether the Alert component allows the prompt box to be closed by clicking a blank area of ​​the screen or pressing the back key.
 
-当 `cancelable` 设置为 `true` 时，用户可以通过点击屏幕空白区域或按下返回键来关闭提示框。这是默认行为，适用于大多数情况下用户可以通过手动关闭提示框的场景。
+When `cancelable` is set to `true`, the user can close the prompt box by clicking a blank area of ​​the screen or pressing the back key. This is the default behavior and is suitable for most scenarios where the user can manually close the prompt box.
 
-但是，当 `cancelable` 设置为 `false` 时，意味着用户无法通过点击屏幕空白区域或按下返回键来关闭提示框。这通常用于一些重要的提示或确认框，确保用户不能轻易地关闭提示框而必须做出明确的选择。
+However, when `cancelable` is set to `false`, it means that the user cannot close the prompt box by clicking a blank area of ​​the screen or pressing the back key. This is usually used for some important prompts or confirmation boxes to ensure that the user cannot easily close the prompt box and must make an explicit choice.
 
 
 
@@ -912,15 +897,14 @@ export default MyAlert;
   style
   ```
 
-  ：按钮的样式，用于定义按钮的外观。可选值包括：
+ : The style of the button, used to define the appearance of the button. Optional values ​​include:
 
-  - `default`：默认样式，通常用于普通按钮。
-  - `cancel`：取消样式，通常用于取消操作的按钮。
-  - `destructive`：破坏性样式，通常用于执行危险或不可恢复操作的按钮。
+- `default`: The default style, usually used for normal buttons.
+- `cancel`: The cancel style, usually used for buttons that cancel operations.
+- `destructive`: The destructive style, usually used for buttons that perform dangerous or irreversible operations.
 
 
-
-例子
+Example
 
 ```react
 import React from 'react';
@@ -929,21 +913,21 @@ import { View, Button, Alert } from 'react-native';
 const MyAlert = () => {
   const showAlert = () => {
     Alert.alert(
-      '标题',
-      '确定要执行这个操作吗？',
+      'Title',
+      'Are you sure you want to perform this operation?？',
       [
         {
-          text: '稍后再试',
-          onPress: () => console.log('稍后提醒我'),
+          text: 'Try again later',
+          onPress: () => console.log('Remind me later'),
         },
         {
-          text: '取消',
-          onPress: () => console.log('取消按钮被点击'),
+          text: 'Cancel',
+          onPress: () => console.log('Cancel button is clicked'),
           style: 'cancel',
         },
         {
-          text: '确定',
-          onPress: () => console.log('确定按钮被点击'),
+          text: 'Sure',
+          onPress: () => console.log('The Sure button is clicked'),
         },
       ],
       { cancelable: false }
@@ -952,7 +936,7 @@ const MyAlert = () => {
 
   return (
     <View>
-      <Button title="显示提示框" onPress={showAlert} />
+      <Button title="Show tooltip" onPress={showAlert} />
     </View>
   );
 };
@@ -964,7 +948,7 @@ export default MyAlert;
 
 #### 🌍 Platform
 
-`Platform` 是 React Native 提供的一个 API，用于获取当前运行平台的信息。通过 `Platform`，你可以判断当前应用程序运行在哪个平台（例如 iOS、Android 或 Web），以便根据不同的平台进行相应的处理或适配。
+`Platform` is an API provided by React Native to obtain information about the current running platform. Through `Platform`, you can determine which platform the current application is running on (such as iOS, Android, or Web) so that you can process or adapt it accordingly according to different platforms.
 
 ```
 paddingTop: platform === "ios" ? (variables.isIphoneX ? 39 : 15) : 0
@@ -975,16 +959,16 @@ height: platform === "ios" ? (isIphoneX ? 88 : 64) : 56
 
 #### 🌍 FlatList
 
-`FlatList` 是一个用于显示列表数据的高性能列表组件。它可以滚动显示大量数据，并提供了一些优化手段来提高列表的性能和流畅度，例如数据的懒加载、滚动优化等。
+`FlatList` is a high-performance list component for displaying list data. It can scroll and display a large amount of data, and provides some optimization methods to improve the performance and fluency of the list, such as lazy loading of data, scrolling optimization, etc.
 
-[官网]: https://reactnative.cn/docs/flatlist
+[**Official Website**](https://reactnative.cn/docs/flatlist)
 
 ```react
 import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 const App = () => {
-  // 示例数据
+  // Sample Data
   const DATA = [
     { id: '1', title: 'Item 1' },
     { id: '2', title: 'Item 2' },
@@ -998,7 +982,7 @@ const App = () => {
     { id: '10', title: 'Item 10' },
   ];
 
-  // 渲染每个列表项
+  // Render each list item
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <Text>{item.title}</Text>
@@ -1008,9 +992,9 @@ const App = () => {
   return (
     <View style={styles.container}>
       <FlatList
-        data={DATA} // 设置列表数据
-        renderItem={renderItem} // 渲染每个列表项
-        keyExtractor={item => item.id} // 提取每个项的唯一键
+        data={DATA} // Setting list data
+        renderItem={renderItem} // Render each list item
+        keyExtractor={item => item.id} // Extract the unique key for each item
       />
     </View>
   );
@@ -1035,16 +1019,16 @@ export default App;
 
 #### 🌍 SectionList
 
-`SectionList` 是一个带有分组标题的列表组件。它类似于 `FlatList`，但可以将列表数据分组显示，并在每个分组之间显示分组标题。
+`SectionList` is a list component with group headers. It is similar to `FlatList`, but can display list data in groups and display group headers between each group.
 
-[官网]: https://reactnative.cn/docs/sectionlist
+[**Official Website**](https://reactnative.cn/docs/sectionlist)
 
 ```react
 import React, { useState } from 'react';
 import { View, Text, SectionList, StyleSheet, refreshControl } from 'react-native';
 
 const App = () => {
-  // 示例数据
+  // Sample Data
   const DATA = [
     {
       title: 'Group 1',
@@ -1065,27 +1049,27 @@ const App = () => {
   const onRefresh = () => {
     setRefreshing(true);
 
-    // 模拟刷新操作，实际应用中通常会发起网络请求或执行其他异步操作
+    // Simulate refresh operations. In actual applications, network requests are usually initiated or other asynchronous operations are performed.
     setTimeout(() => {
       setRefreshing(false);
     }, 2000);
   };
 
-  // 渲染每个分组的标题
+  // Renders the title of each group
   const renderSectionHeader = ({ section }) => (
     <View style={styles.sectionHeader}>
       <Text style={styles.sectionHeaderText}>{section.title}</Text>
     </View>
   );
 
-  // 渲染每个分组中的每个项目
+  // Render each item in each group
   const renderItem = ({ item }) => (
     <View style={styles.item}>
       <Text>{item}</Text>
     </View>
   );
 
-  // 列表为空时显示的组件
+  // The component to display when the list is empty
   const renderEmptyComponent = () => (
     <View style={styles.emptyContainer}>
       <Text>No data available</Text>
@@ -1095,16 +1079,16 @@ const App = () => {
   return (
     <View style={styles.container}>
       <SectionList
-        sections={DATA} // 设置分组数据
-        keyExtractor={(item, index) => item + index} // 设置每个项的唯一键
-        renderItem={renderItem} // 渲染每个项
-        renderSectionHeader={renderSectionHeader} // 渲染每个分组的标题
-        ItemSeparatorComponent={() => <View style={styles.separator} />} // 设置分隔符组件
-        ListEmptyComponent={renderEmptyComponent} // 设置空列表时显示的组件
-        refreshing={refreshing} // 设置下拉刷新的状态
-        onRefresh={onRefresh} // 设置下拉刷新的回调函数
+        sections={DATA} // Set up packet data
+        keyExtractor={(item, index) => item + index} // Set a unique key for each item
+        renderItem={renderItem} // Render each item
+        renderSectionHeader={renderSectionHeader} // Renders the title of each group
+        ItemSeparatorComponent={() => <View style={styles.separator} />} // Set the separator component
+        ListEmptyComponent={renderEmptyComponent} // Set the component to display when the list is empty
+        refreshing={refreshing} // Set the pull-to-refresh state
+        onRefresh={onRefresh} // Set the pull-down refresh callback function
           
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />} // 刷新控件
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />} // Refresh Control
       />
     </View>
   );
@@ -1146,61 +1130,11 @@ export default App;
 
 #### 🌍 Modal
 
-`Modal` 是一个用于显示模态框的组件。它可以在当前界面上显示一个覆盖层，并在其上显示一个自定义的内容。通常用于实现对话框、提示框或其他需要用户交互的临时界面。
+`Modal` is a component used to display a modal box. It can display an overlay on the current interface and display a custom content on it. It is usually used to implement dialog boxes, prompt boxes or other temporary interfaces that require user interaction.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 插件
+## Plugins
 
 ```
 npm i expo-font axios react-native-dotenv
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -30,7 +30,14 @@ export function BlogItem({ post }: { post: BlogPost }) {
     >
       {frontMatter.image && (
         <Link href={permalink} className="max-h-[240px] w-full cursor-pointer overflow-hidden object-cover">
-          <Image src={frontMatter?.image} alt={title} img={''} />
+          <div className="relative w-full" style={{ height: '160px',width:'100%' }}> {/* 设置固定高度 */}
+    <Image
+      src={frontMatter?.image}
+      alt={title}
+      img={''}
+      className="object-cover" // 使用 object-cover 让图片自适应容器
+    />
+  </div>
         </Link>
       )}
       <div className={'card__body'}>

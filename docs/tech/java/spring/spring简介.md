@@ -8,6 +8,8 @@ tags: [java]
 keywords: [java]
 ---
 
+
+
 Spring MVC 是一个基于 Spring 框架的模块，专门用于构建 Web 应用程序。它采用了经典的 MVC（Model-View-Controller）设计模式，提供了一种灵活和高效的方式来开发 Java Web 应用。Spring MVC 通过将业务逻辑、用户界面和请求处理分离，使得应用程序的结构更加清晰，便于维护和扩展。
 
 Spring MVC 的主要特点包括：

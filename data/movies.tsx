@@ -136,10 +136,35 @@ export const movies: Project[] = [
     source: 'https://www.movieffm.net/movies/die-alone/',
     tags: ['thriller'],
     type: 'movie',
-  }
-
+  },
   // anime
-
+  {
+    title: translate({ id: 'movie.title.anime1', message: '死神' }),
+    description: translate({ id: 'movie.desc.anime1', message: '小时候自己花钱买了一大堆死神的CD，是我的最爱！' }),
+    preview: 'https://giffiles.alphacoders.com/221/221811.gif',
+    website: 'https://www.movieffm.net/drama/153898/',
+    source: 'https://www.movieffm.net/drama/153898/',
+    tags: ['favorite','fighting'],
+    type: 'anime',
+  },
+  {
+    title: translate({ id: 'movie.title.anime2', message: '東京食屍鬼' }),
+    description: translate({ id: 'movie.desc.anime2', message: '曾经被主题曲震撼，然后迷上的动漫' }),
+    preview: 'https://images4.alphacoders.com/804/thumb-1920-804422.png',
+    website: 'https://www.movieffm.net/drama/151011/',
+    source: 'https://www.movieffm.net/drama/151011/',
+    tags: ['favorite','fighting'],
+    type: 'anime',
+  },
+  {
+    title: translate({ id: 'movie.title.anime3', message: '鬼滅之刃' }),
+    description: translate({ id: 'movie.desc.anime3', message: '莫名会被剧情吸引的动漫' }),
+    preview: 'https://images2.alphacoders.com/132/thumb-1920-1329828.jpeg',
+    website: 'https://www.movieffm.net/tvshows/85937/',
+    source: 'https://www.movieffm.net/tvshows/85937/',
+    tags: ['favorite','fighting'],
+    type: 'anime',
+  }
   // drama
 
 ]

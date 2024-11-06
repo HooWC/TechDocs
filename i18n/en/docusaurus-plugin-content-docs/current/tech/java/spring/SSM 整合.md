@@ -1,20 +1,18 @@
 ---
 id: ssm
 slug: /ssm
-title: SSM 整合学习
+title: SSM Integrated Learning
 date: 2024-11-04
 authors: Hoo
 tags: [java]
 keywords: [java]
 ---
 
-## SSM 整合
+## SSM Integrated Learning
 
 Spring + Spring MVC + MyBatis
 
-
-
-#### 导入 POM
+### Import POM
 
 ```xml
  <dependencies>
@@ -107,7 +105,9 @@ Spring + Spring MVC + MyBatis
   </dependencies>
 ```
 
-#### web.xml 配置 Spring MVC, Spring
+### 配置
+
+web.xml Configuration Spring MVC, Spring
 
 ```xml
 <!DOCTYPE web-app PUBLIC
@@ -137,7 +137,7 @@ Spring + Spring MVC + MyBatis
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
-  <!-- 显示中文 -->
+  <!-- Display Chinese -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -147,7 +147,7 @@ Spring + Spring MVC + MyBatis
     </init-param>
     <init-param>
       <param-name>forceEncoding</param-name>
-      <param-value>true</param-value> <!-- 此处应该使用布尔值 true -->
+      <param-value>true</param-value> <!-- Boolean value should be used here true -->
     </init-param>
   </filter>
 
@@ -156,25 +156,25 @@ Spring + Spring MVC + MyBatis
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-  <!-- Spring MVC 静态资源访问 -->
+  <!-- Spring MVC Static resource access -->
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.js</url-pattern>
   </servlet-mapping>
 
-  <!-- Spring MVC 显示图片 格式 -->
+  <!-- Spring MVC Display image format -->
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.png</url-pattern>
   </servlet-mapping>
 
-  <!-- Spring MVC 显示图片 格式 -->
+  <!-- Spring MVC Display image format -->
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.jpg</url-pattern>
   </servlet-mapping>
 
-  <!-- Spring MVC 显示图片 格式 -->
+  <!-- Spring MVC Display image format -->
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.jpeg</url-pattern>
@@ -183,12 +183,10 @@ Spring + Spring MVC + MyBatis
 </web-app>
 ```
 
-#### 创建 XML 文件
+### Creating the XML File
 
 1. mybatis.xml
 2. springmvc.xml
-
-Spring.xml  不需要 ！！！！！
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -263,21 +261,21 @@ Spring.xml  不需要 ！！！！！
       <version>0.9.5.5</version>
     </dependency>
 
-    <!-- JSTL 顺序 1 -->
+    <!-- JSTL 1 -->
     <dependency>
       <groupId>jakarta.servlet.jsp.jstl</groupId>
       <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
       <version>2.0.0</version>
     </dependency>
 
-    <!-- JSTL 顺序 2 -->
+    <!-- JSTL 2 -->
     <dependency>
       <groupId>org.glassfish.web</groupId>
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
       <version>2.0.0</version>
     </dependency>
 
-    <!-- JSTL 顺序 3 -->
+    <!-- JSTL 3 -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
@@ -327,22 +325,22 @@ Spring.xml  不需要 ！！！！！
 </project>
 ```
 
-Mybatis.xml 引入 http://mybatis.org/dtd/mybatis-3-config.dtd 查看 MyBatis笔记
+Mybatis.xml Import http://mybatis.org/dtd/mybatis-3-config.dtd View MyBatis Notes
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <!-- 延迟加载 -->
+    <!-- Lazy Loading -->
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
         <setting name="lazyLoadingEnabled" value="true"/>
-        <!-- 二级缓存 -->
+        <!-- Second level cache -->
         <setting name="cacheEnabled" value="true"/>
     </settings>
 
-    <!-- 配置 MyBatis 运行 -->
+    <!-- Configure MyBatis to run -->
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -380,10 +378,10 @@ Springmvc.xml
 
     <mvc:annotation-driven/>
 
-    <!--配置自动扫描-->
+    <!--Configuring automatic scanning-->
     <context:component-scan base-package="com.xs"/>
 
-    <!--视图解析器-->
+    <!--View Resolver-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/"/>
         <property name="suffix" value=".jsp"/>
@@ -394,9 +392,9 @@ Springmvc.xml
 
 
 
-## 开始
+## Start
 
-文件 目录
+File Directory
 
 ```
 java
@@ -413,7 +411,7 @@ resource
 		UserRepository.xml
 ```
 
-1，实体类
+### 1，Entity Class
 
 ```java
 package com.xs.entity;
@@ -429,7 +427,7 @@ public class User {
 }
 ```
 
-2，Controller / Handler
+### 2，Controller / Handler
 
 ```java
 package com.xs.controller;
@@ -452,12 +450,12 @@ public class UserHandler {
     @GetMapping("/index")
     public ModelAndView index() {
 
-        // 加载 MyBatis 配置文件
+        // Loading the MyBatis configuration file
         InputStream inp = UserHandler.class.getClassLoader().getResourceAsStream("mybatis.xml");
         SqlSessionFactoryBuilder sqlSFB = new SqlSessionFactoryBuilder();
         SqlSessionFactory sqlF = sqlSFB.build(inp);
 
-        // 获取 SqlSession
+        // Get SqlSession
         SqlSession sqlS = sqlF.openSession();
         UserRepository userRepository = sqlS.getMapper(UserRepository.class);
 
@@ -471,7 +469,7 @@ public class UserHandler {
 }
 ```
 
-3，Repository / interface
+### 3，Repository / interface
 
 ```java
 package com.xs.repository;
@@ -487,12 +485,12 @@ public interface UserRepository {
 }
 ```
 
-4，Repository XML
+### 4，Repository XML
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- 接口的路径 -->
+<!-- Interface path -->
 <mapper namespace="com.xs.repository.UserRepository">
 
     <select id="findAll" resultType="com.xs.entity.User">
@@ -502,16 +500,9 @@ public interface UserRepository {
 </mapper>
 ```
 
-5，index.jsp
+### 5，index.jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Hoo
-  Date: 10/22/2024
-  Time: 2:03 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

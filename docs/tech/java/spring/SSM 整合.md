@@ -14,7 +14,7 @@ Spring + Spring MVC + MyBatis
 
 
 
-#### 导入 POM
+### 导入 POM
 
 ```xml
  <dependencies>
@@ -107,7 +107,9 @@ Spring + Spring MVC + MyBatis
   </dependencies>
 ```
 
-#### web.xml 配置 Spring MVC, Spring
+### 配置
+
+web.xml 配置 Spring MVC, Spring
 
 ```xml
 <!DOCTYPE web-app PUBLIC
@@ -183,7 +185,7 @@ Spring + Spring MVC + MyBatis
 </web-app>
 ```
 
-#### 创建 XML 文件
+### 创建 XML 文件
 
 1. mybatis.xml
 2. springmvc.xml
@@ -413,7 +415,7 @@ resource
 		UserRepository.xml
 ```
 
-1，实体类
+### 1，实体类
 
 ```java
 package com.xs.entity;
@@ -429,7 +431,7 @@ public class User {
 }
 ```
 
-2，Controller / Handler
+### 2，Controller / Handler
 
 ```java
 package com.xs.controller;
@@ -471,7 +473,7 @@ public class UserHandler {
 }
 ```
 
-3，Repository / interface
+### 3，Repository / interface
 
 ```java
 package com.xs.repository;
@@ -487,7 +489,7 @@ public interface UserRepository {
 }
 ```
 
-4，Repository XML
+### 4，Repository XML
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -502,7 +504,7 @@ public interface UserRepository {
 </mapper>
 ```
 
-5，index.jsp
+### 5，index.jsp
 
 ```jsp
 <%--
@@ -528,3 +530,58 @@ public interface UserRepository {
 </body>
 </html>
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
