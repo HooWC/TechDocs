@@ -148,228 +148,163 @@ app.listen(8080, () => {
 })
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## JavaScript 写法
+## JavaScript Writing
 
 ### FS
 
-#### 创建文件
+#### Create a file
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 异步写入
-fs.writeFile('./创建文件.txt','输入的内容', err => {
-    if(err){
-        console.log('写入失败');
+// Asynchronous write
+fs.writeFile('./newFile.txt', 'Content to write', err => {
+    if (err) {
+        console.log('Write failed');
         return;
     }
 
-    console.log('成功');
+    console.log('Success');
 });
 ```
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 同步写入
-fs.writeFileSync('./创建文件.txt','输入的内容');
+// Synchronous write
+fs.writeFileSync('./newFile.txt', 'Content to write');
 
-//路径
-'D:/index.html'
+// Path
+'D:/index.html';
 ```
 
 
 
-#### 追加内容
+#### Additional content
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 追加内容
-fs.appendFile('./创建文件.txt','追加的内容', err => {
-    if(err) throw err;
-    console.log('成功');
+// Append content
+fs.appendFile('./newFile.txt', 'Appended content', err => {
+    if (err) throw err;
+    console.log('Success');
 });
 ```
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 同步追加
-fs.appendFileSync('./创建文件.txt','输入的内容');
+// Synchronous append
+fs.appendFileSync('./newFile.txt', 'Content to append');
 ```
 
 
 
-#### FS 流式写法 创建
+#### FS Streaming Writing Create
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 写入
-let ws = fs.createWriteStream('./世界观.txt');
-ws.write('世间1\r\n');
-ws.write('世间2\r\n');
-ws.write('世间3\r\n');
-ws.write('世间4\r\n');
+// Write
+let ws = fs.createWriteStream('./worldview.txt');
+ws.write('World 1\r\n');
+ws.write('World 2\r\n');
+ws.write('World 3\r\n');
+ws.write('World 4\r\n');
 
-// 关闭
-ws.end
+// Close
+ws.end();
 ```
 
 
 
-#### 读取
+#### Read
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 读取 二进制
-fs.readFile('./创建文件.txt',(err, data) => {
-    if(err) throw err;
-    console.log(data);
-})
+// Read as binary
+fs.readFile('./newFile.txt', (err, data) => {
+    if (err) throw err;
+    console.log(data); // Binary data output
+});
 
-// 读取 内容
-fs.readFile('./创建文件.txt','utf-8',(err, data) => {
-    if(err) throw err;
-    console.log(data);
-})
+// Read as text
+fs.readFile('./newFile.txt', 'utf-8', (err, data) => {
+    if (err) throw err;
+    console.log(data); // Text content output
+});
 ```
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 读取 二进制
-let data = fs.readFileSync('./创建文件.txt');
+// Read as binary
+let data = fs.readFileSync('./newFile.txt');
 console.log(data.toString());
 ```
 
 
 
-#### 保存视频
+#### Save Video
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 读取
-let data = fs.readFileSync('./例子.mp4');
+// Read video file
+let data = fs.readFileSync('./example.mp4');
 
-// 保存视频
-fs.writeFileSync('../File/Save/例子.mp4',data);
+// Save video file
+fs.writeFileSync('../File/Save/example.mp4', data);
 ```
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 读取
-const rs = fs.createReadStream('./例子.mp4');
-// 保存路径
-const ws = fs.createWriteStream('./新例子.mp4');
+// Create read stream
+const rs = fs.createReadStream('./example.mp4');
+// Create write stream
+const ws = fs.createWriteStream('./newExample.mp4');
 
-rs.on('data',chunk => {
-    // 保存
+// On data event, write to the new file
+rs.on('data', chunk => {
     ws.write(chunk);
-})
+});
+
+// Optional: Handle end of stream
+rs.on('end', () => {
+    ws.end();  // Close the write stream when done
+});
 ```
 
 
 
-#### 换名字
+#### Change name
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 换名字
-fs.rename('./创建文件.txt','./新名字.txt', err => {
-    if(err) throw err;
-    console.log('成功');
-})
+// Rename file
+fs.rename('./newFile.txt', './newName.txt', err => {
+    if (err) throw err;
+    console.log('Success');
+});
 ```
 
 
 
-#### 移动文件
+#### Move files
 
 ```js
 // 导入 fs
@@ -384,95 +319,95 @@ fs.rename('./创建文件.txt','./新文件夹/创建文件.txt', err => {
 
 
 
-#### 删除文件
+#### Deleting files
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 删除
-fs.unlink('./创建文件.txt', err => {
-    if(err) throw err;
-    console.log('成功');
-})
+// Move file
+fs.rename('./newFile.txt', './newFolder/newFile.txt', err => {
+    if (err) throw err;
+    console.log('Success');
+});
 ```
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 删除
-fs.rm('./创建文件.txt', err => {
-    if(err) throw err;
-    console.log('成功');
-})
+// Delete file
+fs.rm('./newFile.txt', err => {
+    if (err) throw err;
+    console.log('Success');
+});
 ```
 
 
 
-#### 创建文件夹
+#### Create a folder
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 创建
+// Create directory
 fs.mkdir('./page', err => {
-    if(err) throw err;
-    console.log('成功');
-})
+    if (err) throw err;
+    console.log('Success');
+});
 ```
 
 
 
-#### 读取文件夹
+#### Read Folder
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 读取
+// Read directory
 fs.readdir('./page', (err, data) => {
-    if(err) throw err;
-    console.log(data);
-})
+    if (err) throw err;
+    console.log(data); // Output the list of files and directories
+});
 ```
 
 
 
-#### 删除文件夹
+#### Delete a folder
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 删除 不可删除空文件夹
+// Remove directory (cannot remove non-empty directories)
 fs.rmdir('./page', err => {
-    if(err) throw err;
-    console.log("成功");
-})
+    if (err) throw err;
+    console.log("Success");
+});
 ```
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 删除 空文件夹  不推荐使用
-fs.rmdir('./page', {recursive: true} , err => {
-    if(err) throw err;
-    console.log("成功");
-})
+// Delete directory (even if non-empty)
+fs.rmdir('./page', { recursive: true }, err => {
+    if (err) throw err;
+    console.log("Success");
+});
 ```
 
 ```js
-// 导入 fs
+// Import fs
 const fs = require('fs');
 
-// 删除 空文件夹   推荐使用
-fs.rm('./page', {recursive: true} , err => {
-    if(err) throw err;
-    console.log("成功");
-})
+// Delete directory (even if non-empty) - Recommended
+fs.rm('./page', { recursive: true }, err => {
+    if (err) throw err;
+    console.log("Success");
+});
 ```
 
 
@@ -480,127 +415,134 @@ fs.rm('./page', {recursive: true} , err => {
 ### Http
 
 ```js
-// 导入 http
+// Import http
 const http = require('http');
 
-// 创建服务对象
+// Create server object
 const server = http.createServer((request, response) => {
    response.end('Hello Http'); 
 })
 
-// 启动服务
-server.listen(9000,() => {
-    console.log('服务启动了')
-})
+// Start server
+server.listen(9000, () => {
+    console.log('Server is running');
+});
 ```
 
 ```js
-// 导入 http
+// Import http
 const http = require('http');
 
-// 创建服务对象
+// Create server object
 const server = http.createServer((request, response) => {
-    // 显示中文
-   response.setHeader('content-type','text/html;charset=utf-8');
+    // Set header for Chinese characters
+   response.setHeader('content-type', 'text/html;charset=utf-8');
    response.end('你好'); 
 })
 
-// 启动服务
-server.listen(9000,() => {
-    console.log('服务启动了')
-})
+// Start server
+server.listen(9000, () => {
+    console.log('Server is running');
+});
 ```
 
 
 
-#### 获取URL数据
+#### Get URL data
 
 ```js
-// 导入 http
+// Import http
 const http = require('http');
-// 导入 url
+// Import url
 const url = require('url');
 
-// 创建服务对象
+// Create server object
 const server = http.createServer((request, response) => {
-   // 连接
+   // Parse the request URL
    let res = url.parse(request.url, true);
 
-   // 获取路径
+   // Get the pathname
    let pathname = res.pathname;
-   // 获取传递值
+   // Get the query parameter 'keyword'
    let keyword = res.query.keyword;
 
-   response.end('url');
+   // Respond with the pathname and keyword
+   response.end(`Pathname: ${pathname}, Keyword: ${keyword}`);
 })
 
-// 启动服务
-server.listen(9000,() => {
-    console.log('服务启动了...')
-})
+// Start server
+server.listen(9000, () => {
+    console.log('Server is running...');
+});
 ```
 
 ```js
-// 导入 http
+// Import http
 const http = require('http');
-// 导入 url
+// Import url
 const url = require('url');
 
-// 创建服务对象
+// Create server object
 const server = http.createServer((request, response) => {
+   // Parse the request URL
+   const parsedUrl = url.parse(request.url, true);
 
-   // 获取传递值
-   let keyword = url.searchParams.get('keyword');
+   // Create a URL object to access searchParams
+   const queryParams = new URLSearchParams(parsedUrl.query);
 
-   response.end('url');
+   // Get the value of 'keyword' from the query string
+   let keyword = queryParams.get('keyword');
+
+   // Respond with the keyword value
+   response.end(`Keyword: ${keyword}`);
 })
 
-// 启动服务
-server.listen(9000,() => {
-    console.log('服务启动了...')
-})
+// Start server
+server.listen(9000, () => {
+    console.log('Server is running...');
+});
 ```
 
 
 
-#### 判断方法
+#### Judgment method
 
 ```js
-// 导入 http 和 url 模块
+// Import http and url modules
 const http = require('http');
 const url = require('url');
 
-// 创建服务对象
+// Create server object
 const server = http.createServer((request, response) => {
 
-    // 获取请求方法
+    // Get request method
     let {method} = request;
     
-   // 获取 pathname
-   let {pathname} = url.parse(request.url, true);
+    // Get pathname from the URL
+    let {pathname} = url.parse(request.url, true);
 
-    // 显示中文
-    response.setHeader('content-type','text/html;charset=utf-8');
+    // Set header to support Chinese characters
+    response.setHeader('content-type', 'text/html;charset=utf-8');
 
-   // 判断请求方法和路径
+   // Check request method and path
    if (method === 'GET' && pathname === '/login') {
-        response.end('登入界面');
+        response.end('Login Page');  // Login page
    } else if (method === 'GET' && pathname === '/reg') {
-        response.end('注册界面');
+        response.end('Registration Page');  // Registration page
    } else {
-        response.end('页面不存在');
+        response.end('Page Not Found');  // Page not found
    }
 });
 
-// 启动服务
+// Start server
 server.listen(9000, () => {
-    console.log('服务启动了...');
+    console.log('Server is running...');
 });
 ```
 
 
 
-#### 引入HTML
+#### Importing HTML
 
 ```html
 <!DOCTYPE html>
@@ -619,75 +561,90 @@ server.listen(9000, () => {
 ```
 
 ```js
-// 导入 http 和 fs 模块
+// Import the http and fs modules
 const http = require('http');
 const fs = require('fs');
 
-// 创建服务对象
+// Create the server object
 const server = http.createServer((request, response) => {
 
-    // 引入 html
+    // Read the HTML file
     let html = fs.readFileSync('./1.html');
     response.end(html);
 
 });
 
-// 启动服务
+// Start the server
 server.listen(9000, () => {
-    console.log('服务启动了...');
+    console.log('Server is running...');
 });
 ```
 
 ```js
-// 导入 http 和 fs 模块
+// Import the http and fs modules
 const http = require('http');
 const fs = require('fs');
+const url = require('url');
 
-// 创建服务对象
+// Create the server object
 const server = http.createServer((request, response) => {
 
+    // Parse the URL and extract the pathname
     let {pathname} = url.parse(request.url, true);
-    if(pathname === '/'){
-    	let html = fs.readFileSync('./1.html');
-    	response.end(html);
-   	}else if(pathname === '/index.css'){
+
+    // Serve the correct file based on the pathname
+    if (pathname === '/') {
+        let html = fs.readFileSync('./1.html');
+        response.end(html);
+    } else if (pathname === '/index.css') {
         let css = fs.readFileSync('./1.css');
-    	response.end(css);
-    }else if(pathname === '/index.js'){
+        response.end(css);
+    } else if (pathname === '/index.js') {
         let js = fs.readFileSync('./1.js');
-    	response.end(js);
-    }else{
+        response.end(js);
+    } else {
         response.statusCode = 404;
-        response.end('<h1>404 Not Found</h1>')
+        response.end('<h1>404 Not Found</h1>');
     }
 
 });
 
-// 启动服务
+// Start the server
 server.listen(9000, () => {
-    console.log('服务启动了...');
+    console.log('Server is running...');
 });
 ```
 
 ```js
-// 导入 http 和 fs 模块
+// Import the http and fs modules
 const http = require('http');
 const fs = require('fs');
+const url = require('url'); // Make sure to require 'url' module
 
-// 创建服务对象
+// Create the server object
 const server = http.createServer((request, response) => {
 
-    let {pathname} = url.parse(request.url, true);
+    // Parse the URL and get the pathname
+    let { pathname } = url.parse(request.url, true);
+
+    // Define the file path based on the requested pathname
+    let filePath = '.' + pathname; // Prepend '.' to make it relative to the current directory
+
+    // Read the requested file and return its content
     fs.readFile(filePath, (err, data) => {
-        if(err) throw err;
-        response.end(data);
-    })
+        if (err) {
+            response.statusCode = 404; // If file not found, send 404 error
+            response.end('<h1>404 Not Found</h1>');
+            return;
+        }
+        response.end(data); // Send the file content as the response
+    });
 
 });
 
-// 启动服务
+// Start the server
 server.listen(9000, () => {
-    console.log('服务启动了...');
+    console.log('Server is running...');
 });
 ```
 
