@@ -1,5 +1,5 @@
 <h2 align="center">
-愧怍的个人博客
+Learning Platform
 </h2>
 <p align="center">
 <a href="https://vercel.com/new/clone?repository-url=https://github.com/HooWC/TechDocs/tree/main&project-name=blog&repo-name=blog" rel="nofollow"><img src="https://vercel.com/button"></a>
@@ -7,85 +7,85 @@
 <a href="https://stackblitz.com/github/HooWC/TechDocs" rel="nofollow"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"></a>
 </p>
 
-## 👋 介绍
+## 👋 Introduce
 
-在这里我会分享各类技术栈所遇到问题与解决方案，带你了解最新的技术栈以及实际开发中如何应用，并希望我的开发经历对你有所启发。
+Here, I will share with you the various problems I encountered during the technical development process and my experience and solutions on how to solve them. From front-end development to back-end debugging, from database optimization to exception handling of API requests, I will discuss common technical problems and solutions with you in an easy-to-understand way. I hope that these sharings can not only help you avoid common pitfalls, but also provide some practical guidance for your technical growth.
+ 
+---------------------------
 
-如果你想要搭建一个类似的站点，可直接 [Fork](https://github.com/HooWC/TechDocs/fork) 本仓库使用，或者通过 [StackBlitz](https://stackblitz.com/github/HooWC/TechDocs) 在线运行本项目，通过 [Vercel](https://vercel.com/new/clone?repository-url=https://github.com/HooWC/TechDocs/tree/main&project-name=blog&repo-name=blog) 一键部署。
+在这里，我将与大家分享我在技术开发过程中遇到的各种问题以及我如何解决它们的经验和方案。从前端开发到后端调试，从数据库优化到API请求的异常处理，我会用轻松易懂的方式和大家一起探讨常见的技术难题和解决方法。希望这些分享不仅能帮助你避免常见的坑，还能为你的技术成长提供一些实用的指导。
 
-## ✨ 特性
+## ✨ Characteristic
 
-- 🦖 **Docusaurus** - 基于 Docusaurus，提供强大的文档生成和博客功能
-- ✍️ **Markdown** - 写作方便，Markdown
-- 🎨 **Beautiful** - 整洁，美观，阅读体验优先
-- 🖥️ **PWA** - 支持 PWA，可安装，离线可用
-- 🌐 **i18n** - 支持国际化
-- 💯 **SEO** - 搜索引擎优化，易于收录
-- 📊 **谷歌分析** - 支持 Google Analytics
-- 🔎 **全文搜索** - 支持 [Algolia DocSearch](https://github.com/algolia/docsearch)
-- 🚀 **持续集成** - 支持 CI/CD，自动部署更新内容
-- 🏞️ **首页视图** - 显示最新博客文章、项目展示，个人特点，技术栈等
-- 🗃️ **博文视图** - 不同的博文视图，列表、宫格
-- 🌈 **资源导航** - 收集并分享有用、有意思的资源
-- 📦 **项目展示** - 展示你的项目，可用作于作品集
+- 🦖 **Docusaurus** - Based on Docusaurus, provides powerful document generation and blogging functions
+- ✍️ **Markdown** - Easy to write, Markdown/Typora
+- 🎨 **Beautiful** - Neat, beautiful, reading experience first
+- 🖥️ **PWA** - Supports PWA, installable, available offline
+- 🌐 **i18n** - Supports internationalization
+- 💯 **SEO** - Search engine optimization, easy to include
+- 📊 **Google Analytics** - Supports Google Analytics
+- 🔎 **Full text search** - Convenient to search for articles
+- 🚀 **Continuous Integration** - Supports CI/CD, automatically deploys updated content
+- 🏞️ **Home View** - Displays the latest blog posts, project displays, personal characteristics, technology stacks, etc.
+- 🗃️ **Blog View** - Different blog post views, lists, grids
+- 🌈 **Resource Navigation** - Collect and share useful and interesting resources
+- 📦 **Project Display** - Show your projects, which can be used as a portfolio
 
-我的主题魔改实现：[Docusaurus 主题魔改](https://kuizuo.cn/docs/docusaurus-guides)
-
-## :wrench: 技术栈
+## :wrench: Technology Stack
 
 - Docusaurus
 - TailwindCSS
+- React
+- Json
+- JavaScript
+- TypeScript
+- NextJS
 - Framer motion & magicui 
 
-## 📊 目录结构
+## 📊 Directory Structure
 
 ```bash
-├── blog                           # 博客
-│   ├── first-blog.md
-├── docs                           # 文档/笔记
-│   └── doc.md
+├── blog                     # Blog
+│ ├── first-blog.md
+├── docs                     # Documents/notes
+│ └── doc.md
 ├── data
-│   ├── feature.tsx                # 特点
-│   ├── friends.tsx                # 友链
-│   ├── projects.tsx               # 项目
-│   ├── skills.tsx                 # 技术栈
-│   ├── resources.tsx              # 资源
-│   └── social.ts                  # 社交链接
-├── i18n                           # 国际化
+│ ├── feature.tsx            # Features
+│ ├── projects.tsx           # Projects
+│ ├── skills.tsx             # Technology stack
+│ ├── resources.tsx          # Resources
+│ └── social.ts              # Social links
+├── i18n # Internationalization
 ├── src
-│   ├── components                 # 组件
-│   ├── css                        # 自定义CSS
-│   ├── pages                      # 自定义页面
-│   ├── plugin                     # 自定义插件
-│   └── theme                      # 自定义主题组件
-├── static                         # 静态资源文件
-│   └── img                        # 静态图片
-├── docusaurus.config.ts           # 站点的配置信息
-├── sidebars.ts                    # 文档的侧边栏
+│ ├── components             # Components
+│ ├── css                    # Custom CSS
+│ ├── pages                  # Custom pages
+│ ├── plugin                 # Custom plugins
+│ └── theme                  # Custom theme components
+├── static                   # Static resource files
+│ └── img                    # Static images
+├── docusaurus.config.ts     # Site configuration information
+├── sidebars.ts              # Document sidebar
 ├── package.json
 ├── tsconfig.json
 └── pnpm-lock.yaml
 ```
 
-## 📥 运行
+## 📥 Run
 
-```bash
-git clone https://github.com/kuizuo/blog.git
+```Bash
+git clone https://github.com/your-git-link
 cd blog
 pnpm install
-pnpm start
+pnpm start / pnpm run serve
 ```
 
-构建
+Build
 
 ```bash
 pnpm build
 ```
 
-## 📷 截图
-
-<img width="1471" alt="Live Demo" src="https://github.com/kuizuo/blog/blob/main/static/img/og.png?raw=true">
-
-## 📝 许可证
+## 📝 License
 
 [MIT](./LICENSE)
