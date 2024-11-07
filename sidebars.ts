@@ -6,7 +6,7 @@ const sidebars: SidebarsConfig = {
 
   // 面试
   interview: [
-    'interview/interview-introduction',
+    'interview/introduction',
      {
       label: '面试准备',
       type: 'category',
