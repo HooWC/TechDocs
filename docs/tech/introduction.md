@@ -1,16 +1,16 @@
 ---
 id: introduction
 slug: /tech
-title: 笔记
+title: 技术学习笔记汇总
 ---
 
-:::info 前文提醒
+:::info 前文  (っ●ω●)っ
 
 目前我的笔记还在不断更新和改进中，目标是让它更简洁、直观，让学习者在一眼看懂的同时还能觉得“哦，原来如此！”
 
 ::: 
 
-:::success 前文提醒
+:::success 前文
 
 笔记文档旨在为开发人员提供详细的代码演示和插件使用说明，帮助用户更好地理解和应用相关技术。文档内容涵盖了从基本操作到高级功能的方方面面，配以丰富的实例和操作步骤，以便用户能够快速上手。随着项目的不断推进和新需求的加入，文档会进行持续更新，确保内容始终保持最新状态，贴合实际应用场景。
 
@@ -18,21 +18,29 @@ title: 笔记
 
 ::: 
 
+欢迎来到我的技术栈学习笔记！这里是我在学习过程中积累的各类知识与心得，涵盖了丰富的技术领域。内容涵盖但不限于以下主题：
 
+  ### Web 开发
 
-本页面为个人学习中所涉及相关技术栈的笔记汇总，包含但不限于
+  - **前端与后端开发**：探索如何构建高效、互动性的Web应用
+  - **Vue.js & React & Angular** ：深入理解现代前端框架，提高用户体验和开发效率
+  - **JavaScript & JQuery**：掌握核心脚本语言，为网页增添动态交互
 
-- Web （前端 / 后端）
-- Vue
-- React
-- JavaScript & JQuery 
-- TypeScript
-- ASP .NET MVC
-- Java Spring MVC
-- Dynamic Web Project
-- Node
-- App
-- HTTP (Restful API)
-- Git
-- Laravel
+  ### 编程语言与框架
 
+  - **TypeScript**：增强JavaScript类型支持，减少错误并提升代码维护性
+  - **ASP .NET MVC & Java Spring MVC**：开发企业级应用的利器，掌握后端开发最佳实践
+  - **Node.js & Dynamic Web Project**：从服务器到前端的一站式开发
+
+  ### 移动与Web App开发
+
+  - **Xamarin & React Native 开发**：为跨平台应用注入活力
+  - **HTTP 与 Restful API**：优化数据交互，实现高效接口设计
+
+  ### 版本控制与协作
+
+  - **Git**：掌握Git的强大版本控制与协作功能，确保项目高效管理
+
+  ### 后端开发框架
+
+  - **Laravel**：高效的PHP开发框架，适用于快速开发可靠的应用

@@ -10,7 +10,9 @@ keywords: [angular]
 
 ### Introduction and explanation of Angular
 
+:::info
 Angular is a powerful and popular front-end framework for building dynamic, modern Single Page Applications (SPAs). Developed and maintained by Google, it is known for its high performance, modularity, extensibility, and powerful toolset. Written in TypeScript, Angular provides a rich set of tools and features that significantly simplify the development of complex applications. The following is a detailed overview of Angular, including its core concepts, design principles, key features, and its benefits.
+:::
 
 ------
 
@@ -92,4 +94,7 @@ Angular is extremely feature-rich. Here is a detailed description of some of its
 
 ### Summarize
 
+:::success Meow~
 Angular is a mature and powerful framework, especially suitable for building complex and scalable single-page applications. Through core concepts such as components, modules, services, and dependency injection, Angular provides developers with a comprehensive ecosystem that makes building dynamic and responsive applications easier and more efficient.
+:::
+

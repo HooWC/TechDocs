@@ -8,6 +8,10 @@ tags: [java]
 keywords: [java]
 ---
 
+:::warning
+At present, the author of Java Spring MVC has not had time to process and translate it, so only the Chinese version can be provided.
+:::
+
 Spring MVC is a module based on the Spring framework, specifically for building Web applications. It adopts the classic MVC (Model-View-Controller) design pattern and provides a flexible and efficient way to develop Java Web applications. Spring MVC separates business logic, user interface, and request processing, making the application structure clearer, easier to maintain and expand.
 
 The main features of Spring MVC include:

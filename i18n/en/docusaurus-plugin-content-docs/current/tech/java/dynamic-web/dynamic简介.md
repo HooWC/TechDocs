@@ -8,6 +8,12 @@ tags: [mvc]
 keywords: [mvc]
 ---
 
+
+
+:::warning
+Currently the author of the Java Dynamic Web Project document has not had time to work on it, so only the Chinese version can be provided.
+:::
+
 Java Dynamic Web Project is a web application development model based on Java EE (Java Platform, Enterprise Edition). It allows developers to build web applications that dynamically generate content, usually in combination with server-side technologies such as Java Servlets and JSP. This project structure is often used to create websites that respond to user requests and display content dynamically.
 
 The main features of Java Dynamic Web Project include:

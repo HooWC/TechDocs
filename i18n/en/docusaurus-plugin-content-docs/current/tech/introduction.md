@@ -1,10 +1,10 @@
 ---
 id: introduction
 slug: /tech
-title: Notes
+title: Technical learning notes summary
 ---
 
-:::info Previous
+:::info Previous  (っ●ω●)っ
 
 My notes are still being updated and improved. My goal is to make them more concise and intuitive, so that learners can understand them at a glance and feel "Oh, that's it!"
 
@@ -12,25 +12,35 @@ My notes are still being updated and improved. My goal is to make them more conc
 
 :::success Previous
 
-The purpose of the notes documentation is to provide developers with detailed code demonstrations and plugin usage instructions to help users better understand and apply related technologies. The documentation covers everything from basic operations to advanced features, with a wealth of examples and steps so that users can get started quickly. As the project progresses and new requirements are added, the documentation will be continuously updated to ensure that the content is always up-to-date and relevant to the actual application scenarios.
+Welcome to my technology stack learning notes! Here are all kinds of knowledge and experience I have accumulated during the learning process, covering a wide range of technical fields. The content covers but is not limited to the following topics:
 
-In addition, updates to the documentation will focus on adding, improving and refining existing content to address user feedback and introduce new functionality notes. I am committed to providing users with more efficient development support and a more intuitive learning experience by continuously improving the notes documentation.
+### Web Development
 
-::: 
+- **Front-end and Back-end Development**: Explore how to build efficient and interactive web applications
 
+- **Vue.js & React & Angular**: In-depth understanding of modern front-end frameworks to improve user experience and development efficiency
 
-This page is a summary of notes on relevant technology stacks involved in personal learning, including but not limited to
-- Web (front-end / back-end)
-- Vue
-- React
-- JavaScript & JQuery 
-- TypeScript
-- ASP .NET MVC
-- Java Spring MVC
-- Dynamic Web Project
-- Node
-- Node
-- HTTP (Restful API)
-- Git
-- Laravel
+- **JavaScript & JQuery**: Master the core scripting language to add dynamic interaction to web pages
+
+### Programming Languages ​​and Frameworks
+
+- **TypeScript**: Enhance JavaScript type support, reduce errors and improve code maintainability
+
+- **ASP .NET MVC & Java Spring MVC**: A powerful tool for developing enterprise-level applications and mastering back-end development best practices
+
+- **Node.js & Dynamic Web Project**: One-stop development from server to front-end
+
+### Mobile and Web App Development
+
+- **Xamarin & React Native Development**: Inject vitality into cross-platform applications
+
+- **HTTP and Restful API**: Optimize data interaction and achieve efficient interface design
+
+### Version Control and Collaboration
+
+- **Git**: Master Git's powerful version control and collaboration functions to ensure efficient project management
+
+### Backend development framework
+
+- **Laravel**: An efficient PHP development framework suitable for rapid development of reliable applications
 
