@@ -1,6 +1,6 @@
 ---
-id: introduction
-slug: /interview
+id: fix-introduction
+slug: /fix-interview
 title: 面试简介
 ---
 
