@@ -100,7 +100,7 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 .relative_box {
-    margin-bottom: 0rem;
+    margin-bottom: -6rem;
 }
 
 a:hover {
@@ -160,6 +160,7 @@ article .markdown code {
 
 article .markdown .alert {
   border: 2px solid var(--ifm-alert-border-color);
+  margin-bottom: 1rem;
 }
 
 article .markdown img {

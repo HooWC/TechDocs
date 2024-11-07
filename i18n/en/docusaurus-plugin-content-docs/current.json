@@ -354,5 +354,29 @@
   "sidebar.version.category.TechDocs 版本": {
     "message": "TechDocs Version",
     "description": "The label for category TechDocs 版本 in sidebar version"
+  },
+  "sidebar.interviewSidebar.category.interview-base": {
+    "message": "interview-base",
+    "description": "The label for category interview-base in sidebar interviewSidebar"
+  },
+  "sidebar.interview.category.面试准备": {
+    "message": "Interview Preparation",
+    "description": "The label for category 面试准备 in sidebar interview"
+  },
+  "sidebar.interview.category.面试准备.link.generated-index.title": {
+    "message": "Interview Preparation",
+    "description": "The generated-index page title for category 面试准备 in sidebar interview"
+  },
+  "sidebar.interview.category.面试准备.link.generated-index.description": {
+    "message": "Interview Preparation",
+    "description": "The generated-index page description for category 面试准备 in sidebar interview"
+  },
+  "sidebar.interview.category.Interview Preparation": {
+    "message": "Interview Preparation",
+    "description": "The label for category Interview Preparation in sidebar interview"
+  },
+  "sidebar.tech.category.Laravel": {
+    "message": "Laravel",
+    "description": "The label for category Laravel in sidebar tech"
   }
 }

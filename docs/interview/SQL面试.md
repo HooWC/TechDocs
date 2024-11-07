@@ -1,5 +1,11 @@
 ---
-sidebar_position: 4
+id: sql-interview
+slug: /sql-interview
+title: SQL 面试
+date: 2024-11-04
+authors: Hoo
+tags: [interview]
+keywords: [interview]
 ---
 
 # SQL面试 
@@ -8,7 +14,7 @@ sidebar_position: 4
 
 
 
-[SQL 高级教程]: https://www.runoob.com/sql/sql-top.html
+[**SQL 高级教程**](https://www.runoob.com/sql/sql-top.html)
 
 
 

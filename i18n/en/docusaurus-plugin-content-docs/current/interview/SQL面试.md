@@ -1,10 +1,14 @@
 ---
-sidebar_position: 4
+id: sql-interview
+slug: /sql-interview
 title: SQL Interview
+date: 2024-11-04
 authors: Hoo
+tags: [interview]
+keywords: [interview]
 ---
 
- 
+
 # SQL Interview 
 🐣 **SQL** (Structured Query Language) is used to manage relational database management systems (RDBMS). The scope of SQL includes data insertion, querying, updating and deletion, database schema creation and modification, and data access control.
 

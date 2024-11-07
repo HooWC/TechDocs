@@ -51,7 +51,7 @@ const config: Config = {
         { label: '博客', position: 'right', to: 'blog' },
         { label: '笔记', position: 'right', to: 'docs/tech' },
          { label: '项目', position: 'right', to: 'project' },
-        { type:'docSidebar',sidebarId: 'interviewSidebar', label: '面试', position: 'right', to: 'docs/interview' },
+         { label: '面试', position: 'right', to: 'docs/interview' },
         { label: '关于', position: 'right', to: 'about' },
         {
           label: '更多',

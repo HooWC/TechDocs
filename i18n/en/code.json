@@ -862,7 +862,9 @@
   "projects.tags.thriller": {
     "message": "Thriller",
     "description": "features"
+  },
+  "blog-desc-life": {
+    "message": "Code Life: A blogging journey weaving technology and life",
+    "description": "features"
   }
-
-
 }

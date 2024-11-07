@@ -1,9 +1,8 @@
 ---
-title: Introduction
-authors: Hoo
+id: introduction
+slug: /interview
+title: Interview Introduction
 ---
-
-
 
 
 :::success Previous
@@ -27,6 +26,3 @@ During the interview process, programmers often encounter a variety of questions
 ### The importance of preparing for an interview
 Preparation is especially important in order to stand out in an interview. Job seekers need to have not only the relevant technical knowledge, but also an understanding of the common questions asked in interviews and the best answers. At the same time, you can effectively improve your performance through mock interviews, sharing your experience with others and seeking feedback.
 Our goal is to provide a centralized resource to help job seekers understand and prepare for all types of interview questions. The website is a collection of many common interview questions, answer ideas and references, and strives to make the job search process less difficult for every visitor.
-
-
-
