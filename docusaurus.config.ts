@@ -93,8 +93,8 @@ const config: Config = {
           items: [
             { label: '关于我', to: '/about' },
             { label: 'GitHub', href: social.github.href },
-            { label: 'LinkedIn', href: social.discord.href },
-            { label: 'Youtube', href: social.x.href },    
+            { label: 'LinkedIn', href: social.linkedin.href },
+            { label: 'X', href: social.x.href },    
           ],
         },
         {
