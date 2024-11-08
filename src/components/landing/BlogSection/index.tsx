@@ -30,7 +30,7 @@ export function BlogItem({ post }: { post: BlogPost }) {
     >
       {frontMatter.image && (
         <Link href={permalink} className="max-h-[240px] w-full cursor-pointer overflow-hidden object-cover">
-          <div className="relative w-full" style={{ height: '160px',width:'100%' }}> {/* 设置固定高度 */}
+          <div className="relative w-full" style={{ height: '160px',width:'100%', pointerEvents:'none' }}> {/* 设置固定高度 */}
     <Image
       src={frontMatter?.image}
       alt={title}

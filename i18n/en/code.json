@@ -866,5 +866,53 @@
   "blog-desc-life": {
     "message": "Code Life: A blogging journey weaving technology and life",
     "description": "features"
+  },
+  "showcase-header-button-1": {
+    "message": "Rich",
+    "description": "features"
+  },
+  "showcase-header-button-2": {
+    "message": "Democracy",
+    "description": "features"
+  },
+  "showcase-header-button-3": {
+    "message": "Culture",
+    "description": "features"
+  },
+  "showcase-header-button-4": {
+    "message": "Harmony",
+    "description": "features"
+  },
+  "showcase-header-button-5": {
+    "message": "Freedom",
+    "description": "features"
+  },
+  "showcase-header-button-6": {
+    "message": "Equality",
+    "description": "features"
+  },
+  "showcase-header-button-7": {
+    "message": "Just",
+    "description": "features"
+  },
+  "showcase-header-button-8": {
+    "message": "Nomocracy",
+    "description": "features"
+  },
+  "showcase-header-button-9": {
+    "message": "Patriotic",
+    "description": "features"
+  },
+  "showcase-header-button-10": {
+    "message": "Dedication",
+    "description": "features"
+  },
+  "showcase-header-button-11": {
+    "message": "Integrity",
+    "description": "features"
+  },
+  "showcase-header-button-12": {
+    "message": "Friendly",
+    "description": "features"
   }
 }

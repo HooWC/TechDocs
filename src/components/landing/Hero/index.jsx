@@ -53,7 +53,7 @@ function Name() {
 
 export default function Hero() {
   return (
-    <motion.div className={styles.hero}>
+    <motion.div className={styles.hero} style={{pointerEvents:'none'}}>
       <div className={styles.intro}>
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants} className="max-lg:px-4">
@@ -76,10 +76,10 @@ export default function Hero() {
           </MovingButton>
         </motion.div>
       </div>
-      <motion.div className={styles.background}>
+      <motion.div className={styles.background} style={{ pointerEvents: 'none' }}>
         <img
           src="/img/backgroundpic.png" alt="Background"
-          style={{ width: '80%', height: 'auto' }}
+          style={{ width: '80%', height: 'auto',pointerEvents: 'none' }}
         />
 
         {/* <HeroSvg /> */}
