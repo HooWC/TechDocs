@@ -373,6 +373,8 @@ const sidebars: SidebarsConfig = {
     'tools/api-return-404-error',
     'tools/http-request-fail',
     'tools/markdown-word',
+    'tools/window-change-password',
+    'tools/common-beautiful-and-understand',
   ],
 
 
