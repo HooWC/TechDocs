@@ -28,6 +28,24 @@ export const projects: Project[] = [
     tags: ['opensource', 'design','public'],
     type: 'web',
   },
+  {
+    title: 'QR Code',
+    description: translate({ id: 'projects.work.qrcode', message: 'React 开发的免费生成二维码的网站' }),
+    preview: '/img/project/QR.png',
+    website: 'https://qr-code-woad-ten.vercel.app/',
+    source: 'https://github.com/HooWC/QR_Code.git',
+    tags: ['opensource', 'design','public'],
+    type: 'web',
+  },
+  {
+    title: 'Sky',
+    description: translate({ id: 'projects.work.sky', message: 'React 开发的天气预报功能' }),
+    preview: '/img/project/Sky.png',
+    website: 'https://sky-teal-pi.vercel.app/',
+    source: 'https://github.com/HooWC/sky_public_source.git',
+    tags: ['opensource', 'design','public'],
+    type: 'web',
+  },
   // personal
   {
     title: 'Muyi Music',

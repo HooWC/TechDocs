@@ -575,6 +575,14 @@
     "message": "A website that can convert WEBP format to PNG images",
     "description": "project"
   },
+  "projects.work.qrcode": {
+    "message": "A website developed with React to generate QR codes for free",
+    "description": "project"
+  },
+  "projects.work.sky": {
+    "message": "A website developed with React to generate QR codes for free",
+    "description": "project"
+  },
   "projects.work.muyimusic": {
     "message": "Personal music online website developed and designed by myself",
     "description": "project"
