@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     title: 'Password Generator',
     description: translate({ id: 'projects.work.password', message: '加强密码' }),
-    preview: '/img/project/Sky.png',
+    preview: '/img/project/password.png',
     website: 'https://sky-teal-pi.vercel.app/',
     source: 'https://github.com/HooWC/sky_public_source.git',
     tags: ['opensource', 'design','public'],
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
     title: 'Online Conversion Tool',
     description: translate({ id: 'projects.work.online', message: '在线转换代码' }),
-    preview: '/img/project/imgtotext.png',
+    preview: '/img/project/online.png',
     website: 'https://image-to-text-neon-kappa.vercel.app/',
     source: 'https://github.com/HooWC/image-to-text.git',
     tags: ['opensource', 'design','public'],
