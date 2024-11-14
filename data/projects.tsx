@@ -46,6 +46,15 @@ export const projects: Project[] = [
     tags: ['opensource', 'design','public'],
     type: 'web',
   },
+  {
+    title: 'Image to Text',
+    description: translate({ id: 'projects.work.imgtotext', message: '识别图片转换成文字，免费版' }),
+    preview: '/img/project/imgtotext.png',
+    website: 'https://image-to-text-neon-kappa.vercel.app/',
+    source: 'https://github.com/HooWC/image-to-text.git',
+    tags: ['opensource', 'design','public'],
+    type: 'web',
+  },
   // personal
   {
     title: 'Muyi Music',

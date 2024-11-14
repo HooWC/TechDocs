@@ -583,6 +583,10 @@
     "message": "A website developed with React to generate QR codes for free",
     "description": "project"
   },
+  "projects.work.imgtotext": {
+    "message": "Recognize pictures and convert them into text, free version",
+    "description": "project"
+  },
   "projects.work.muyimusic": {
     "message": "Personal music online website developed and designed by myself",
     "description": "project"
