@@ -587,6 +587,14 @@
     "message": "Recognize pictures and convert them into text, free version",
     "description": "project"
   },
+  "projects.work.password": {
+    "message": "Strengthen password",
+    "description": "project"
+  },
+  "projects.work.online": {
+    "message": "Convert codes online",
+    "description": "project"
+  },
   "projects.work.muyimusic": {
     "message": "Personal music online website developed and designed by myself",
     "description": "project"
