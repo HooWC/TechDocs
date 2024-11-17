@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     title: 'Super Translation Tool',
     description: translate({ id: 'projects.work.tr', message: '免费在线翻译' }),
-    preview: '/img/project/tr.png',
+    preview: '/img/project/TR.png',
     website: 'https://hoo-translation-en.vercel.app/',
     source: 'https://github.com/HooWC/HOO-Translation-en.git',
     tags: ['opensource', 'design','public'],
