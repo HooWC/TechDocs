@@ -56,6 +56,15 @@ export const projects: Project[] = [
     type: 'web',
   },
   {
+    title: 'Super Translation Tool',
+    description: translate({ id: 'projects.work.tr', message: '免费在线翻译' }),
+    preview: '/img/project/tr.png',
+    website: 'https://hoo-translation-en.vercel.app/',
+    source: 'https://github.com/HooWC/HOO-Translation-en.git',
+    tags: ['opensource', 'design','public'],
+    type: 'web',
+  },
+  {
     title: 'Password Generator',
     description: translate({ id: 'projects.work.password', message: '加强密码' }),
     preview: '/img/project/password.png',

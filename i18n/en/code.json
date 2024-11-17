@@ -579,6 +579,10 @@
     "message": "A website developed with React to generate QR codes for free",
     "description": "project"
   },
+  "projects.work.tr": {
+    "message": "Free Online Translation",
+    "description": "project"
+  },
   "projects.work.sky": {
     "message": "A website developed with React to generate QR codes for free",
     "description": "project"
