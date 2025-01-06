@@ -156,3 +156,466 @@ DELETE FROM table_name;
 
 
 
+## 进阶
+
+### LIMIT
+
+```sql
+SELECT * FROM Customers LIMIT 10;
+```
+
+### IS NULL
+
+```sql
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+```
+
+### IS NOT NULL
+
+```sql
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NOT NULL;
+```
+
+### ORDER BY
+
+```sql
+SELECT * FROM Customers
+ORDER BY Country DESC;
+```
+
+### NOT
+
+```sql
+SELECT * FROM Customers
+WHERE NOT Country='Germany';
+```
+
+### MIN()
+
+```sql
+SELECT MIN(Price) AS SmallestPrice
+FROM Products; 
+```
+
+### MAX()
+
+```sql
+SELECT MAX(Price) AS LargestPrice
+FROM Products; 
+```
+
+### COUNT()
+
+```sql
+SELECT COUNT(ProductID)
+FROM Products;
+```
+
+### AVG()
+
+```sql
+SELECT AVG(Price)
+FROM Products;
+```
+
+### SUM()
+
+```sql
+SELECT SUM(Quantity)
+FROM OrderDetails;
+```
+
+### LIKE
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+```
+
+查询以 "a" 结尾的名字：
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%a';
+```
+
+`%or%` 表示：在 `CustomerName` 中 **只要包含 "or"**，无论前后有什么字符，都会匹配。
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%or%'
+```
+
+第二个字符是 "r" 的所有记录
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%';
+```
+
+查询 `CustomerName` 中，**以 "a" 开头且至少有三个字符** 的记录。
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__%';
+```
+
+查询 `ContactName` 中，**以 "a" 开头且以 "o" 结尾** 的所有记录。
+
+```sql
+SELECT * FROM Customers
+WHERE ContactName LIKE 'a%o';
+```
+
+
+
+### NOT LIKE
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'a%';
+```
+
+
+
+### OFFSET 
+
+**`OFFSET`** 用于跳过指定数量的记录，从而实现分页查询或控制结果集的起始点。
+
+```sql
+SELECT * 
+FROM TableName 
+LIMIT RowsToFetch OFFSET RowsToSkip;
+```
+
+#### **查询 1：获取前 3 条记录**
+
+```sql
+SELECT * FROM users LIMIT 3 OFFSET 0;
+```
+
+- 解释：
+  - `LIMIT 3`：返回 3 条记录。
+  - `OFFSET 0`：从第 0 条记录开始（即不跳过记录）。
+
+
+
+#### **查询 2：跳过前 3 条，获取接下来的 3 条记录**
+
+```sql
+SELECT * FROM users LIMIT 3 OFFSET 3;
+```
+
+- 解释：
+  - `LIMIT 3`：返回 3 条记录。
+  - `OFFSET 3`：跳过前 3 条记录，从第 4 条开始。
+
+
+
+### NOT IN
+
+```sql
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
+```
+
+### IN
+
+```sql
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+```
+
+### BETWEEN
+
+```sql
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20;
+```
+
+### NOT BETWEEN
+
+```sql
+SELECT * FROM Products
+WHERE Price NOT BETWEEN 10 AND 20;
+```
+
+```sql
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20
+AND CategoryID NOT IN (1,2,3);
+```
+
+
+
+## Alias
+
+```sql
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+```
+
+
+
+### CONCAT_WS
+
+```sql
+SELECT CustomerName, CONCAT_WS(', ', Address, PostalCode, City, Country) AS Address
+FROM Customers;
+```
+
+### 多 Database
+
+老式的 SQL 语法，通常称为“隐式连接”
+
+```sql
+SELECT o.OrderID, o.OrderDate, c.CustomerName
+FROM Customers AS c, Orders AS o
+WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;
+```
+
+### INNER JOIN
+
+```sql
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers
+ON Orders.CustomerID=Customers.CustomerID;
+```
+
+```sql
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate, OrderDetails.ProductID, OrderDetails.Quantity
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID;
+```
+
+
+
+### INNER JOIN LV2
+
+```sql
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM ((Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+```
+
+### LEFT JOIN
+
+```sql
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+```
+
+
+
+### UNION
+
+`UNION` 是 SQL 中的一个操作符，用于将两个或多个 `SELECT` 查询的结果合并成一个结果集。它会去除重复的行，返回唯一的结果。如果你希望包括所有的行（包括重复的行），可以使用 `UNION ALL`。
+
+
+
+在你提供的 SQL 查询中：
+
+```sql
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+```
+
+- 第一个 `SELECT` 查询从 `Customers` 表中选择 `City` 列。
+- 第二个 `SELECT` 查询从 `Suppliers` 表中选择 `City` 列。
+- `UNION` 将两个查询结果合并成一个结果集，并自动去除重复的城市。
+- `ORDER BY City` 用于对结果按 `City` 列进行排序。
+
+### 注意：
+
+- `UNION` 需要确保两个查询返回的列数和数据类型是相同的。
+- `UNION` 会去掉重复的记录，如果你希望保留重复的记录，可以使用 `UNION ALL`：
+
+```sql
+SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers
+ORDER BY City;
+```
+
+这个查询会包括重复的城市记录，而 `UNION` 则会自动去除重复值。
+
+
+
+### GROUP BY
+
+```sql
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+```
+
+```sql
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+```
+
+### HAVING
+
+```sql
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
+```
+
+```sql
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5
+ORDER BY COUNT(CustomerID) DESC;
+```
+
+### EXISTS
+
+```sql
+SELECT SupplierName
+FROM Suppliers
+WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price < 20);
+```
+
+### ANY()
+
+```sql
+SELECT ProductName 
+FROM Products
+WHERE ProductID = ANY (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+```
+
+```sql
+SELECT ProductName 
+FROM Products 
+WHERE ProductID > ANY (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+```
+
+
+
+### 模拟数据：
+
+**`Products` 表：**
+
+| ProductID | ProductName |
+| --------- | ----------- |
+| 100       | Product A   |
+| 101       | Product B   |
+| 102       | Product C   |
+| 103       | Product D   |
+| 104       | Product E   |
+
+**`OrderDetails` 表：**
+
+| ProductID | Quantity |
+| --------- | -------- |
+| 101       | 10       |
+| 102       | 10       |
+| 103       | 10       |
+
+------
+
+### 查询 1：使用 `ANY`
+
+```sql
+SELECT ProductName
+FROM Products
+WHERE ProductID > ANY (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+```
+
+**子查询**：`SELECT ProductID FROM OrderDetails WHERE Quantity = 10;`
+
+- 返回：`[101, 102, 103]` 这三个 `ProductID`。
+
+**外部查询**：`WHERE ProductID > ANY (...)`
+
+- 外部查询将返回那些 `ProductID` 大于 `101`、`102` 或 `103` 中 **任意一个** 的 `ProductName`。
+
+**执行结果**：
+
+- `ProductID = 100` 小于所有子查询的 `ProductID`，不符合条件。
+- `ProductID = 101` 等于子查询中的第一个 `ProductID`，不符合条件。
+- `ProductID = 102` 等于子查询中的第二个 `ProductID`，不符合条件。
+- `ProductID = 103` 等于子查询中的第三个 `ProductID`，不符合条件。
+- `ProductID = 104` 大于 `101`、`102` 和 `103` 中的 **任意一个**，符合条件。
+
+**最终结果**：
+
+- `ProductName = "Product E"`（因为它的 `ProductID = 104`，大于 `101`、`102` 或 `103` 中的任何一个）。
+
+------
+
+### 查询 2：使用 `ALL`
+
+```sql
+SELECT ProductName
+FROM Products
+WHERE ProductID > ALL (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+```
+
+**子查询**：`SELECT ProductID FROM OrderDetails WHERE Quantity = 10;`
+
+- 返回：`[101, 102, 103]` 这三个 `ProductID`。
+
+**外部查询**：`WHERE ProductID > ALL (...)`
+
+- 外部查询将返回那些 `ProductID` 大于 **所有子查询返回的 `ProductID`** 的 `ProductName`。
+
+**执行结果**：
+
+- `ProductID = 100` 小于所有子查询的 `ProductID`，不符合条件。
+- `ProductID = 101` 小于子查询中的 `102` 和 `103`，不符合条件。
+- `ProductID = 102` 小于子查询中的 `103`，不符合条件。
+- `ProductID = 103` 不大于子查询中的 `103`，不符合条件。
+- `ProductID = 104` 大于 `101`、`102` 和 `103` 中 **所有的值**，符合条件。
+
+**最终结果**：
+
+- `ProductName = "Product E"`（因为它的 `ProductID = 104`，大于 `101`、`102` 和 `103` 中的所有值）。
+
+
+
+
+
+### Comments
+
+```sql
+-- SELECT * FROM Customers;
+```
+
+
+
+### DROP
+
+```sql
+DROP DATABASE databasename;
+```
+
+
+
+### ALTER TABLE
+
+**向 `Employees` 表中添加一个新的列 `Email`，其数据类型为 `VARCHAR(255)`**：
+
+```sql
+ALTER TABLE Employees
+ADD Email VARCHAR(255);
+```
+
+
+
