@@ -20,7 +20,8 @@ const sidebars: SidebarsConfig = {
     },
     'interview/frontend-interview',
     'interview/sql-interview',
-    'interview/interview-qr'
+    'interview/interview-qr',
+    'interview/interview-qr-php',
   ],
 
 
