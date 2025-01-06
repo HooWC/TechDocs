@@ -62,7 +62,7 @@ export const projects: Project[] = [
     website: 'https://hoo-translation-en.vercel.app/',
     source: 'https://github.com/HooWC/HOO-Translation-en.git',
     tags: ['opensource', 'design','public'],
-    type: 'web',
+    type: 'web', 
   },
   {
     title: 'Password Generator',
